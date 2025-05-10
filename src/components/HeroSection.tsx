@@ -63,7 +63,7 @@ const HeroSection = () => {
           <div className="hidden md:block">
             <div className="relative">
               <div className="absolute -bottom-10 -right-10 w-80 h-80 bg-bank-accent/20 rounded-full blur-3xl"></div>
-              <Carousel className="w-full max-w-md mx-auto">
+              <Carousel className="w-full max-w-4xl mx-auto">
                 <CarouselContent>
                   {heroImages.map((image, index) => (
                     <CarouselItem key={index} className={index === currentIndex ? "block" : "hidden"}>
@@ -74,7 +74,7 @@ const HeroSection = () => {
                         <img 
                           src={image.src} 
                           alt={image.alt} 
-                          className="relative z-10 rounded-lg shadow-2xl w-full h-[500px] object-cover"
+                          className="relative z-10 rounded-lg shadow-2xl w-[800px] h-[500px] object-cover"
                         />
                       </div>
                     </CarouselItem>
