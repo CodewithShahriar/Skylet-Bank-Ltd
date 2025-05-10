@@ -19,11 +19,21 @@ const HeroSection = () => {
               Experience the next generation of banking with Skylet Bank. Secure, modern, and designed for your financial growth.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="btn-primary bg-bank-red">
-                Get Started
+              {/* Open Account Button */}
+              <Button
+                size="lg"
+                className="btn-primary bg-gradient-to-r from-blue-900 via-green-000 to-purple-500 text-white"
+              >
+                Open Account
                 <ArrowRight size={18} className="ml-2" />
               </Button>
-              <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white/10">
+
+              {/* Learn More Button */}
+              <Button
+                size="lg"
+                variant="outline"
+                className="bg-transparent border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white"
+              >
                 Learn More
               </Button>
             </div>
