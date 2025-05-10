@@ -1,0 +1,117 @@
+
+#root {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+}
+
+/* Animation for hover effects */
+.hover-scale {
+  transition: transform 0.3s ease-out;
+}
+
+.hover-scale:hover {
+  transform: translateY(-5px);
+}
+
+/* Custom styling for gradient backgrounds */
+.gradient-bg-blue-purple {
+  background: linear-gradient(90deg, #0E416C 0%, #9B87F5 100%);
+}
+
+.gradient-bg-green-purple {
+  background: linear-gradient(90deg, #71C5B7 0%, #9B87F5 100%);
+}
+
+.gradient-bg-blue-green {
+  background: linear-gradient(90deg, #0E416C 0%, #71C5B7 100%);
+}
+
+/* Custom styling for cards */
+.service-card {
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Custom styles for buttons */
+.btn-animated {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-animated::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s ease;
+  z-index: -1;
+}
+
+.btn-animated:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Card gradient styles for blue-green-purple theme */
+.card-gradient-blue {
+  background: linear-gradient(135deg, #D3E4FD 0%, #E5DEFF 100%);
+  border-color: #0E416C;
+}
+
+.card-gradient-green {
+  background: linear-gradient(135deg, #F2FCE2 0%, #D3E4FD 100%);
+  border-color: #71C5B7;
+}
+
+.card-gradient-purple {
+  background: linear-gradient(135deg, #E5DEFF 0%, #F2FCE2 100%);
+  border-color: #9B87F5;
+}
+
+/* Custom card effects */
+.card-chip {
+  background: linear-gradient(45deg, #FFD700, #FFA500);
+  height: 10px;
+  width: 25px;
+  border-radius: 2px;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.credit-card {
+  transition: all 0.3s ease;
+}
+
+.credit-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Carousel styling */
+.carousel-slide {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+}
+
+/* Responsive fixes */
+@media (max-width: 768px) {
+  .responsive-hide {
+    display: none;
+  }
+}
