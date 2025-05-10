@@ -61,20 +61,19 @@ const HeroSection = () => {
           </div>
           
           <div className="hidden md:block">
-            <div className="relative">
-              <div className="absolute -bottom-10 -right-10 w-80 h-80 bg-bank-accent/20 rounded-full blur-3xl"></div>
-              <Carousel className="w-full max-w-4xl mx-auto">
+            <div className="relative h-full">
+              {/* Left-side curve */}
+              <div className="absolute inset-0 -left-10 bg-bank-accent/20 rounded-l-full blur-3xl"></div>
+              <Carousel className="w-full h-full">
                 <CarouselContent>
                   {heroImages.map((image, index) => (
                     <CarouselItem key={index} className={index === currentIndex ? "block" : "hidden"}>
-                      <div className="relative">
-                        {/* Blur effect container */}
-                        <div className="absolute inset-0 w-full h-full bg-bank-accent/20 blur-2xl rounded-lg"></div>
+                      <div className="relative h-full">
                         {/* Image */}
-                        <img 
-                          src={image.src} 
-                          alt={image.alt} 
-                          className="relative z-10 rounded-lg shadow-2xl w-[800px] h-[500px] object-cover"
+                        <img
+                          src={image.src}
+                          alt={image.alt}
+                          className="relative z-10 rounded-l-full shadow-2xl w-full h-full object-cover"
                         />
                       </div>
                     </CarouselItem>
