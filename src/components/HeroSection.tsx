@@ -6,15 +6,15 @@ import { useEffect, useState } from "react";
 
 const heroImages = [
   {
-    src: "/placeholder.svg",
+    src: "https://july.finestwp.com/newwp/flexibank/wp-content/uploads/2024/09/banner-1-1.jpg",
     alt: "Banking professional",
   },
   {
-    src: "/placeholder.svg", 
+    src: "https://july.finestwp.com/newwp/flexibank/wp-content/uploads/2024/09/banner-2-1.jpg", 
     alt: "Mobile banking",
   },
   {
-    src: "/placeholder.svg",
+    src: "https://july.finestwp.com/newwp/flexibank/wp-content/uploads/2024/09/banner-3-1.jpg",
     alt: "Financial services",
   }
 ];
