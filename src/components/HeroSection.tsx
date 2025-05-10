@@ -1,4 +1,3 @@
-
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
@@ -40,7 +39,7 @@ const HeroSection = () => {
         <div className="grid md:grid-cols-2 gap-8 py-16 md:py-24 items-center">
           <div className="space-y-6 animate-fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              Maximize benefits with your every transaction
+              {heroImages[currentIndex].alt}
             </h1>
             <p className="text-lg md:text-xl text-gray-100 max-w-lg">
               Modern banking solutions tailored to your needs. Experience secure and convenient financial services with Skylet Bank.
@@ -63,11 +62,16 @@ const HeroSection = () => {
                 <CarouselContent>
                   {heroImages.map((image, index) => (
                     <CarouselItem key={index} className={index === currentIndex ? "block" : "hidden"}>
-                      <img 
-                        src={image.src} 
-                        alt={image.alt} 
-                        className="relative z-10 rounded-lg shadow-xl w-full h-[300px] object-cover"
-                      />
+                      <div className="relative">
+                        {/* Blur effect container */}
+                        <div className="absolute inset-0 w-full h-full bg-bank-accent/20 blur-2xl rounded-lg"></div>
+                        {/* Image */}
+                        <img 
+                          src={image.src} 
+                          alt={image.alt} 
+                          className="relative z-10 rounded-lg shadow-2xl w-full h-[500px] object-cover"
+                        />
+                      </div>
                     </CarouselItem>
                   ))}
                 </CarouselContent>
