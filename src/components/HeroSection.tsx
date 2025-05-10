@@ -22,7 +22,7 @@ const HeroSection = () => {
               {/* Open Account Button */}
               <Button
                 size="lg"
-                className="btn-primary bg-gradient-to-r from-blue-900 via-green-000 to-purple-500 text-white"
+                className="btn-primary bg-gradient-to-r from-blue-900 via-green-000 to-purple-500 text-white hover:bg-gradient-to-r hover:from-blue-400 hover:via-green-000 hover:to-purple-500"
               >
                 Open Account
                 <ArrowRight size={18} className="ml-2" />
@@ -32,7 +32,7 @@ const HeroSection = () => {
               <Button
                 size="lg"
                 variant="outline"
-                className="bg-transparent border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white"
+                className="bg-transparent border-blue-500 text-blue-500 hover:bg-gradient-to-r hover:from-blue-400 hover:via-green-000 hover:to-purple-500 hover:text-white"
               >
                 Learn More
               </Button>
