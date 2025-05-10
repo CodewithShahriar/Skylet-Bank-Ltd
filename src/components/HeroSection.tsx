@@ -33,9 +33,9 @@ const HeroSection = () => {
           <div className="hidden md:block">
             <div className="relative">
               <img
-                src="https://bankz.eu/wp-content/uploads/2023/06/image-A.webp"
+                src="https://i.ibb.co.com/rGVFPjMt/Whats-App-Image-2025-05-11-at-04-48-52-e6ec8e09.jpg"
                 alt="Banking Made Smart for Your Future"
-                className="relative z-10 rounded-lg shadow-2xl w-full h-auto object-cover"
+                className="relative z-10 rounded-lg w-full h-[600px] object-cover"
               />
             </div>
           </div>
