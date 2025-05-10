@@ -24,11 +24,10 @@ const heroImages = [
 const HeroSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Auto slide functionality with slower speed
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
-    }, 5000); // Slowed down to 8 seconds
+    }, 5000);
 
     return () => clearInterval(interval);
   }, []);
@@ -37,15 +36,14 @@ const HeroSection = () => {
     <section className="relative overflow-hidden bg-bank-primary text-white">
       {/* Background gradient overlay */}
       <div className="absolute inset-0 bg-hero-gradient opacity-90"></div>
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid md:grid-cols-2 gap-8 py-16 md:py-24 items-center">
+          {/* Text Section */}
           <div className="space-y-6 animate-fade-in">
-            {/* Dynamic heading */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               {heroImages[currentIndex].alt}
             </h1>
-            {/* Dynamic subtext */}
             <p className="text-lg md:text-xl text-gray-100 max-w-lg">
               {heroImages[currentIndex].description}
             </p>
@@ -59,34 +57,31 @@ const HeroSection = () => {
               </Button>
             </div>
           </div>
-          
-          <div className="hidden md:block">
-            <div className="relative h-full">
-              {/* Left-side curve */}
-              <div className="absolute inset-0 -left-10 bg-bank-accent/20 rounded-l-full blur-3xl"></div>
-              <Carousel className="w-full h-full">
-                <CarouselContent>
-                  {heroImages.map((image, index) => (
-                    <CarouselItem key={index} className={index === currentIndex ? "block" : "hidden"}>
-                      <div className="relative h-full">
-                        {/* Image */}
-                        <img
-                          src={image.src}
-                          alt={image.alt}
-                          className="relative z-10 rounded-l-full shadow-2xl w-full h-full object-cover"
-                        />
-                      </div>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-                <CarouselPrevious className="left-2" />
-                <CarouselNext className="right-2" />
-              </Carousel>
-            </div>
+
+          {/* Image Section */}
+          <div className="hidden md:block h-[500px] relative">
+            <Carousel className="w-full h-full">
+              <CarouselContent className="w-full h-full">
+                {heroImages.map((image, index) => (
+                  <CarouselItem
+                    key={index}
+                    className={`w-full h-full ${index === currentIndex ? "block" : "hidden"}`}
+                  >
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-full object-cover"
+                    />
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="left-2" />
+              <CarouselNext className="right-2" />
+            </Carousel>
           </div>
         </div>
       </div>
-      
+
       {/* Quick access features */}
       <div className="bg-white py-6 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
