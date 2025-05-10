@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Menu, X, User, Search } from "lucide-react";
@@ -22,7 +21,9 @@ const Navbar = () => {
           {/* Logo section */}
           <div className="flex-shrink-0 flex items-center">
             <Link to="/" className="flex items-center">
-              <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-bank-primary to-bank-accent">Skylet Bank</span>
+              <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-green-700 to-purple-800">
+                SKYLET BANK LTD
+              </span>
             </Link>
           </div>
 
