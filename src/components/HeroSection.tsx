@@ -5,19 +5,19 @@ import { useEffect, useState } from "react";
 
 const heroImages = [
   {
-    src: "https://july.finestwp.com/newwp/flexibank/wp-content/uploads/2024/09/banner-1-1.jpg",
-    alt: "Banking professional",
-    description: "Empowering professionals with modern banking solutions.",
+    src: "https://img.freepik.com/free-vector/online-transactions-concept-illustration_114360-5462.jpg?semt=ais_hybrid&w=740",
+    alt: "Banking Made Smart for Your Future ",
+    description: "Experience the next generation of banking with Skylet Bank. Secure, modern, and designed for your financial growth.",
   },
   {
-    src: "https://july.finestwp.com/newwp/flexibank/wp-content/uploads/2024/09/banner-2-1.jpg",
-    alt: "Mobile banking",
-    description: "Bank anytime, anywhere with our mobile banking app.",
+    src: "https://deepvue.tech/wp-content/uploads/2025/03/20602904_6333208-1-1-1-1-min.png",
+    alt: "Your Security, Our Top Priority",
+    description: "Bank with confidence at Skylet Bank. Advanced encryption, real-time alerts, and fraud protection built to safeguard your financial future.",
   },
   {
-    src: "https://july.finestwp.com/newwp/flexibank/wp-content/uploads/2024/09/banner-3-1.jpg",
-    alt: "Financial services",
-    description: "Secure and convenient financial services for everyone.",
+    src: "https://img.freepik.com/free-vector/e-wallet-concept-illustration_114360-7711.jpg?semt=ais_hybrid&w=740",
+    alt: "Empower Your Finances, Embrace Your Future",
+    description: "Discover a smarter way to manage your money with Skylet Bank. Personalized, efficient, and focused on your financial success.",
   },
 ];
 
@@ -34,7 +34,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative overflow-hidden text-white hero-gradient">
+    <section className="relative overflow-hidden bg-white text-black">
       {/* Background gradient overlay */}
       <div className="absolute inset-0 opacity-90"></div>
       
@@ -46,7 +46,7 @@ const HeroSection = () => {
               {heroImages[currentIndex].alt}
             </h1>
             {/* Dynamic subtext */}
-            <p className="text-lg md:text-xl text-gray-100 max-w-lg">
+            <p className="text-lg md:text-xl text-gray-700 max-w-lg">
               {heroImages[currentIndex].description}
             </p>
             <div className="flex flex-wrap gap-4">
