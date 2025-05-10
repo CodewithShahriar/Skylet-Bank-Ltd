@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 const heroImages = [
   {
-    src: "https://img.freepik.com/free-vector/online-transactions-concept-illustration_114360-5462.jpg?semt=ais_hybrid&w=740",
+    src: "https://bankz.eu/wp-content/uploads/2023/06/image-A.webp",
     alt: "Banking Made Smart for Your Future ",
     description: "Experience the next generation of banking with Skylet Bank. Secure, modern, and designed for your financial growth.",
   },
@@ -15,7 +15,7 @@ const heroImages = [
     description: "Bank with confidence at Skylet Bank. Advanced encryption, real-time alerts, and fraud protection built to safeguard your financial future.",
   },
   {
-    src: "https://img.freepik.com/free-vector/e-wallet-concept-illustration_114360-7711.jpg?semt=ais_hybrid&w=740",
+    src: "https://img.freepik.com/free-vector/online-transactions-concept-illustration_114360-5462.jpg?semt=ais_hybrid&w=740",
     alt: "Empower Your Finances, Embrace Your Future",
     description: "Discover a smarter way to manage your money with Skylet Bank. Personalized, efficient, and focused on your financial success.",
   },
