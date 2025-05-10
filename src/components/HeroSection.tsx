@@ -7,26 +7,29 @@ const heroImages = [
   {
     src: "https://july.finestwp.com/newwp/flexibank/wp-content/uploads/2024/09/banner-1-1.jpg",
     alt: "Banking professional",
+    description: "Empowering professionals with modern banking solutions.",
   },
   {
-    src: "https://july.finestwp.com/newwp/flexibank/wp-content/uploads/2024/09/banner-2-1.jpg", 
+    src: "https://july.finestwp.com/newwp/flexibank/wp-content/uploads/2024/09/banner-2-1.jpg",
     alt: "Mobile banking",
+    description: "Bank anytime, anywhere with our mobile banking app.",
   },
   {
     src: "https://july.finestwp.com/newwp/flexibank/wp-content/uploads/2024/09/banner-3-1.jpg",
     alt: "Financial services",
-  }
+    description: "Secure and convenient financial services for everyone.",
+  },
 ];
 
 const HeroSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Auto slide functionality
+  // Auto slide functionality with slower speed
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
-    }, 5000);
-    
+    }, 5000); // Slowed down to 8 seconds
+
     return () => clearInterval(interval);
   }, []);
 
@@ -38,11 +41,13 @@ const HeroSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid md:grid-cols-2 gap-8 py-16 md:py-24 items-center">
           <div className="space-y-6 animate-fade-in">
+            {/* Dynamic heading */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               {heroImages[currentIndex].alt}
             </h1>
+            {/* Dynamic subtext */}
             <p className="text-lg md:text-xl text-gray-100 max-w-lg">
-              Modern banking solutions tailored to your needs. Experience secure and convenient financial services with Skylet Bank.
+              {heroImages[currentIndex].description}
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="btn-primary bg-bank-red">
