@@ -7,7 +7,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   
   const menuItems = [
-    { name: "Personal Banking", link: "/" },
+    { name: "Product & Service", link: "/" },
     { name: "Business Banking", link: "/" },
     { name: "Islamic Banking", link: "/" },
     { name: "About Us", link: "/" },
@@ -37,7 +37,7 @@ const Navbar = () => {
               >
                 {item.name}
               </Link>
-            ))}
+            ))}           
           </div>
 
           {/* Right side buttons */}
@@ -46,7 +46,9 @@ const Navbar = () => {
               <Search size={16} />
               <span className="sr-only md:not-sr-only md:inline-block">Search</span>
             </Button>
-            <Button className="bg-bank-primary hover:bg-bank-primary/90">
+            <Button
+              className="btn-primary bg-gradient-to-r from-blue-700 via-green-000 to-purple-500 text-white hover:bg-gradient-to-r hover:from-blue-400 hover:via-green-000 hover:to-purple-600"
+            >
               <User size={16} className="mr-2" />
               Login
             </Button>
@@ -83,7 +85,9 @@ const Navbar = () => {
                 <Search size={16} />
                 <span>Search</span>
               </Button>
-              <Button className="bg-bank-primary hover:bg-bank-primary/90">
+              <Button
+                className="btn-primary bg-gradient-to-r from-blue-900 via-green-500 to-purple-500 text-white hover:bg-gradient-to-r hover:from-blue-400 hover:via-green-500 hover:to-purple-500"
+              >
                 <User size={16} className="mr-2" />
                 Login
               </Button>
