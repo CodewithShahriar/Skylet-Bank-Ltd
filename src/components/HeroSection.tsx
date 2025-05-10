@@ -33,7 +33,7 @@ const HeroSection = () => {
           <div className="hidden md:block">
             <div className="relative">
               <img
-                src="https://i.ibb.co.com/rGVFPjMt/Whats-App-Image-2025-05-11-at-04-48-52-e6ec8e09.jpg"
+                src="https://i.ibb.co.com/GvV1X4tB/Whats-App-Image-2025-05-11-at-05-30-38-c9fc62ca.jpg"
                 alt="Banking Made Smart for Your Future"
                 className="relative z-10 rounded-lg w-full h-[600px] object-cover"
               />
