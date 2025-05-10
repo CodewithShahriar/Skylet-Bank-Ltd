@@ -42,7 +42,7 @@ const HeroSection = () => {
         <div className="grid md:grid-cols-2 gap-8 py-16 md:py-24 items-center">
           <div className="space-y-6 animate-fade-in">
             {/* Dynamic heading */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-green-500 to-purple-500">
               {heroImages[currentIndex].alt}
             </h1>
             {/* Dynamic subtext */}
