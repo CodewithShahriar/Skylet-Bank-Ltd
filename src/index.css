@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -118,5 +117,9 @@
   
   .gradient-text {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-bank-primary via-bank-accent to-bank-secondary;
+  }
+
+  .hero-gradient {
+    @apply bg-gradient-to-r from-blue-500 via-green-500 to-purple-500;
   }
 }

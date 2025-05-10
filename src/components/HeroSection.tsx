@@ -34,9 +34,9 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative overflow-hidden bg-bank-primary text-white">
+    <section className="relative overflow-hidden text-white hero-gradient">
       {/* Background gradient overlay */}
-      <div className="absolute inset-0 bg-hero-gradient opacity-90"></div>
+      <div className="absolute inset-0 opacity-90"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid md:grid-cols-2 gap-8 py-16 md:py-24 items-center">
