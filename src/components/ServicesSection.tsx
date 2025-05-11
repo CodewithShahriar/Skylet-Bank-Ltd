@@ -44,10 +44,10 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <Card
               key={index}
-              className="group bg-white border border-gray-200 overflow-hidden card-hover transition-all duration-300"
+              className="group bg-white border border-gray-300 overflow-hidden card-hover transition-all duration-300"
             >
               <CardHeader className="pb-2">
-                <div className="mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-800 group-hover:to-green-700 group-hover:via-transparent">
+                <div className="mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-200 group-hover:to-green-200 group-hover:via-transparent">
                   {service.icon}
                 </div>
                 <CardTitle className="text-xl font-bold text-bank-primary group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-700 group-hover:to-green-500">
