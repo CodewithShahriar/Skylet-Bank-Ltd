@@ -662,7 +662,8 @@ const CardsPage = () => {
       </section>
       
       {/* Apply for Card Section */}
-      <section className="py-16 px-4 md:px-8 bg-gradient-to-r from-blue-600 to-purple-700 text-white">
+     <section className="py-16 px-4 md:px-8 bg-gradient-to-r from-blue-800 via-green-600 to-blue-700 text-white">
+
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-bold mb-2">Ready to Apply?</h2>
@@ -702,7 +703,7 @@ const CardsPage = () => {
           </div>
           
           <div className="text-center mt-12">
-            <Button className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-6 text-lg">Apply for a Card Now</Button>
+            <Button className="bg-white text-blue-900 hover:bg-blue-100 px-8 py-6 text-lg">Apply for a Card Now</Button>
           </div>
         </div>
       </section>
