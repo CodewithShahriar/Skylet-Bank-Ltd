@@ -470,7 +470,10 @@ const AccountsPage = () => {
           </div>
           
           <div className="text-center mt-10">
-            <Button className="bg-blue-600 hover:bg-blue-700 text-lg px-8 py-6">Open Your Account Now</Button>
+            <Button className="bg-gradient-to-r from-blue-600 to-green-500 hover:from-blue-700 hover:to-green-600 text-lg px-8 py-6">
+  Open Your Account Now
+</Button>
+
           </div>
         </div>
       </section>
