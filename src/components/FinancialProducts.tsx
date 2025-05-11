@@ -45,16 +45,19 @@ const FinancialProducts = () => {
         <div className="mb-4 p-3 rounded-full bg-bank-secondary/10">
           {service.icon}
         </div>
-        <h3 className="text-xl font-bold text-bank-primary mb-2 group-hover:text-gradient-to-r group-hover:from-blue-300 group-hover:via-green-200 group-hover:to-purple-300">
+        {/* Title with gradient hover effect */}
+        <h3 className="text-xl font-bold text-bank-primary mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-800 group-hover:via-green-600 group-hover:to-purple-800">
           {service.title}
         </h3>
-        <p className="text-gray-600 group-hover:text-gradient-to-r group-hover:from-blue-300 group-hover:via-green-200 group-hover:to-purple-300">
+        {/* Description with gradient hover effect */}
+        <p className="text-gray-600 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-800 group-hover:via-green-800 group-hover:to-purple-800">
           {service.description}
         </p>
       </CardContent>
     </Card>
   ))}
 </div>
+
         </div>
         
         {/* Credit Cards Section with Realistic Cards */}
@@ -85,10 +88,26 @@ const FinancialProducts = () => {
                   <span>24/7 concierge services</span>
                 </li>
               </ul>
-              <Button className="w-full md:w-auto bg-white text-bank-primary hover:bg-white/90">
-                Apply Now
-                <ArrowRight size={16} className="ml-2" />
-              </Button>
+              <div
+                  style={{
+                    padding: "2px",
+                    borderRadius: "0.5rem",
+                    background: "linear-gradient(135deg, #3b82f6, #10b981, #8b5cf6)",
+                    backgroundSize: "300% 300%",
+                    animation: "glowBorder 5s linear infinite"
+                  }}
+                  className="w-full"
+                >
+                  <div className="bg-white rounded-md w-full">
+                    <Button
+                      variant="outline"
+                      className="w-full text-bank-primary hover:scale-105 transition duration-200 border-none"
+                    >
+                      Apply Now
+                      <ArrowRight size={16} className="ml-2" />
+                    </Button>
+                  </div>
+              </div>
             </div>
             
             <div className="md:col-span-3 relative">

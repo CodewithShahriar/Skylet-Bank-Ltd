@@ -76,7 +76,7 @@ const BankingServices = () => {
     advisory: {
       title: "Expert Financial",
       subtitle: "Guidance",
-      description: "Our team of certified financial advisors provides personalized strategies to help you navigate complex financial decisions and build a secure future.",
+      description: "Our team of certified financial advisors provides personalized strategies and expert advice to help you navigate complex financial decisions and build a secure future.",
       stats: [
         { value: "500+", label: "Advisory Clients", growth: "12.4% IN LFY" },
         { value: "৳4.6b", label: "Assets Under Management", growth: "8.7% IN LFY" }
