@@ -1,10 +1,13 @@
-
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+  const [subscribed, setSubscribed] = useState(false);
+
   const quickLinks = [
     { name: "About Us", href: "/" },
     { name: "Careers", href: "/" },
@@ -30,8 +33,9 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-bank-dark text-white">
+    <footer className="bg-gradient-to-r from-blue-800 via-green-600 to-purple-800 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
         {/* Newsletter Section */}
         <div className="bg-bank-primary/20 rounded-xl p-6 mb-12">
           <div className="grid md:grid-cols-2 gap-6 items-center">
@@ -40,18 +44,35 @@ const Footer = () => {
               <p className="text-white/70 mb-0">Subscribe to our newsletter for the latest news and offers</p>
             </div>
             <div className="flex gap-2">
-              <Input 
-                type="email" 
-                placeholder="Enter your email" 
-                className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus-visible:ring-bank-accent" 
-              />
-              <Button className="bg-bank-accent hover:bg-bank-accent/90">
-                Subscribe
-              </Button>
+              {!subscribed ? (
+                <>
+                  <Input
+                    type="email"
+                    placeholder="Enter your email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus-visible:ring-bank-accent"
+                  />
+                  <Button
+                    className="bg-bank-accent hover:bg-bank-accent/90"
+                    onClick={() => {
+                      if (email.trim()) {
+                        setSubscribed(true);
+                      }
+                    }}
+                  >
+                    Subscribe
+                  </Button>
+                </>
+              ) : (
+                <p className="text-white font-medium">
+                  Thank you for subscribing! Our support team will reach out via email if needed.
+                </p>
+              )}
             </div>
           </div>
         </div>
-        
+
         {/* Main Footer Content */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-12 gap-8 mb-10">
           <div className="lg:col-span-4">
@@ -59,14 +80,14 @@ const Footer = () => {
               <span className="text-2xl font-bold">Skylet Bank</span>
             </Link>
             <p className="text-white/70 mb-4">
-              Providing innovative banking solutions for individuals and businesses since 2015. We are committed to excellence in customer service and financial solutions.
+              Providing innovative banking solutions for individuals and businesses
             </p>
             <div className="space-y-2">
               <div className="flex items-start">
                 <Phone className="w-5 h-5 mr-3 text-bank-accent mt-0.5" />
                 <div>
                   <p className="font-medium">Customer Support</p>
-                  <p className="text-white/70">16247 (24/7)</p>
+                  <p className="text-white/70">165247 (24/7)</p>
                 </div>
               </div>
               <div className="flex items-start">
@@ -85,7 +106,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="lg:col-span-2 sm:col-span-1">
             <h4 className="font-bold text-lg mb-4">Quick Links</h4>
             <ul className="space-y-2">
@@ -98,7 +119,7 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-          
+
           <div className="lg:col-span-2 sm:col-span-1">
             <h4 className="font-bold text-lg mb-4">Products</h4>
             <ul className="space-y-2">
@@ -111,7 +132,7 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-          
+
           <div className="lg:col-span-2 sm:col-span-1">
             <h4 className="font-bold text-lg mb-4">Support</h4>
             <ul className="space-y-2">
@@ -124,7 +145,7 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-          
+
           <div className="lg:col-span-2 sm:col-span-1">
             <h4 className="font-bold text-lg mb-4">Banking Hours</h4>
             <ul className="space-y-2 text-white/70">
@@ -135,7 +156,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        
+
         {/* Bottom Footer */}
         <div className="pt-8 mt-8 border-t border-white/10">
           <div className="flex flex-col md:flex-row justify-between">
