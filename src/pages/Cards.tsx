@@ -651,11 +651,12 @@ const CardsPage = () => {
             </Card>
           </div>
           
-          <div className="mt-8 text-center">
-            <Button className="bg-red-600 hover:bg-red-700 text-lg px-6 py-4">
-                Report Lost Card Now
-            </Button>
-            </div>
+           <div className="mt-8 text-center">
+                <Button className="bg-red-600 hover:bg-red-700 text-lg px-6 py-4 animate-slow-blink">
+                    Report Lost Card Now
+                </Button>
+                </div>
+
 
         </div>
       </section>
