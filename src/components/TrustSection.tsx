@@ -53,28 +53,36 @@ const TrustSection = () => {
         
         {/* Testimonials */}
         <div>
-          <h3 className="text-2xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-900 via-green-600 to-blue-900 mb-10">
+           <h3 className="text-2xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-900 via-green-600 to-blue-900 mb-10">
   What Our Customers Say
 </h3>
-          
           <div className="grid md:grid-cols-3 gap-8">
-            <Testimonial 
-              content="Skylet Bank has transformed how I manage my finances. Their mobile app is intuitive and their customer service is exceptional."
-              author="Ahsan Rahman"
-              position="Business Owner"
-            />
-            <Testimonial 
-              content="I've been with Skylet Bank for 3 years now. Their Islamic banking services align perfectly with my values while delivering great returns."
-              author="Fatima Begum"
-              position="University Professor"
-            />
-            <Testimonial 
-              content="The loan process was seamless and quick. The bank representatives were helpful throughout the entire application process."
-              author="Mohammed Hasan"
-              position="Software Engineer"
-            />
-          </div>
+  <div className="p-6 rounded-xl bg-gradient-to-br from-blue-100 via-green-100 to-purple-100 shadow-md">
+    <Testimonial 
+      content="Skylet Bank has transformed how I manage my finances. Their mobile app is intuitive and their customer service is exceptional."
+      author="Ahsan Rahman"
+      position="Business Owner"
+    />
+  </div>
+  
+  <div className="p-6 rounded-xl bg-gradient-to-br from-blue-100 via-green-100 to-purple-100 shadow-md">
+    <Testimonial 
+      content="I've been with Skylet Bank for 3 years now. Their Islamic banking services align perfectly with my values while delivering great returns."
+      author="Fatima Begum"
+      position="University Professor"
+    />
+  </div>
+
+  <div className="p-6 rounded-xl bg-gradient-to-br from-blue-100 via-green-100 to-purple-100 shadow-md">
+    <Testimonial 
+      content="The loan process was seamless and quick. The bank representatives were helpful throughout the entire application process."
+      author="Mohammed Hasan"
+      position="Software Engineer"
+    />
+  </div>
+</div>
         </div>
+
       </div>
     </section>
   );
