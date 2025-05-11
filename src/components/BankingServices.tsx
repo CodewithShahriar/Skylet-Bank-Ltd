@@ -164,10 +164,11 @@ const BankingServices = () => {
                 ))}
               </div>
               
-              <Button className="btn-primary bg-gradient-to-r from-blue-900 via-green-000 to-purple-500 text-white hover:bg-gradient-to-r hover:from-blue-600 hover:via-green-000 hover:to-purple-600">
+              <Button className="btn-primary bg-gradient-to-r from-blue-700 to-green-700 text-white hover:bg-gradient-to-r hover:from-blue-600 hover:to-green-600">
                 Explore Options
                 <ArrowRight size={16} className="ml-2" />
               </Button>
+
             </div>
             
             {/* Digital account opening form */}
