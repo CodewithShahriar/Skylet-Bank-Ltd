@@ -62,7 +62,7 @@ const AccountsPage = () => {
       <section className="py-16 px-4 md:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-2">Account Types</h2>
+            <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-900 via-green-600 to-purple-800 mb-2">Account Types</h2>
             <p className="text-lg text-gray-600">Select the account that fits your lifestyle and financial goals</p>
           </div>
           
@@ -81,7 +81,8 @@ const AccountsPage = () => {
             
             <TabsContent value="personal" className="mt-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Card className="card-hover">
+                <Card className="card-hover border border-gray-300 rounded-md">
+
                   <CardHeader>
                     <div className="flex items-center gap-3 mb-2">
                       <div className="bg-blue-100 p-2 rounded-full">
@@ -106,11 +107,13 @@ const AccountsPage = () => {
                         <span>No minimum balance requirements</span>
                       </li>
                     </ul>
-                    <Button className="mt-4 bg-blue-600 hover:bg-blue-700">Learn More</Button>
+                   <Button className="mt-4 bg-gradient-to-r from-blue-600 to-green-500 hover:bg-gradient-to-r hover:from-blue-700 to-green-600">
+                            Learn More
+                    </Button>
                   </CardContent>
                 </Card>
                 
-                <Card className="card-hover">
+                <Card className="card-hover border border-gray-300 rounded-md">
                   <CardHeader>
                     <div className="flex items-center gap-3 mb-2">
                       <div className="bg-blue-100 p-2 rounded-full">
@@ -135,11 +138,13 @@ const AccountsPage = () => {
                         <span>Overdraft options available</span>
                       </li>
                     </ul>
-                    <Button className="mt-4 bg-blue-600 hover:bg-blue-700">Learn More</Button>
+                    <Button className="mt-4 bg-gradient-to-r from-blue-600 to-green-500 hover:bg-gradient-to-r hover:from-blue-700 to-green-600">
+                            Learn More
+                    </Button>
                   </CardContent>
                 </Card>
                 
-                <Card className="card-hover">
+                <Card className="card-hover border border-gray-300 rounded-md">
                   <CardHeader>
                     <div className="flex items-center gap-3 mb-2">
                       <div className="bg-blue-100 p-2 rounded-full">
@@ -164,11 +169,13 @@ const AccountsPage = () => {
                         <span>Discounts on educational services</span>
                       </li>
                     </ul>
-                    <Button className="mt-4 bg-blue-600 hover:bg-blue-700">Learn More</Button>
+                    <Button className="mt-4 bg-gradient-to-r from-blue-600 to-green-500 hover:bg-gradient-to-r hover:from-blue-700 to-green-600">
+                            Learn More
+                    </Button>
                   </CardContent>
                 </Card>
                 
-                <Card className="card-hover">
+                <Card className="card-hover border border-gray-300 rounded-md">
                   <CardHeader>
                     <div className="flex items-center gap-3 mb-2">
                       <div className="bg-blue-100 p-2 rounded-full">
@@ -193,7 +200,9 @@ const AccountsPage = () => {
                         <span>Special loan rates for account holders</span>
                       </li>
                     </ul>
-                    <Button className="mt-4 bg-blue-600 hover:bg-blue-700">Learn More</Button>
+                    <Button className="mt-4 bg-gradient-to-r from-blue-600 to-green-500 hover:bg-gradient-to-r hover:from-blue-700 to-green-600">
+                            Learn More
+                    </Button>
                   </CardContent>
                 </Card>
               </div>
@@ -201,7 +210,7 @@ const AccountsPage = () => {
             
             <TabsContent value="business" className="mt-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Card className="card-hover">
+                <Card className="card-hover border border-gray-300 rounded-md">
                   <CardHeader>
                     <div className="flex items-center gap-3 mb-2">
                       <div className="bg-blue-100 p-2 rounded-full">
@@ -226,11 +235,13 @@ const AccountsPage = () => {
                         <span>Business analytics dashboard</span>
                       </li>
                     </ul>
-                    <Button className="mt-4 bg-blue-600 hover:bg-blue-700">Learn More</Button>
+                    <Button className="mt-4 bg-gradient-to-r from-blue-600 to-green-500 hover:bg-gradient-to-r hover:from-blue-700 to-green-600">
+                            Learn More
+                    </Button>
                   </CardContent>
                 </Card>
                 
-                <Card className="card-hover">
+                <Card className="card-hover border border-gray-300 rounded-md">
                   <CardHeader>
                     <div className="flex items-center gap-3 mb-2">
                       <div className="bg-blue-100 p-2 rounded-full">
@@ -255,7 +266,9 @@ const AccountsPage = () => {
                         <span>Networking opportunities</span>
                       </li>
                     </ul>
-                    <Button className="mt-4 bg-blue-600 hover:bg-blue-700">Learn More</Button>
+                    <Button className="mt-4 bg-gradient-to-r from-blue-600 to-green-500 hover:bg-gradient-to-r hover:from-blue-700 to-green-600">
+                            Learn More
+                    </Button>
                   </CardContent>
                 </Card>
               </div>
@@ -263,7 +276,7 @@ const AccountsPage = () => {
             
             <TabsContent value="digital" className="mt-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Card className="card-hover">
+                <Card className="card-hover border border-gray-300 rounded-md">
                   <CardHeader>
                     <div className="flex items-center gap-3 mb-2">
                       <div className="bg-blue-100 p-2 rounded-full">
@@ -288,11 +301,13 @@ const AccountsPage = () => {
                         <span>24/7 digital support</span>
                       </li>
                     </ul>
-                    <Button className="mt-4 bg-blue-600 hover:bg-blue-700">Learn More</Button>
+                    <Button className="mt-4 bg-gradient-to-r from-blue-600 to-green-500 hover:bg-gradient-to-r hover:from-blue-700 to-green-600">
+                            Learn More
+                    </Button>
                   </CardContent>
                 </Card>
                 
-                <Card className="card-hover">
+                <Card className="card-hover border border-gray-300 rounded-md">
                   <CardHeader>
                     <div className="flex items-center gap-3 mb-2">
                       <div className="bg-blue-100 p-2 rounded-full">
@@ -317,11 +332,13 @@ const AccountsPage = () => {
                         <span>Joint financial planning tools</span>
                       </li>
                     </ul>
-                    <Button className="mt-4 bg-blue-600 hover:bg-blue-700">Learn More</Button>
+                    <Button className="mt-4 bg-gradient-to-r from-blue-600 to-green-500 hover:bg-gradient-to-r hover:from-blue-700 to-green-600">
+                            Learn More
+                    </Button>
                   </CardContent>
                 </Card>
                 
-                <Card className="card-hover">
+                <Card className="card-hover border border-gray-300 rounded-md">
                   <CardHeader>
                     <div className="flex items-center gap-3 mb-2">
                       <div className="bg-blue-100 p-2 rounded-full">
@@ -346,11 +363,13 @@ const AccountsPage = () => {
                         <span>Free doorstep banking services</span>
                       </li>
                     </ul>
-                    <Button className="mt-4 bg-blue-600 hover:bg-blue-700">Learn More</Button>
+                    <Button className="mt-4 bg-gradient-to-r from-blue-600 to-green-500 hover:bg-gradient-to-r hover:from-blue-700 to-green-600">
+                            Learn More
+                    </Button>
                   </CardContent>
                 </Card>
                 
-                <Card className="card-hover">
+                <Card className="card-hover border border-gray-300 rounded-md">
                   <CardHeader>
                     <div className="flex items-center gap-3 mb-2">
                       <div className="bg-blue-100 p-2 rounded-full">
@@ -375,7 +394,9 @@ const AccountsPage = () => {
                         <span>Tax advisory services</span>
                       </li>
                     </ul>
-                    <Button className="mt-4 bg-blue-600 hover:bg-blue-700">Learn More</Button>
+                    <Button className="mt-4 bg-gradient-to-r from-blue-600 to-green-500 hover:bg-gradient-to-r hover:from-blue-700 to-green-600">
+                            Learn More
+                    </Button>
                   </CardContent>
                 </Card>
               </div>
