@@ -147,7 +147,7 @@ const CardsPage = () => {
                 
                 <Card className="overflow-hidden">
                   <div className="h-48  flex items-center justify-center p-6">
-                    <div className="credit-card bg-gradient-to-r from-purple-500 to-purple-700 p-4 rounded-xl w-64 h-36 shadow-lg">
+                    <div className="credit-card bg-gradient-to-r from-yellow-700 to-green-800 p-4 rounded-xl w-64 h-36 shadow-lg">
                       <div className="flex justify-between">
                         <p className="text-xs text-white/80">Skylet Bank Ltd.</p>
                         <CreditCard className="text-white/70" size={20} />
