@@ -93,10 +93,12 @@ const CardsPage = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Card className="overflow-hidden">
                   <div className="h-48  flex items-center justify-center p-6">
-                    <div className="credit-card bg-gradient-to-r from-blue-500 to-blue-700 p-4 rounded-xl w-64 h-36 shadow-lg">
+                    <div className="credit-card bg-gradient-to-r from-blue-500 via-purple-600 to-green-500 p-4 rounded-xl w-64 h-36 shadow-lg">
                       <div className="flex justify-between">
                         <p className="text-xs text-white/80">Skylet Bank Ltd.</p>
+                        
                         <CreditCard className="text-white/70" size={20} />
+                        
                       </div>
                       <div className="card-chip mx-0 my-3"></div>
                       <p className="text-white text-sm tracking-widest">•••• •••• •••• 1234</p>
@@ -203,8 +205,8 @@ const CardsPage = () => {
             <TabsContent value="credit" className="mt-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Card className="overflow-hidden">
-                  <div className="h-48 bg-gradient-to-r from-yellow-400 to-amber-600 flex items-center justify-center p-6">
-                    <div className="credit-card bg-gradient-to-r from-yellow-400 to-amber-600 p-4 rounded-xl w-64 h-36 shadow-lg">
+                  <div className="h-48  flex items-center justify-center p-6">
+                    <div className="credit-card bg-gradient-to-r from-amber-800 to-yellow-600 p-4 rounded-xl w-64 h-36 shadow-lg">
                       <div className="flex justify-between">
                         <div>
                           <p className="text-xs text-white/80">Skylet Bank</p>
@@ -237,7 +239,7 @@ const CardsPage = () => {
                     <ul className="space-y-2 mb-6">
                       <li className="flex items-start gap-2">
                         <CheckCircle className="min-w-4 text-yellow-600 mt-1" size={16} />
-                        <span>1 reward point for every ₹100 spent</span>
+                        <span>1 reward point for every ৳100 spent</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <CheckCircle className="min-w-4 text-yellow-600 mt-1" size={16} />
@@ -245,11 +247,11 @@ const CardsPage = () => {
                       </li>
                       <li className="flex items-start gap-2">
                         <CheckCircle className="min-w-4 text-yellow-600 mt-1" size={16} />
-                        <span>Fuel surcharge waiver up to ₹1,000 per month</span>
+                        <span>Fuel surcharge waiver up to ৳1,000 per month</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <CheckCircle className="min-w-4 text-yellow-600 mt-1" size={16} />
-                        <span>Annual fee: ₹1,000 (waived on spending ₹1,50,000/year)</span>
+                        <span>Annual fee: ৳1,000 (waived on spending ৳1,50,000/year)</span>
                       </li>
                     </ul>
                     <Button className="w-full bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-600">
@@ -259,8 +261,8 @@ const CardsPage = () => {
                 </Card>
                 
                 <Card className="overflow-hidden">
-                  <div className="h-48 bg-gradient-to-r from-blue-400 to-blue-700 flex items-center justify-center p-6">
-                    <div className="credit-card bg-gradient-to-r from-blue-400 to-blue-700 p-4 rounded-xl w-64 h-36 shadow-lg">
+                  <div className="h-48  flex items-center justify-center p-6">
+                    <div className="credit-card bg-gradient-to-r from-gray-600 to-black p-4 rounded-xl w-64 h-36 shadow-lg">
                       <div className="flex justify-between">
                         <div>
                           <p className="text-xs text-white/80">Skylet Bank</p>
@@ -293,7 +295,7 @@ const CardsPage = () => {
                     <ul className="space-y-2 mb-6">
                       <li className="flex items-start gap-2">
                         <CheckCircle className="min-w-4 text-blue-600 mt-1" size={16} />
-                        <span>2 reward points for every ₹100 spent</span>
+                        <span>2 reward points for every ৳100 spent</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <CheckCircle className="min-w-4 text-blue-600 mt-1" size={16} />
@@ -301,11 +303,11 @@ const CardsPage = () => {
                       </li>
                       <li className="flex items-start gap-2">
                         <CheckCircle className="min-w-4 text-blue-600 mt-1" size={16} />
-                        <span>Travel insurance coverage up to ₹50 lakhs</span>
+                        <span>Travel insurance coverage up to ৳50 lakhs</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <CheckCircle className="min-w-4 text-blue-600 mt-1" size={16} />
-                        <span>Annual fee: ₹3,000 (waived on spending ₹3,00,000/year)</span>
+                        <span>Annual fee: ৳3,000 (waived on spending ৳3,00,000/year)</span>
                       </li>
                     </ul>
                     <Button className="w-full bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-600">
@@ -319,8 +321,8 @@ const CardsPage = () => {
             <TabsContent value="prepaid" className="mt-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Card className="overflow-hidden">
-                  <div className="h-48 bg-gradient-to-r from-green-400 to-green-600 flex items-center justify-center p-6">
-                    <div className="credit-card bg-gradient-to-r from-green-500 to-green-700 p-4 rounded-xl w-64 h-36 shadow-lg">
+                  <div className="h-48 ৳ flex items-center justify-center p-6">
+                    <div className="credit-card bg-gradient-to-r from-yellow-500 to-orange-500 p-4 rounded-xl w-64 h-36 shadow-lg">
                       <div className="flex justify-between">
                         <p className="text-xs text-white/80">Skylet Bank</p>
                         <CreditCard className="text-white/70" size={20} />
@@ -372,8 +374,8 @@ const CardsPage = () => {
                 </Card>
                 
                 <Card className="overflow-hidden">
-                  <div className="h-48 bg-gradient-to-r from-purple-400 to-indigo-600 flex items-center justify-center p-6">
-                    <div className="credit-card bg-gradient-to-r from-purple-500 to-indigo-700 p-4 rounded-xl w-64 h-36 shadow-lg">
+                  <div className="h-48  flex items-center justify-center p-6">
+                    <div className="credit-card bg-gradient-to-r from-green-800 to-lime-500 p-4 rounded-xl w-64 h-36 shadow-lg">
                       <div className="flex justify-between">
                         <p className="text-xs text-white/80">Skylet Bank</p>
                         <CreditCard className="text-white/70" size={20} />
