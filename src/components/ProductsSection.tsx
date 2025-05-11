@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
@@ -17,21 +16,18 @@ const ProductsSection = () => {
             title="Fixed Deposit"
             description="Secure your savings with competitive interest rates and flexible tenures."
             features={["Up to 7.5% interest rate", "Tenures from 3 months to 5 years", "Monthly interest payout option"]}
-            bgClass="bg-gradient-to-br from-blue-50 to-blue-100 border-blue-200"
           />
           
           <ProductCard 
             title="Savings Plus"
             description="Enhanced savings account with premium benefits and higher interest rates."
             features={["Premium interest on your balance", "Zero maintenance fee", "Free premium debit card"]}
-            bgClass="bg-gradient-to-br from-green-50 to-green-100 border-green-200"
           />
           
           <ProductCard 
             title="Youth Savings"
             description="Special savings account designed for young individuals under 25 years."
             features={["No minimum balance", "Free digital banking", "Educational bonuses"]}
-            bgClass="bg-gradient-to-br from-purple-50 to-purple-100 border-purple-200"
           />
         </div>
       </div>
@@ -42,16 +38,14 @@ const ProductsSection = () => {
 const ProductCard = ({ 
   title, 
   description, 
-  features,
-  bgClass 
+  features 
 }: { 
   title: string; 
   description: string; 
   features: string[];
-  bgClass: string;
 }) => {
   return (
-    <Card className={`h-full flex flex-col card-hover ${bgClass}`}>
+    <Card className="h-full flex flex-col card-hover border border-gray-400 bg-gradient-to-br from-blue-100 to-blue-130">
       <CardHeader>
         <CardTitle className="text-xl font-bold text-bank-primary">{title}</CardTitle>
       </CardHeader>
