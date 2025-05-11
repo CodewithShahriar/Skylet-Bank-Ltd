@@ -7,7 +7,9 @@ const TrustSection = () => {
     <section className="py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="section-title">Why Choose Skylet Bank</h2>
+          <h2 className="section-title text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-800 via-green-600 to-blue-700">
+  Why Choose Skylet Bank
+</h2>
           <p className="section-subtitle">Trusted by thousands of customers across Bangladesh</p>
         </div>
         
