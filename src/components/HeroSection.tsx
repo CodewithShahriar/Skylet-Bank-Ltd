@@ -8,7 +8,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 opacity-90"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid md:grid-cols-2 gap-8 py-16 md:py-24 items-center">
+        <div className="grid md:grid-cols-2 gap-8 py-10 md:py-18 items-center">
           <div className="space-y-6 animate-fade-in">
             {/* Dynamic heading */}
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-green-500 to-purple-800">
