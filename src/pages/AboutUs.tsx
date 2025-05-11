@@ -58,13 +58,14 @@ const AboutUsPage = () => {
       <section className="py-16 px-4 md:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-2">Our Mission & Vision</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-2 bg-gradient-to-r from-blue-800 via-green-700 to-purple-700 text-transparent bg-clip-text">Our Mission & Vision</h2>
             <p className="text-lg text-gray-600">Guiding principles that drive everything we do</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-xl border border-blue-200 shadow-sm">
-              <h3 className="text-2xl font-bold text-blue-700 mb-4">Our Mission</h3>
+              <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-600 via-green-500 to-purple-300 text-transparent bg-clip-text mb-4">
+Our Mission</h3>
               <p className="text-gray-700 mb-6">
                 To provide accessible, innovative, and secure financial services that empower our customers to achieve their goals while contributing to the economic growth of Bangladesh.
               </p>
@@ -91,7 +92,7 @@ const AboutUsPage = () => {
             </div>
             
             <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-xl border border-purple-200 shadow-sm">
-              <h3 className="text-2xl font-bold text-purple-700 mb-4">Our Vision</h3>
+              <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-600 via-green-500 to-purple-300 text-transparent bg-clip-text mb-4">Our Vision</h3>
               <p className="text-gray-700 mb-6">
                 To be the most trusted and innovative financial institution in Bangladesh, recognized for our technological advancement, customer-centricity, and contribution to sustainable development.
               </p>
@@ -124,7 +125,7 @@ const AboutUsPage = () => {
       <section className="py-16 px-4 md:px-8 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-2">Our Journey</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-2 bg-gradient-to-r from-blue-800 via-green-700 to-purple-700 text-transparent bg-clip-text">Our Journey</h2>
             <p className="text-lg text-gray-600">Key milestones in the Skylet Bank story</p>
           </div>
           
@@ -137,11 +138,15 @@ const AboutUsPage = () => {
               {/* 2010 */}
               <div className="flex flex-col md:flex-row items-center md:justify-between">
                 <div className="md:w-5/12 text-right md:pr-8 order-2 md:order-1">
-                  <h3 className="text-xl font-bold text-blue-700 mb-1">2010</h3>
+                  <h3 className="text-xl font-bold bg-gradient-to-r from-blue-900 via-green-900 to-green-700 text-transparent bg-clip-text mb-1">
+                    2010
+                    </h3>
+
                   <h4 className="text-lg font-semibold mb-2">Foundation</h4>
                   <p className="text-gray-700">Skylet Bank was founded with a vision to combine cutting-edge technology with personalized banking services.</p>
                 </div>
-                <div className="relative w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center z-10 mb-3 md:mb-0 order-1 md:order-2">
+                <div className="relative w-8 h-8 bg-gradient-to-r from-blue-500 to-green-500 rounded-full flex items-center justify-center z-10 mb-3 md:mb-0 order-1 md:order-2">
+
                   <div className="w-4 h-4 bg-white rounded-full"></div>
                 </div>
                 <div className="md:w-5/12 md:pl-8 order-3"></div>
@@ -150,11 +155,12 @@ const AboutUsPage = () => {
               {/* 2013 */}
               <div className="flex flex-col md:flex-row items-center md:justify-between">
                 <div className="md:w-5/12 order-2"></div>
-                <div className="relative w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center z-10 mb-3 md:mb-0 order-1">
+                <div className="relative w-8 h-8 bg-gradient-to-r from-blue-500 to-green-500 rounded-full flex items-center justify-center z-10 mb-3 md:mb-0 order-1 md:order-2">
+
                   <div className="w-4 h-4 bg-white rounded-full"></div>
                 </div>
                 <div className="md:w-5/12 md:pl-8 order-3">
-                  <h3 className="text-xl font-bold text-blue-700 mb-1">2013</h3>
+                  <h3 className="text-xl font-bold bg-gradient-to-r from-blue-900 via-green-900 to-green-700 text-transparent bg-clip-text mb-1">2013</h3>
                   <h4 className="text-lg font-semibold mb-2">Expansion</h4>
                   <p className="text-gray-700">Opened our 25th branch and launched our first mobile banking application, bringing modern banking to more customers.</p>
                 </div>
@@ -163,11 +169,12 @@ const AboutUsPage = () => {
               {/* 2016 */}
               <div className="flex flex-col md:flex-row items-center md:justify-between">
                 <div className="md:w-5/12 text-right md:pr-8 order-2 md:order-1">
-                  <h3 className="text-xl font-bold text-blue-700 mb-1">2016</h3>
+                  <h3 className="text-xl font-bold bg-gradient-to-r from-blue-900 via-green-900 to-green-700 text-transparent bg-clip-text mb-1">2016</h3>
                   <h4 className="text-lg font-semibold mb-2">Digital Transformation</h4>
                   <p className="text-gray-700">Implemented advanced core banking system and launched digital-only accounts with enhanced security features.</p>
                 </div>
-                <div className="relative w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center z-10 mb-3 md:mb-0 order-1 md:order-2">
+                <div className="relative w-8 h-8 bg-gradient-to-r from-blue-500 to-green-500 rounded-full flex items-center justify-center z-10 mb-3 md:mb-0 order-1 md:order-2">
+
                   <div className="w-4 h-4 bg-white rounded-full"></div>
                 </div>
                 <div className="md:w-5/12 md:pl-8 order-3"></div>
@@ -176,11 +183,12 @@ const AboutUsPage = () => {
               {/* 2019 */}
               <div className="flex flex-col md:flex-row items-center md:justify-between">
                 <div className="md:w-5/12 order-2"></div>
-                <div className="relative w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center z-10 mb-3 md:mb-0 order-1">
+                <div className="relative w-8 h-8 bg-gradient-to-r from-blue-500 to-green-500 rounded-full flex items-center justify-center z-10 mb-3 md:mb-0 order-1 md:order-2">
+
                   <div className="w-4 h-4 bg-white rounded-full"></div>
                 </div>
                 <div className="md:w-5/12 md:pl-8 order-3">
-                  <h3 className="text-xl font-bold text-blue-700 mb-1">2019</h3>
+                  <h3 className="text-xl font-bold bg-gradient-to-r from-blue-900 via-green-900 to-green-700 text-transparent bg-clip-text mb-1">2019</h3>
                   <h4 className="text-lg font-semibold mb-2">Innovation Award</h4>
                   <p className="text-gray-700">Received the "Most Innovative Bank" award for our AI-driven customer service platform and contactless payment solutions.</p>
                 </div>
@@ -189,11 +197,12 @@ const AboutUsPage = () => {
               {/* 2022 */}
               <div className="flex flex-col md:flex-row items-center md:justify-between">
                 <div className="md:w-5/12 text-right md:pr-8 order-2 md:order-1">
-                  <h3 className="text-xl font-bold text-blue-700 mb-1">2022</h3>
+                  <h3 className="text-xl font-bold bg-gradient-to-r from-blue-900 via-green-900 to-green-700 text-transparent bg-clip-text mb-1">2022</h3>
                   <h4 className="text-lg font-semibold mb-2">1 Million Customers</h4>
                   <p className="text-gray-700">Reached the milestone of serving 1 million customers and launched the Skylet Bank Sustainable Finance initiative.</p>
                 </div>
-                <div className="relative w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center z-10 mb-3 md:mb-0 order-1 md:order-2">
+                <div className="relative w-8 h-8 bg-gradient-to-r from-blue-500 to-green-500 rounded-full flex items-center justify-center z-10 mb-3 md:mb-0 order-1 md:order-2">
+
                   <div className="w-4 h-4 bg-white rounded-full"></div>
                 </div>
                 <div className="md:w-5/12 md:pl-8 order-3"></div>
@@ -202,11 +211,12 @@ const AboutUsPage = () => {
               {/* 2024 */}
               <div className="flex flex-col md:flex-row items-center md:justify-between">
                 <div className="md:w-5/12 order-2"></div>
-                <div className="relative w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center z-10 mb-3 md:mb-0 order-1">
+                <div className="relative w-8 h-8 bg-gradient-to-r from-blue-500 to-green-500 rounded-full flex items-center justify-center z-10 mb-3 md:mb-0 order-1 md:order-2">
+
                   <div className="w-4 h-4 bg-white rounded-full"></div>
                 </div>
                 <div className="md:w-5/12 md:pl-8 order-3">
-                  <h3 className="text-xl font-bold text-purple-700 mb-1">2024</h3>
+                  <h3 className="text-xl font-bold bg-gradient-to-r from-blue-900 via-green-900 to-green-700 text-transparent bg-clip-text mb-1">2024</h3>
                   <h4 className="text-lg font-semibold mb-2">Today & Beyond</h4>
                   <p className="text-gray-700">Now serving over 2 million customers with 100+ branches nationwide, and continuing to innovate with blockchain technology and green banking initiatives.</p>
                 </div>
@@ -220,7 +230,7 @@ const AboutUsPage = () => {
       <section className="py-16 px-4 md:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-2">Leadership Team</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-2 bg-gradient-to-r from-blue-800 via-green-700 to-purple-700 text-transparent bg-clip-text">Leadership Team</h2>
             <p className="text-lg text-gray-600">Meet the people guiding Skylet Bank's vision</p>
           </div>
           
@@ -235,7 +245,7 @@ const AboutUsPage = () => {
                 />
               </div>
               <CardContent className="pt-6">
-                <h3 className="text-xl font-bold mb-1">Ahmed Rahman</h3>
+                <h3 className="text-xl font-bold mb-1">Professor Ahmed Rahman</h3>
                 <p className="text-blue-600 font-medium mb-3">Chief Executive Officer</p>
                 <p className="text-gray-600 text-sm mb-4">
                   With over 25 years of experience in banking and finance, Ahmed has led Skylet Bank's transformation into a digital-first institution while maintaining exceptional customer service.
@@ -314,12 +324,12 @@ const AboutUsPage = () => {
       <section className="py-16 px-4 md:px-8 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-2">Our Core Values</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-2 bg-gradient-to-r from-blue-800 via-green-700 to-purple-700 text-transparent bg-clip-text">Our Core Values</h2>
             <p className="text-lg text-gray-600">The principles that guide our actions</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-300">
               <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
                 <ShieldCheck className="text-blue-700" size={24} />
               </div>
@@ -329,7 +339,7 @@ const AboutUsPage = () => {
               </p>
             </div>
             
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-300">
               <div className="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
                 <Users className="text-green-700" size={24} />
               </div>
@@ -339,7 +349,7 @@ const AboutUsPage = () => {
               </p>
             </div>
             
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-300">
               <div className="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
                 <Award className="text-purple-700" size={24} />
               </div>
@@ -349,7 +359,7 @@ const AboutUsPage = () => {
               </p>
             </div>
             
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-300">
               <div className="bg-red-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-red-700"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="m7 11 2 2 6-6"></path></svg>
               </div>
@@ -359,7 +369,7 @@ const AboutUsPage = () => {
               </p>
             </div>
             
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-300">
               <div className="bg-yellow-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-yellow-700"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" x2="9.01" y1="9" y2="9"></line><line x1="15" x2="15.01" y1="9" y2="9"></line></svg>
               </div>
@@ -369,7 +379,7 @@ const AboutUsPage = () => {
               </p>
             </div>
             
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-300">
               <div className="bg-orange-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-orange-700"><path d="M6 9H4.5a2.5 2.5 0 0 0 0 5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 1 0 5H18"></path><path d="M8 9h8"></path><path d="M8 15h8"></path><path d="M13.73 21a9.97 9.97 0 0 1-6.95-2.81"></path><path d="M10.22 3a10 10 0 0 1 10.8 9.5"></path></svg>
               </div>
@@ -386,7 +396,7 @@ const AboutUsPage = () => {
       <section className="py-16 px-4 md:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-2">Corporate Social Responsibility</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-2 bg-gradient-to-r from-blue-800 via-green-700 to-purple-700 text-transparent bg-clip-text">Corporate Social Responsibility</h2>
             <p className="text-lg text-gray-600">Making a positive impact beyond banking</p>
           </div>
           
@@ -432,7 +442,10 @@ const AboutUsPage = () => {
                 <p className="text-gray-600 mb-4">
                   At Skylet Bank, sustainability isn't just a buzzword—it's integrated into our business strategy and operations. From paperless banking to green financing options and sustainable investment products, we're working to create positive environmental and social impact.
                 </p>
-                <Button className="bg-blue-600 hover:bg-blue-700">Download Sustainability Report</Button>
+                <Button className="bg-gradient-to-r from-blue-700 to-green-600 hover:from-blue-700 hover:to-green-600 text-white px-6 py-3 ">
+  Download Sustainability Report
+</Button>
+
               </div>
             </div>
           </div>
@@ -443,7 +456,7 @@ const AboutUsPage = () => {
       <section className="py-16 px-4 md:px-8 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-2">Awards & Recognition</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-2 bg-gradient-to-r from-blue-800 via-green-700 to-purple-700 text-transparent bg-clip-text">Awards & Recognition</h2>
             <p className="text-lg text-gray-600">Our commitment to excellence has been recognized</p>
           </div>
           
@@ -484,14 +497,14 @@ const AboutUsPage = () => {
       </section>
       
       {/* Join Us CTA Section */}
-      <section className="py-16 px-4 md:px-8 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+      <section className="relative bg-gradient-to-r from-blue-800 via-green-600 to-blue-700 py-20 px-4 md:px-8 text-white">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Join the Skylet Bank Family</h2>
           <p className="text-lg mb-8 max-w-3xl mx-auto">
             Whether you're looking for the best banking solutions or interested in career opportunities, we invite you to be part of our journey toward financial excellence.
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
-            <Button className="bg-white text-blue-600 hover:bg-blue-50">Open an Account</Button>
+            <Button className="bg-white text-blue-900 hover:bg-blue-50">Open an Account</Button>
             <Button className="bg-transparent border border-white hover:bg-white/10">Career Opportunities</Button>
           </div>
         </div>
