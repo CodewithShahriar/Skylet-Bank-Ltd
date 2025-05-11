@@ -72,16 +72,17 @@ const FAQSection = () => {
         </div>
 
         <div className="mt-10 text-center">
-          <p className="text-gray-600">
-            Can't find what you're looking for?{" "}
-            <button
-              onClick={() => setIsModalOpen(true)}
-              className="text-bank-primary font-medium hover:underline"
-            >
-              Contact our support team
-            </button>
-          </p>
-        </div>
+  <p className="text-gray-600">
+    Can't find what you're looking for?{" "}
+    <button
+      onClick={() => setIsModalOpen(true)}
+      className="text-blue-600 text-base font-semibold hover:underline"
+    >
+      Contact our support team
+    </button>
+  </p>
+</div>
+
       </div>
 
       {/* Modal */}
@@ -128,7 +129,7 @@ const FAQSection = () => {
                   </div>
                   <button
                       type="submit"
-                      className="w-full bg-gradient-to-r from-blue-600 via-green-600 to-blue-700 text-white py-2 rounded-md hover:bg-gradient-to-r from-blue-600 via-green-600 to-blue-700/90">
+                      className="w-full bg-gradient-to-r from-blue-400 via-green-600 to-blue-700 text-white py-2 rounded-md hover:bg-gradient-to-r from-blue-600 via-green-600 to-blue-700/90">
                       Submit
 </button>
                 </form>
