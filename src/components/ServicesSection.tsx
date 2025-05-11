@@ -34,7 +34,7 @@ const ServicesSection = () => {
     <section className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="section-title text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-900 via-green-700 to-blue-800">
+          <h2 className="section-title text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-800 via-green-600 to-blue-700">
             Banking For Your Needs
           </h2>
           <p className="section-subtitle">Discover financial services tailored to your unique requirements</p>
@@ -47,22 +47,22 @@ const ServicesSection = () => {
               className="group bg-white border border-gray-200 overflow-hidden card-hover transition-all duration-300"
             >
               <CardHeader className="pb-2">
-                <div className="mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-800 group-hover:via-sky-900 group-hover:to-green-900">
+                <div className="mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-800 group-hover:to-green-700 group-hover:via-transparent">
                   {service.icon}
                 </div>
-                <CardTitle className="text-xl font-bold text-bank-primary group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:via-sky-500 group-hover:to-green-500">
+                <CardTitle className="text-xl font-bold text-bank-primary group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-700 group-hover:to-green-500">
                   {service.title}
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:via-sky-500 group-hover:to-green-500">
+                <p className="text-gray-600 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-800 group-hover:to-green-700">
                   {service.description}
                 </p>
               </CardContent>
               <CardFooter>
                 <Button
                   variant="ghost"
-                  className="text-bank-primary group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:via-sky-500 group-hover:to-green-500 p-0"
+                  className="text-bank-primary group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-800 group-hover:to-green-700 p-0"
                 >
                   {service.buttonText} <ArrowRight size={16} className="ml-1" />
                 </Button>
