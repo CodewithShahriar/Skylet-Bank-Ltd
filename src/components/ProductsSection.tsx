@@ -1,8 +1,25 @@
+import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowRight } from "lucide-react";
 
 const ProductsSection = () => {
+  // Inject keyframes dynamically for the animated border
+  useEffect(() => {
+    const styleId = "glow-keyframes";
+    if (!document.getElementById(styleId)) {
+      const style = document.createElement("style");
+      style.id = styleId;
+      style.innerHTML = `
+        @keyframes glowBorder {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
+      `;
+      document.head.appendChild(style);
+    }
+  }, []);
+
   return (
     <section className="py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -37,17 +54,17 @@ const ProductsSection = () => {
   );
 };
 
-const ProductCard = ({ 
-  title, 
-  description, 
-  features 
-}: { 
-  title: string; 
-  description: string; 
+const ProductCard = ({
+  title,
+  description,
+  features
+}: {
+  title: string;
+  description: string;
   features: string[];
 }) => {
   return (
-    <Card className="h-full flex flex-col card-hover border border-gray-400 bg-gradient-to-br from-blue-100 to-blue-130">
+    <Card className="h-full flex flex-col card-hover border border-gray-300 bg-gradient-to-br from-blue-100 to-blue-130">
       <CardHeader>
         <CardTitle className="text-xl font-bold text-bank-primary">{title}</CardTitle>
       </CardHeader>
@@ -65,9 +82,26 @@ const ProductCard = ({
         </ul>
       </CardContent>
       <CardFooter>
-        <Button variant="outline" className="w-full border-bank-primary text-bank-primary hover:bg-bank-primary/5">
-          Learn More
-        </Button>
+        {/* Glowing gradient outline wrapper */}
+        <div
+          style={{
+            padding: "2px",
+            borderRadius: "0.5rem",
+            background: "linear-gradient(135deg, #3b82f6, #10b981, #8b5cf6)",
+            backgroundSize: "300% 300%",
+            animation: "glowBorder 5s linear infinite"
+          }}
+          className="w-full"
+        >
+          <div className="bg-white rounded-md w-full">
+            <Button
+              variant="outline"
+              className="w-full text-bank-primary hover:bg-bank-primary/5 border-none"
+            >
+              Learn More
+            </Button>
+          </div>
+        </div>
       </CardFooter>
     </Card>
   );

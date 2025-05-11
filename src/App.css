@@ -115,3 +115,37 @@
     display: none;
   }
 }
+
+
+
+.animated-outline {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.animated-outline::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #3b82f6, #10b981, #8b5cf6);
+  background-size: 600% 600%;
+  z-index: -1;
+  border-radius: inherit;
+  animation: glowing-border 6s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.animated-outline:hover::before {
+  opacity: 1;
+}
+
+@keyframes glowing-border {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
