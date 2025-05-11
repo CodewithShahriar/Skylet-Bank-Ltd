@@ -62,7 +62,9 @@ const AccountsPage = () => {
       <section className="py-16 px-4 md:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-900 via-green-600 to-purple-800 mb-2">Account Types</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-2 bg-gradient-to-r from-blue-700 via-green-700 to-purple-500 text-transparent bg-clip-text">
+            Account Types
+            </h2>
             <p className="text-lg text-gray-600">Select the account that fits your lifestyle and financial goals</p>
           </div>
           
@@ -409,7 +411,9 @@ const AccountsPage = () => {
       <section className="py-16 px-4 md:px-8 bg-blue-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-2">Features & Benefits</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-2 bg-gradient-to-r from-blue-700 via-green-700 to-purple-500 text-transparent bg-clip-text">
+  Frequently Asked Questions
+</h2>
             <p className="text-lg text-gray-600">Every Skylet Bank account comes with premium features</p>
           </div>
           
@@ -445,7 +449,10 @@ const AccountsPage = () => {
       <section className="py-16 px-4 md:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-2">Open Your Account in 3 Simple Steps</h2>
+            
+            <h2 className="text-3xl md:text-4xl font-bold mb-2 bg-gradient-to-r from-blue-700 via-green-700 to-purple-500 text-transparent bg-clip-text">
+            Open Your Account in 3 Simple Steps
+            </h2>
             <p className="text-lg text-gray-600">Quick, easy, and hassle-free account opening process</p>
           </div>
           
@@ -482,7 +489,9 @@ const AccountsPage = () => {
       <section className="py-16 px-4 md:px-8 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-2">Frequently Asked Questions</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-2 bg-gradient-to-r from-blue-700 via-green-700 to-purple-500 text-transparent bg-clip-text">
+            Frequently Asked Questions
+            </h2>
             <p className="text-lg text-gray-600">Got questions? We've got answers</p>
           </div>
           
