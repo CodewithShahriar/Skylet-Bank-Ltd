@@ -559,14 +559,14 @@ const CardsPage = () => {
       <section className="py-16 px-4 md:px-8 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-2 bg-gradient-to-r from-blue-700 via-green-700 to-purple-700 text-transparent bg-clip-text">
+            <h2 className="text-3xl md:text-4xl font-bold mb-2 bg-gradient-to-r from-red-900 via-red-500 to-red-900 text-transparent bg-clip-text">
             Lost or Stolen Card?
             </h2>
             <p className="text-lg text-gray-600">Take immediate action to secure your account</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Card>
+            <Card className="border-b border-gray-400">
               <CardHeader>
                 <div className="flex items-center gap-3">
                   <div className="bg-red-100 p-2 rounded-full">
@@ -594,7 +594,7 @@ const CardsPage = () => {
               </CardContent>
             </Card>
             
-            <Card>
+            <Card className="border-b border-gray-400">
               <CardHeader>
                 <div className="flex items-center gap-3">
                   <div className="bg-red-100 p-2 rounded-full">
@@ -622,7 +622,7 @@ const CardsPage = () => {
               </CardContent>
             </Card>
             
-            <Card>
+            <Card className="border-b border-gray-400">
               <CardHeader>
                 <div className="flex items-center gap-3">
                   <div className="bg-red-100 p-2 rounded-full">
@@ -652,8 +652,11 @@ const CardsPage = () => {
           </div>
           
           <div className="mt-8 text-center">
-            <Button className="bg-red-600 hover:bg-red-700">Report Lost Card Now</Button>
-          </div>
+            <Button className="bg-red-600 hover:bg-red-700 text-lg px-6 py-4">
+                Report Lost Card Now
+            </Button>
+            </div>
+
         </div>
       </section>
       
