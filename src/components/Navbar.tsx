@@ -54,12 +54,13 @@ const Navbar = () => {
               <span className="sr-only md:not-sr-only md:inline-block">Search</span>
             </Button>
             <Button
-  className="btn-primary bg-gradient-to-r from-blue-700 via-green-000 to-purple-500 text-white hover:bg-gradient-to-r hover:from-blue-400 hover:via-green-000 hover:to-purple-600"
-  onClick={() => window.open("https://skyletbankltd-dashboard.netlify.app/", "_blank")}
->
-  <User size={16} className="mr-2" />
-  Login
-</Button>
+              className="btn-primary bg-gradient-to-r from-blue-500 to-green-500 text-white hover:bg-gradient-to-r hover:from-blue-600 hover:to-green-600"
+              onClick={() => window.open("https://skyletbankltd-dashboard.netlify.app/", "_blank")}
+            >
+              <User size={16} className="mr-2" />
+              Login
+            </Button>
+
           </div>
 
           {/* Mobile menu button */}
