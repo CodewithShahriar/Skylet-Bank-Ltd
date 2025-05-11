@@ -1,18 +1,25 @@
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Menu, X, User, Search } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
   
   const menuItems = [
-    { name: "Accounts", link: "/" },
-    { name: "Deposits & Loan", link: "/" },
-    { name: "Debit & Credit Cards", link: "/" },
-    { name: "About Us", link: "/" },
-    { name: "Support", link: "/" }
+    { name: "Accounts", link: "/accounts" },
+    { name: "Deposits & Loan", link: "/deposits-and-loans" },
+    { name: "Debit & Credit Cards", link: "/cards" },
+    { name: "About Us", link: "/about-us" },
+    { name: "Support", link: "/support" }
   ];
+
+
+  const isActive = (path) => {
+    return location.pathname === path;
+  };
+
 
   return (
     <nav className="bg-white shadow-sm sticky top-0 z-50">
