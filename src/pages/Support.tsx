@@ -17,7 +17,7 @@ const SupportPage = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-purple-600 via-blue-500 to-blue-400 py-20 px-4 md:px-8">
+      <section className="relative bg-gradient-to-r from-blue-800 via-green-600 to-blue-700 py-20 px-4 md:px-8 text-white">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div className="text-white">
@@ -113,7 +113,7 @@ const SupportPage = () => {
       <section className="py-16 px-4 md:px-8 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-2">Help Center</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-2 bg-gradient-to-r from-blue-700 via-green-700 to-purple-700 text-transparent bg-clip-text">Help Center</h2>
             <p className="text-lg text-gray-600">Find answers to commonly asked questions</p>
           </div>
           
@@ -471,7 +471,7 @@ const SupportPage = () => {
           </Tabs>
           
           <div className="text-center mt-10">
-            <Button className="bg-blue-600 hover:bg-blue-700">Browse All Articles</Button>
+            <Button className="mt-4 bg-gradient-to-r from-blue-600 to-green-500 hover:bg-gradient-to-r hover:from-blue-700 to-green-600">Browse All Articles</Button>
           </div>
         </div>
       </section>
@@ -480,7 +480,7 @@ const SupportPage = () => {
       <section className="py-16 px-4 md:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-2">Branch & ATM Locator</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-2 bg-gradient-to-r from-blue-700 via-green-700 to-purple-700 text-transparent bg-clip-text">Branch & ATM Locator</h2>
             <p className="text-lg text-gray-600">Find your nearest Skylet Bank branch or ATM</p>
           </div>
           
@@ -533,7 +533,10 @@ const SupportPage = () => {
                     </div>
                   </div>
                   
-                  <Button className="w-full bg-blue-600 hover:bg-blue-700">Search Locations</Button>
+                  <Button className="w-full bg-gradient-to-r from-blue-600 to-green-700 hover:from-blue-600 hover:to-green-600">
+  Search Locations
+</Button>
+
                 </div>
               </CardContent>
             </Card>
@@ -617,7 +620,7 @@ const SupportPage = () => {
       <section className="py-16 px-4 md:px-8 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-2">Submit a Complaint</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-2 bg-gradient-to-r from-blue-700 via-green-700 to-purple-700 text-transparent bg-clip-text">Submit a Complaint</h2>
             <p className="text-lg text-gray-600">We're committed to addressing your concerns promptly</p>
           </div>
           
@@ -668,7 +671,7 @@ const SupportPage = () => {
                   </div>
                 </div>
                 
-                <div className="mt-6 p-4 bg-white rounded-lg border border-blue-100">
+                <div className="mt-6 p-4 bg-white rounded-lg border border-blue-300">
                   <p className="text-sm text-gray-600">
                     Most complaints are resolved within 7 business days. Complex issues may take up to 15 business days.
                   </p>
@@ -677,10 +680,10 @@ const SupportPage = () => {
             </div>
             
             <div className="md:col-span-2">
-              <Card>
+              <Card className="rounded-lg border border-gray-400 ">
                 <CardContent className="p-6">
                   <form className="space-y-4">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
                       <div className="space-y-2">
                         <Label htmlFor="fullName">Full Name</Label>
                         <Input id="fullName" placeholder="John Doe" />
@@ -745,7 +748,10 @@ const SupportPage = () => {
                       </label>
                     </div>
                     
-                    <Button className="w-full md:w-auto bg-blue-600 hover:bg-blue-700">Submit Complaint</Button>
+                    <Button className="w-full md:w-auto bg-gradient-to-r from-blue-600 to-green-700 hover:from-blue-600 hover:to-green-600">
+  Submit Complaint
+</Button>
+
                   </form>
                 </CardContent>
               </Card>
@@ -758,7 +764,7 @@ const SupportPage = () => {
       <section className="py-16 px-4 md:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-2">Frequently Asked Questions</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-2 bg-gradient-to-r from-blue-700 via-green-700 to-purple-700 text-transparent bg-clip-text">Frequently Asked Questions</h2>
             <p className="text-lg text-gray-600">Quick answers to common questions</p>
           </div>
           
@@ -815,7 +821,7 @@ const SupportPage = () => {
       </section>
       
       {/* Contact CTA Section */}
-      <section className="py-16 px-4 md:px-8 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+      <section className="relative bg-gradient-to-r from-blue-800 via-green-600 to-blue-700 py-20 px-4 md:px-8 text-white">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Still Need Help?</h2>
           <p className="text-lg mb-8 max-w-3xl mx-auto">
