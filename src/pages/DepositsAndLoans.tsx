@@ -240,7 +240,9 @@ const DepositsAndLoansPage = () => {
                           </li>
                         </ul>
                       </div>
-                      <Button className="bg-blue-600 hover:bg-blue-700">Apply Now</Button>
+                      <Button className="mt-4 bg-gradient-to-r from-blue-600 to-green-500 hover:bg-gradient-to-r hover:from-blue-700 to-green-600">
+                            Apply Now
+                    </Button>
                     </CardContent>
                   </Card>
                 </div>
@@ -323,7 +325,9 @@ const DepositsAndLoansPage = () => {
                           </li>
                         </ul>
                       </div>
-                      <Button className="bg-blue-600 hover:bg-blue-700">Apply Now</Button>
+                      <Button className="mt-4 bg-gradient-to-r from-blue-600 to-green-500 hover:bg-gradient-to-r hover:from-blue-700 to-green-600">
+                            Apply Now
+                    </Button>
                     </CardContent>
                   </Card>
                 </div>
@@ -406,7 +410,9 @@ const DepositsAndLoansPage = () => {
                           </li>
                         </ul>
                       </div>
-                      <Button className="bg-blue-600 hover:bg-blue-700">Apply Now</Button>
+                      <Button className="mt-4 bg-gradient-to-r from-blue-600 to-green-500 hover:bg-gradient-to-r hover:from-blue-700 to-green-600">
+                            Apply Now
+                    </Button>
                     </CardContent>
                   </Card>
                 </div>
@@ -489,7 +495,9 @@ const DepositsAndLoansPage = () => {
                           </li>
                         </ul>
                       </div>
-                      <Button className="bg-blue-600 hover:bg-blue-700">Apply Now</Button>
+                      <Button className="mt-4 bg-gradient-to-r from-blue-600 to-green-500 hover:bg-gradient-to-r hover:from-blue-700 to-green-600">
+                            Apply Now
+                    </Button>
                     </CardContent>
                   </Card>
                 </div>
@@ -610,7 +618,10 @@ const DepositsAndLoansPage = () => {
                     </div>
                   </div>
                   
-                  <Button onClick={calculateEMI} className="w-full bg-blue-600 hover:bg-blue-700">Calculate EMI</Button>
+                  <Button onClick={calculateEMI} className="w-full bg-gradient-to-r from-blue-600 to-green-500 hover:from-blue-700 hover:to-green-600">
+                    Calculate EMI
+                    </Button>
+                  
                 </div>
               </CardContent>
             </Card>
@@ -624,7 +635,7 @@ const DepositsAndLoansPage = () => {
                 <div className="text-center py-8">
                   {monthlyPayment > 0 ? (
                     <>
-                      <div className="text-4xl font-bold text-blue-600 mb-2">
+                      <div className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-green-500 text-transparent bg-clip-text mb-2">
                          ৳{monthlyPayment.toLocaleString('en-IN', { maximumFractionDigits: 0 })}
                       </div>
                       <p className="text-gray-600">per month</p>
