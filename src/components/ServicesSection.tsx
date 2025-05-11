@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight, Wallet, Banknote, Shield, Globe } from "lucide-react";
@@ -35,7 +34,9 @@ const ServicesSection = () => {
     <section className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="section-title">Banking For Your Needs</h2>
+          <h2 className="section-title text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-900 via-green-700 to-blue-800">
+            Banking For Your Needs
+          </h2>
           <p className="section-subtitle">Discover financial services tailored to your unique requirements</p>
         </div>
 
