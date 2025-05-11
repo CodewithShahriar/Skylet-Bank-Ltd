@@ -106,7 +106,7 @@ const DepositsAndLoansPage = () => {
                   </div>
                   <div className="flex justify-between mb-2">
                     <span className="text-gray-600">Minimum Deposit</span>
-                    <span>₹5,000</span>
+                    <span>৳5,000</span>
                   </div>
                 </div>
                 <ul className="space-y-2 mb-6">
@@ -149,7 +149,7 @@ const DepositsAndLoansPage = () => {
                   </div>
                   <div className="flex justify-between mb-2">
                     <span className="text-gray-600">Minimum Monthly Deposit</span>
-                    <span>₹1,000</span>
+                    <span>৳1,000</span>
                   </div>
                 </div>
                 <ul className="space-y-2 mb-6">
@@ -212,7 +212,7 @@ const DepositsAndLoansPage = () => {
                         </div>
                         <div className="flex justify-between mb-2">
                           <span className="text-gray-600">Loan Amount</span>
-                          <span>₹50,000 - ₹20,00,000</span>
+                          <span>৳50,000 - ৳20,00,000</span>
                         </div>
                         <div className="flex justify-between mb-2">
                           <span className="text-gray-600">Tenure</span>
@@ -295,7 +295,7 @@ const DepositsAndLoansPage = () => {
                         </div>
                         <div className="flex justify-between mb-2">
                           <span className="text-gray-600">Loan Amount</span>
-                          <span>Up to ₹5 crore</span>
+                          <span>Up to ৳5 crore</span>
                         </div>
                         <div className="flex justify-between mb-2">
                           <span className="text-gray-600">Tenure</span>
@@ -378,7 +378,7 @@ const DepositsAndLoansPage = () => {
                         </div>
                         <div className="flex justify-between mb-2">
                           <span className="text-gray-600">Loan Amount</span>
-                          <span>Up to ₹75 lakhs</span>
+                          <span>Up to ৳75 lakhs</span>
                         </div>
                         <div className="flex justify-between mb-2">
                           <span className="text-gray-600">Tenure</span>
@@ -461,7 +461,7 @@ const DepositsAndLoansPage = () => {
                         </div>
                         <div className="flex justify-between mb-2">
                           <span className="text-gray-600">Loan Amount</span>
-                          <span>Up to ₹1 crore</span>
+                          <span>Up to ৳1 crore</span>
                         </div>
                         <div className="flex justify-between mb-2">
                           <span className="text-gray-600">Tenure</span>
@@ -510,7 +510,7 @@ const DepositsAndLoansPage = () => {
                         </li>
                         <li className="flex items-start gap-2">
                           <ChevronRight className="min-w-4 text-blue-600 mt-1" size={16} />
-                          <span>Minimum income: ₹3 lakh per annum</span>
+                          <span>Minimum income: ৳3 lakh per annum</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <ChevronRight className="min-w-4 text-blue-600 mt-1" size={16} />
@@ -537,7 +537,7 @@ const DepositsAndLoansPage = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Card>
+            <Card className="rounded-2xl bg-gray-200">
               <CardHeader>
                 <CardTitle>Loan Details</CardTitle>
                 <CardDescription>Adjust the sliders or enter values to calculate your EMI</CardDescription>
@@ -545,7 +545,7 @@ const DepositsAndLoansPage = () => {
               <CardContent>
                 <div className="space-y-6">
                   <div>
-                    <Label htmlFor="loanAmount">Loan Amount: ₹{loanAmount.toLocaleString()}</Label>
+                    <Label htmlFor="loanAmount">Loan Amount: ৳{loanAmount.toLocaleString()}</Label>
                     <div className="flex items-center gap-4">
                       <input
                         type="range"
@@ -615,7 +615,7 @@ const DepositsAndLoansPage = () => {
               </CardContent>
             </Card>
             
-            <Card>
+            <Card className="rounded-2xl bg-gray-200">
               <CardHeader>
                 <CardTitle>EMI Result</CardTitle>
                 <CardDescription>Your estimated monthly installment</CardDescription>
@@ -625,7 +625,7 @@ const DepositsAndLoansPage = () => {
                   {monthlyPayment > 0 ? (
                     <>
                       <div className="text-4xl font-bold text-blue-600 mb-2">
-                        ₹{monthlyPayment.toLocaleString('en-IN', { maximumFractionDigits: 0 })}
+                         ৳{monthlyPayment.toLocaleString('en-IN', { maximumFractionDigits: 0 })}
                       </div>
                       <p className="text-gray-600">per month</p>
                       
@@ -633,15 +633,15 @@ const DepositsAndLoansPage = () => {
                         <div className="grid grid-cols-2 gap-4">
                           <div>
                             <p className="text-gray-600">Total Principal</p>
-                            <p className="font-semibold">₹{loanAmount.toLocaleString()}</p>
+                            <p className="font-semibold"> ৳{loanAmount.toLocaleString()}</p>
                           </div>
                           <div>
                             <p className="text-gray-600">Total Interest</p>
-                            <p className="font-semibold">₹{((monthlyPayment * loanTerm * 12) - loanAmount).toLocaleString('en-IN', { maximumFractionDigits: 0 })}</p>
+                            <p className="font-semibold"> ৳{((monthlyPayment * loanTerm * 12) - loanAmount).toLocaleString('en-IN', { maximumFractionDigits: 0 })}</p>
                           </div>
                           <div>
                             <p className="text-gray-600">Total Amount</p>
-                            <p className="font-semibold">₹{(monthlyPayment * loanTerm * 12).toLocaleString('en-IN', { maximumFractionDigits: 0 })}</p>
+                            <p className="font-semibold"> ৳{(monthlyPayment * loanTerm * 12).toLocaleString('en-IN', { maximumFractionDigits: 0 })}</p>
                           </div>
                           <div>
                             <p className="text-gray-600">Loan Term</p>
