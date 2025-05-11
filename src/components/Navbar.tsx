@@ -7,11 +7,11 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   
   const menuItems = [
-    { name: "Product & Service", link: "/" },
-    { name: "Business Banking", link: "/" },
-    { name: "Islamic Banking", link: "/" },
+    { name: "Accounts", link: "/" },
+    { name: "Deposits & Loan", link: "/" },
+    { name: "Debit & Credit Cards", link: "/" },
     { name: "About Us", link: "/" },
-    { name: "Contact", link: "/" }
+    { name: "Support", link: "/" }
   ];
 
   return (
@@ -33,7 +33,7 @@ const Navbar = () => {
               <Link 
                 key={item.name}
                 to={item.link}
-                className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-700 hover:text-bank-primary border-b-2 border-transparent hover:border-bank-primary transition-colors duration-300"
+                className="inline-flex items-center px-1 pt-1 text-base font-medium text-gray-700 hover:text-bank-primary border-b-2 border-transparent hover:border-bank-primary transition-colors duration-300"
               >
                 {item.name}
               </Link>
@@ -80,18 +80,6 @@ const Navbar = () => {
                 {item.name}
               </Link>
             ))}
-            <div className="mt-4 flex flex-col space-y-2 px-3">
-              <Button variant="outline" size="sm" className="flex items-center justify-center gap-2">
-                <Search size={16} />
-                <span>Search</span>
-              </Button>
-              <Button
-                className="btn-primary bg-gradient-to-r from-blue-900 via-green-500 to-purple-500 text-white hover:bg-gradient-to-r hover:from-blue-400 hover:via-green-500 hover:to-purple-500"
-              >
-                <User size={16} className="mr-2" />
-                Login
-              </Button>
-            </div>
           </div>
         </div>
       )}
