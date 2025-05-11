@@ -34,7 +34,9 @@ const FinancialProducts = () => {
         {/* Banking Services Section (replacing the savings calculator) */}
         <div className="mb-20">
           <div className="text-center mb-12">
-            <h2 className="section-title">Banking For Your Future</h2>
+           <h2 className="section-title text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-800 via-green-600 to-blue-700">
+  Banking For Your Future
+</h2>
             <p className="section-subtitle">Comprehensive financial solutions for every stage of life</p>
           </div>
           
@@ -203,15 +205,17 @@ const FinancialProducts = () => {
         {/* Loans Section */}
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <div className="order-2 md:order-1">
-            <img
-              src="/placeholder.svg"
-              alt="Online loan calculator"
-              className="rounded-xl shadow-lg w-full"
-            />
-          </div>
+  <img
+    src="https://ecdn.ittefaqbd.com/contents/cache/images/640x358x1/uploads/media/2023/06/20/1e91604b351e46df384695ffa0751b33-64911a148cd23.jpg?jadewits_media_id=7874"
+    alt="Online loan calculator"
+    className="rounded-xl shadow-lg w-full h-96"
+  />
+</div>
           
           <div className="order-1 md:order-2">
-            <h3 className="text-3xl font-bold text-bank-primary mb-4">Flexible Online Loan Calculator</h3>
+            <h3 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-800 via-green-600 to-blue-700 mb-4">
+  Flexible Online Loan Calculator
+</h3>
             <p className="text-gray-600 mb-6">
               Planning a major purchase or need funds for an emergency? Use our online calculator to find the perfect loan solution tailored to your needs.
             </p>
