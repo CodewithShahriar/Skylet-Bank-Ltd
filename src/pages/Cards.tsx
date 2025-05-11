@@ -92,10 +92,10 @@ const CardsPage = () => {
             <TabsContent value="debit" className="mt-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Card className="overflow-hidden">
-                  <div className="h-48 bg-gradient-to-r from-blue-400 to-blue-600 flex items-center justify-center p-6">
+                  <div className="h-48  flex items-center justify-center p-6">
                     <div className="credit-card bg-gradient-to-r from-blue-500 to-blue-700 p-4 rounded-xl w-64 h-36 shadow-lg">
                       <div className="flex justify-between">
-                        <p className="text-xs text-white/80">Skylet Bank</p>
+                        <p className="text-xs text-white/80">Skylet Bank Ltd.</p>
                         <CreditCard className="text-white/70" size={20} />
                       </div>
                       <div className="card-chip mx-0 my-3"></div>
@@ -138,15 +138,18 @@ const CardsPage = () => {
                         <span>Contactless payment technology</span>
                       </li>
                     </ul>
-                    <Button className="w-full bg-blue-600 hover:bg-blue-700">Apply Now</Button>
+                    <Button className="w-full bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-600">
+                        Apply Now
+                        </Button>
+
                   </CardContent>
                 </Card>
                 
                 <Card className="overflow-hidden">
-                  <div className="h-48 bg-gradient-to-r from-purple-400 to-purple-600 flex items-center justify-center p-6">
+                  <div className="h-48  flex items-center justify-center p-6">
                     <div className="credit-card bg-gradient-to-r from-purple-500 to-purple-700 p-4 rounded-xl w-64 h-36 shadow-lg">
                       <div className="flex justify-between">
-                        <p className="text-xs text-white/80">Skylet Bank</p>
+                        <p className="text-xs text-white/80">Skylet Bank Ltd.</p>
                         <CreditCard className="text-white/70" size={20} />
                       </div>
                       <div className="card-chip mx-0 my-3"></div>
@@ -189,7 +192,9 @@ const CardsPage = () => {
                         <span>Exclusive merchant discounts and offers</span>
                       </li>
                     </ul>
-                    <Button className="w-full bg-purple-600 hover:bg-purple-700">Apply Now</Button>
+                    <Button className="w-full bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-600">
+                        Apply Now
+                        </Button>
                   </CardContent>
                 </Card>
               </div>
@@ -247,7 +252,9 @@ const CardsPage = () => {
                         <span>Annual fee: ₹1,000 (waived on spending ₹1,50,000/year)</span>
                       </li>
                     </ul>
-                    <Button className="w-full bg-yellow-600 hover:bg-yellow-700">Apply Now</Button>
+                    <Button className="w-full bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-600">
+                        Apply Now
+                        </Button>
                   </CardContent>
                 </Card>
                 
@@ -301,7 +308,9 @@ const CardsPage = () => {
                         <span>Annual fee: ₹3,000 (waived on spending ₹3,00,000/year)</span>
                       </li>
                     </ul>
-                    <Button className="w-full bg-blue-600 hover:bg-blue-700">Apply Now</Button>
+                    <Button className="w-full bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-600">
+                        Apply Now
+                        </Button>
                   </CardContent>
                 </Card>
               </div>
@@ -356,7 +365,9 @@ const CardsPage = () => {
                         <span>Complimentary travel insurance</span>
                       </li>
                     </ul>
-                    <Button className="w-full bg-green-600 hover:bg-green-700">Apply Now</Button>
+                    <Button className="w-full bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-600">
+                        Apply Now
+                        </Button>
                   </CardContent>
                 </Card>
                 
@@ -407,7 +418,9 @@ const CardsPage = () => {
                         <span>Zero issuance fee</span>
                       </li>
                     </ul>
-                    <Button className="w-full bg-purple-600 hover:bg-purple-700">Apply Now</Button>
+                    <Button className="w-full bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-600">
+                        Apply Now
+                        </Button>
                   </CardContent>
                 </Card>
               </div>
