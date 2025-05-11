@@ -24,7 +24,7 @@ const CardsPage = () => {
             </div>
             <div className="flex justify-center md:justify-end">
               <div className="relative">
-                <div className="credit-card bg-gradient-to-r from-blue-400 to-blue-700 p-5 rounded-xl w-80 h-48 shadow-xl transform rotate-6 absolute -right-2 z-10">
+                <div className="credit-card bg-gradient-to-r from-blue-800 via-sky-600 to-green-500 p-5 rounded-xl w-80 h-48 shadow-xl transform rotate-6 absolute -right-2 z-10">
                   <div className="flex justify-between">
                     <div>
                       <p className="text-xs text-white/80">Skylet Bank Ltd.</p>
@@ -442,10 +442,10 @@ const CardsPage = () => {
           </div>
           
           <div className="overflow-x-auto">
-            <table className="w-full bg-white border-collapse rounded-lg overflow-hidden shadow-md">
+            <table className="w-full bg-white border border-black border-collapse rounded-lg overflow-hidden shadow-md">
               <thead>
-                <tr className="bg-blue-600 text-white">
-                  <th className="text-left p-4">Card Type</th>
+                <tr className="bg-gradient-to-r from-blue-600 to-green-500 text-white ">
+                  <th className="text-left p-4 ">Card Type</th>
                   <th className="text-left p-4">Annual Fee</th>
                   <th className="text-left p-4">Rewards</th>
                   <th className="text-left p-4">Key Benefits</th>
@@ -453,35 +453,35 @@ const CardsPage = () => {
                 </tr>
               </thead>
               <tbody>
-                <tr className="border-b border-gray-200">
+                <tr className="border-b border-gray-400">
                   <td className="p-4 font-medium">Skylet Debit Card</td>
                   <td className="p-4">No Fee</td>
                   <td className="p-4">0.1% cashback</td>
                   <td className="p-4">Universal acceptance, Free ATM withdrawals</td>
                   <td className="p-4">Everyday banking</td>
                 </tr>
-                <tr className="border-b border-gray-200 bg-gray-50">
+                <tr className="border-b border-gray-400 bg-gray-50">
                   <td className="p-4 font-medium">Skylet Signature Debit</td>
                   <td className="p-4">₹500/year</td>
                   <td className="p-4">0.25% cashback</td>
                   <td className="p-4">Higher limits, Airport lounge access</td>
                   <td className="p-4">Premium account holders</td>
                 </tr>
-                <tr className="border-b border-gray-200">
+                <tr className="border-b border-gray-400">
                   <td className="p-4 font-medium">Skylet Gold Credit Card</td>
                   <td className="p-4">₹1,000/year (waivable)</td>
                   <td className="p-4">1 point per ₹100</td>
                   <td className="p-4">2x rewards on dining, Fuel surcharge waiver</td>
                   <td className="p-4">Everyday spenders</td>
                 </tr>
-                <tr className="border-b border-gray-200 bg-gray-50">
+                <tr className="border-b border-gray-400 bg-gray-50">
                   <td className="p-4 font-medium">Skylet Platinum Credit Card</td>
                   <td className="p-4">₹3,000/year (waivable)</td>
                   <td className="p-4">2 points per ₹100</td>
                   <td className="p-4">Lounge access, Travel insurance</td>
                   <td className="p-4">Frequent travelers</td>
                 </tr>
-                <tr className="border-b border-gray-200">
+                <tr className="border-b border-gray-400">
                   <td className="p-4 font-medium">Multi-Currency Travel Card</td>
                   <td className="p-4">₹500 (one-time)</td>
                   <td className="p-4">None</td>
