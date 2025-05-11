@@ -7,7 +7,9 @@ const ProductsSection = () => {
     <section className="py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="section-title">Enhance Your Wealth Safely</h2>
+          <h2 className="section-title text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-green-700 to-blue-800">
+            Enhance Your Wealth Safely
+          </h2>
           <p className="section-subtitle">Choose from our range of deposit products</p>
         </div>
 
