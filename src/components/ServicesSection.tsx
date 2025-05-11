@@ -42,16 +42,28 @@ const ServicesSection = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
-            <Card key={index} className="bg-white border border-gray-200 overflow-hidden card-hover">
+            <Card
+              key={index}
+              className="group bg-white border border-gray-200 overflow-hidden card-hover transition-all duration-300"
+            >
               <CardHeader className="pb-2">
-                <div className="mb-4">{service.icon}</div>
-                <CardTitle className="text-xl font-bold text-bank-primary">{service.title}</CardTitle>
+                <div className="mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-800 group-hover:via-sky-900 group-hover:to-green-900">
+                  {service.icon}
+                </div>
+                <CardTitle className="text-xl font-bold text-bank-primary group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:via-sky-500 group-hover:to-green-500">
+                  {service.title}
+                </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">{service.description}</p>
+                <p className="text-gray-600 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:via-sky-500 group-hover:to-green-500">
+                  {service.description}
+                </p>
               </CardContent>
               <CardFooter>
-                <Button variant="ghost" className="text-bank-primary hover:text-bank-primary/80 p-0">
+                <Button
+                  variant="ghost"
+                  className="text-bank-primary group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:via-sky-500 group-hover:to-green-500 p-0"
+                >
                   {service.buttonText} <ArrowRight size={16} className="ml-1" />
                 </Button>
               </CardFooter>
