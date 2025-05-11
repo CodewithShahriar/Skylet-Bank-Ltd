@@ -11,7 +11,7 @@ const HeroSection = () => {
         <div className="grid md:grid-cols-2 gap-8 py-10 md:py-18 items-center">
           <div className="space-y-6 animate-fade-in">
             {/* Dynamic heading */}
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-green-500 to-purple-800">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-green-600 to-purple-800">
               Banking Made Smart for Your Future
             </h1>
             {/* Dynamic subtext */}
