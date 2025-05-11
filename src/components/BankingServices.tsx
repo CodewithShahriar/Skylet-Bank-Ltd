@@ -96,7 +96,7 @@ const BankingServices = () => {
   };
 
   return (
-    <section className="relative bg-gradient-to-br from-bank-primary to-bank-red">
+    <section className="relative bg-gradient-to-br from-blue-900 via-green-500 to-purple-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="mb-12">
           <div className="flex items-center mb-4">
@@ -117,7 +117,7 @@ const BankingServices = () => {
                   onClick={() => setActiveTab(tab.id)}
                 >
                   {activeTab === tab.id && (
-                    <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-bank-red"></div>
+                    <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-r from-blue-600 to-green-500"></div>
                   )}
                   <div className={`px-6 py-5 hover:bg-gray-50 ${activeTab === tab.id ? 'bg-gray-50' : ''}`}>
                     <h3 className="font-medium text-gray-900">{tab.title}</h3>
@@ -164,7 +164,7 @@ const BankingServices = () => {
                 ))}
               </div>
               
-              <Button className="bg-bank-red hover:bg-bank-red/90 text-white">
+              <Button className="btn-primary bg-gradient-to-r from-blue-900 via-green-000 to-purple-500 text-white hover:bg-gradient-to-r hover:from-blue-600 hover:via-green-000 hover:to-purple-600">
                 Explore Options
                 <ArrowRight size={16} className="ml-2" />
               </Button>
