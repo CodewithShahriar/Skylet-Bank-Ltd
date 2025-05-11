@@ -53,7 +53,9 @@ const TrustSection = () => {
         
         {/* Testimonials */}
         <div>
-          <h3 className="text-2xl font-bold text-center mb-10">What Our Customers Say</h3>
+          <h3 className="text-2xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-900 via-green-600 to-blue-900 mb-10">
+  What Our Customers Say
+</h3>
           
           <div className="grid md:grid-cols-3 gap-8">
             <Testimonial 
