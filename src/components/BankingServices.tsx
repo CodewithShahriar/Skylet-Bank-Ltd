@@ -222,11 +222,28 @@ const BankingServices = () => {
                     </div>
                   </div>
                 </div>
-                
-                <Button className="w-full bg-gradient-to-r from-blue-800 via-green-000 to-purple-500 text-white hover:bg-gradient-to-r hover:from-blue-600 hover:via-green-000 hover:to-purple-600">
-  Proceed to Details
-  <ArrowRight size={16} className="ml-2" />
-</Button>
+
+                <div
+                            style={{
+                              padding: "2px",
+                              borderRadius: "0.5rem",
+                              background: "linear-gradient(135deg, #3b82f6, #10b981, #8b5cf6)",
+                              backgroundSize: "300% 300%",
+                              animation: "glowBorder 5s linear infinite"
+                            }}
+                            className="w-full"
+                          >
+                            <div className="bg-white rounded-md w-full">
+                              <Button
+                                variant="outline"
+                                className="w-full text-bank-primary hover:bg-bank-primary/5 border-none"
+                              >
+                                
+                                Proceed to Details
+                                <ArrowRight size={16} className="ml-2" />
+                              </Button>
+                            </div>
+                          </div>
               </div>
             </div>
           </div>
