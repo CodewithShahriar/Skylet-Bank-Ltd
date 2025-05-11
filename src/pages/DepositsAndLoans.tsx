@@ -40,7 +40,7 @@ const DepositsAndLoansPage = () => {
               <h1 className="text-4xl md:text-5xl font-bold mb-4">Smart Ways to Save & Borrow</h1>
               <p className="text-lg mb-6">Discover our range of deposit options and loan products designed to help you achieve your financial goals.</p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button className="bg-white text-green-600 hover:bg-green-50">Start Saving</Button>
+                <Button className="bg-white text-black hover:bg-green-50">Start Saving</Button>
                 <Button className="bg-transparent border border-white text-white hover:bg-white/10">Apply for a Loan</Button>
               </div>
             </div>
@@ -77,7 +77,9 @@ const DepositsAndLoansPage = () => {
       <section className="py-16 px-4 md:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-2">Deposit Options</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-2 bg-gradient-to-r from-blue-700 via-green-700 to-purple-500 text-transparent bg-clip-text">
+            Deposit Options
+            </h2>
             <p className="text-lg text-gray-600">Grow your money with our secure deposit solutions</p>
           </div>
           
@@ -175,7 +177,9 @@ const DepositsAndLoansPage = () => {
       <section className="py-16 px-4 md:px-8 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-2">Loan Products</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-2 bg-gradient-to-r from-blue-700 via-green-700 to-purple-500 text-transparent bg-clip-text">
+            Loan Products
+            </h2>
             <p className="text-lg text-gray-600">Financing solutions for all your needs</p>
           </div>
           
@@ -526,7 +530,9 @@ const DepositsAndLoansPage = () => {
       <section className="py-16 px-4 md:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-2">EMI Calculator</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-2 bg-gradient-to-r from-blue-700 via-green-700 to-purple-500 text-transparent bg-clip-text">
+            EMI Calculator
+            </h2>
             <p className="text-lg text-gray-600">Plan your loan repayments with our easy-to-use calculator</p>
           </div>
           
@@ -667,7 +673,9 @@ const DepositsAndLoansPage = () => {
       <section className="py-16 px-4 md:px-8 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-2">Success Stories</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-2 bg-gradient-to-r from-blue-700 via-green-700 to-purple-500 text-transparent bg-clip-text">
+            Success Stories
+            </h2>
             <p className="text-lg text-gray-600">Hear from our satisfied customers</p>
           </div>
           
