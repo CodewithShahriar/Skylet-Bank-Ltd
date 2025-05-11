@@ -62,49 +62,58 @@ const SupportPage = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow">
-              <CardContent className="p-6">
+            <CardContent className="p-6">
                 <div className="flex flex-col items-center text-center">
-                  <div className="bg-purple-100 p-4 rounded-full mb-4">
-                    <Phone className="text-purple-600" size={24} />
-                  </div>
-                  <h3 className="text-lg font-bold mb-2">Call Us</h3>
-                  <p className="text-gray-600 mb-4">Our customer service is available 24/7 to help you with your banking needs.</p>
-                  <p className="font-semibold text-purple-600 mb-1">General Support: 1800-XXX-XXXX</p>
-                  <p className="font-semibold text-purple-600 mb-1">Card Support: 1800-XXX-YYYY</p>
-                  <p className="font-semibold text-purple-600">International: +880-XX-XXXXXXX</p>
+                <div className="bg-gradient-to-r from-blue-200 to-green-200 p-4 rounded-full mb-4">
+                    <Phone className="text-black" size={24} />
                 </div>
-              </CardContent>
+                <h3 className="text-lg font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-900 to-green-900">
+                    Call Us
+                </h3>
+                <p className="text-gray-600 mb-4">Our customer service is available 24/7 to help you with your banking needs.</p>
+                <p className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-600 mb-1">General Support: 1800-XXX-XXXX</p>
+                <p className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-600 mb-1">Card Support: 1800-XXX-YYYY</p>
+                <p className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-600">International: +880-XX-XXXXXXX</p>
+                </div>
+            </CardContent>
             </Card>
+
             
             <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow">
-              <CardContent className="p-6">
+            <CardContent className="p-6">
                 <div className="flex flex-col items-center text-center">
-                  <div className="bg-blue-100 p-4 rounded-full mb-4">
-                    <Mail className="text-blue-600" size={24} />
-                  </div>
-                  <h3 className="text-lg font-bold mb-2">Email Us</h3>
-                  <p className="text-gray-600 mb-4">Send us an email and we'll get back to you within 24 hours on business days.</p>
-                  <p className="font-semibold text-blue-600 mb-1">General Inquiries: info@skyletbank.com</p>
-                  <p className="font-semibold text-blue-600 mb-1">Customer Support: support@skyletbank.com</p>
-                  <p className="font-semibold text-blue-600">Corporate Relations: business@skyletbank.com</p>
+                <div className="bg-gradient-to-r from-blue-200 to-green-200 p-4 rounded-full mb-4">
+                    <Mail className="text-black" size={24} />
                 </div>
-              </CardContent>
+                <h3 className="text-lg font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-900 to-green-900">
+                    Email Us
+                </h3>
+                <p className="text-gray-600 mb-4">Send us an email and we'll get back to you within 24 hours on business days.</p>
+                <p className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-green-600 mb-1">General Inquiries: info@skyletbank.com</p>
+                <p className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-green-600 mb-1">Customer Support: support@skyletbank.com</p>
+                <p className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-green-600">Corporate Relations: business@skyletbank.com</p>
+                </div>
+            </CardContent>
             </Card>
+
             
             <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow">
-              <CardContent className="p-6">
+            <CardContent className="p-6">
                 <div className="flex flex-col items-center text-center">
-                  <div className="bg-green-100 p-4 rounded-full mb-4">
-                    <MapPin className="text-green-600" size={24} />
-                  </div>
-                  <h3 className="text-lg font-bold mb-2">Visit Us</h3>
-                  <p className="text-gray-600 mb-4">Stop by our branches for in-person assistance from our banking experts.</p>
-                  <p className="font-semibold text-green-600 mb-1">Headquarters: Skylet Tower, 123 Finance Street, Dhaka</p>
-                  <p className="font-semibold text-green-600 mb-1">Hours: Monday-Friday 10AM-6PM</p>
-                  <p className="font-semibold text-green-600">Weekend: Saturday 10AM-2PM</p>
+                <div className="bg-gradient-to-r from-blue-200 to-green-200 p-4 rounded-full mb-4">
+                    <MapPin className="text-black" size={24} />
                 </div>
-              </CardContent>
+                <h3 className="text-lg font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-900 to-green-900">
+                    Visit Us
+                </h3>
+                <p className="text-gray-600 mb-4">Stop by our branches for in-person assistance from our banking experts.</p>
+                <p className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-600 mb-1">Headquarters: Skylet Tower, 123 Finance Street, Dhaka</p>
+                <p className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-600 mb-1">Hours: Monday-Friday 10AM-6PM</p>
+                <p className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-600">Weekend: Saturday 10AM-2PM</p>
+                </div>
+            </CardContent>
             </Card>
+
           </div>
         </div>
       </section>
@@ -563,7 +572,9 @@ const SupportPage = () => {
                     </div>
                     <p>ATMs: 24/7 Access</p>
                   </div>
-                  <a href="#" className="text-blue-600 text-sm hover:underline inline-block mt-2">View Details</a>
+                  <a href="#" className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-700 hover:text-transparent text-sm inline-block mt-2">
+  View Details
+</a>
                 </CardContent>
               </Card>
               
@@ -578,7 +589,9 @@ const SupportPage = () => {
                     </div>
                     <p>ATMs: 24/7 Access</p>
                   </div>
-                  <a href="#" className="text-blue-600 text-sm hover:underline inline-block mt-2">View Details</a>
+                  <a href="#" className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-700 hover:text-transparent text-sm inline-block mt-2">
+  View Details
+</a>
                 </CardContent>
               </Card>
               
@@ -593,7 +606,9 @@ const SupportPage = () => {
                     </div>
                     <p>ATMs: 24/7 Access</p>
                   </div>
-                  <a href="#" className="text-blue-600 text-sm hover:underline inline-block mt-2">View Details</a>
+                  <a href="#" className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-700 hover:text-transparent text-sm inline-block mt-2">
+  View Details
+</a>
                 </CardContent>
               </Card>
               
@@ -608,7 +623,10 @@ const SupportPage = () => {
                     </div>
                     <p>ATMs: 24/7 Access</p>
                   </div>
-                  <a href="#" className="text-blue-600 text-sm hover:underline inline-block mt-2">View Details</a>
+                  <a href="#" className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-700 hover:text-transparent text-sm inline-block mt-2">
+  View Details
+</a>
+
                 </CardContent>
               </Card>
             </div>
