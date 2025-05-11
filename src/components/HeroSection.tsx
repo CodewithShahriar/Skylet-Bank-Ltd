@@ -29,13 +29,25 @@ const HeroSection = () => {
               </Button>
 
               {/* Learn More Button */}
-              <Button
-                size="lg"
-                variant="outline"
-                className="bg-transparent border-blue-500 text-blue-500 hover:bg-gradient-to-r hover:from-blue-400 hover:via-green-000 hover:to-purple-500 hover:text-white"
+              <div
+                style={{
+                  padding: "2px",
+                  borderRadius: "0.5rem",
+                  background: "linear-gradient(135deg, #3b82f6, #10b981, #8b5cf6)",
+                  backgroundSize: "300% 300%",
+                  animation: "glowBorder 5s linear infinite"
+                }}
+                className="w-1/3"
               >
-                Learn More
-              </Button>
+                <div className="bg-white rounded-md w-full">
+                  <Button
+                    variant="outline"
+                    className="w-full text-bank-primary hover:bg-bank-primary/5 border-none"
+                  >
+                    Learn More
+                  </Button>
+               </div>
+              </div>
             </div>
           </div>
           
