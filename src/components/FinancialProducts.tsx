@@ -39,18 +39,22 @@ const FinancialProducts = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {bankingServices.map((service, index) => (
-              <Card key={index} className="bg-white border border-gray-200 overflow-hidden card-hover">
-                <CardContent className="p-6 flex flex-col items-center text-center">
-                  <div className="mb-4 p-3 rounded-full bg-bank-secondary/10">
-                    {service.icon}
-                  </div>
-                  <h3 className="text-xl font-bold text-bank-primary mb-2">{service.title}</h3>
-                  <p className="text-gray-600">{service.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+  {bankingServices.map((service, index) => (
+    <Card key={index} className="bg-white border border-gray-300 overflow-hidden card-hover">
+      <CardContent className="p-6 flex flex-col items-center text-center group">
+        <div className="mb-4 p-3 rounded-full bg-bank-secondary/10">
+          {service.icon}
+        </div>
+        <h3 className="text-xl font-bold text-bank-primary mb-2 group-hover:text-gradient-to-r group-hover:from-blue-300 group-hover:via-green-200 group-hover:to-purple-300">
+          {service.title}
+        </h3>
+        <p className="text-gray-600 group-hover:text-gradient-to-r group-hover:from-blue-300 group-hover:via-green-200 group-hover:to-purple-300">
+          {service.description}
+        </p>
+      </CardContent>
+    </Card>
+  ))}
+</div>
         </div>
         
         {/* Credit Cards Section with Realistic Cards */}
