@@ -48,7 +48,7 @@ const CardsPage = () => {
                 <div className="credit-card bg-gradient-to-r from-yellow-400 to-amber-600 p-5 rounded-xl w-80 h-48 shadow-xl transform -rotate-3 relative z-0">
                   <div className="flex justify-between">
                     <div>
-                      <p className="text-xs text-white/80">Skylet Bank</p>
+                      <p className="text-xs text-white/80">Skylet Bank Ltd.</p>
                       <p className="text-white/50 text-xs">Gold</p>
                     </div>
                     <CreditCard className="text-white/70" size={24} />
@@ -76,7 +76,9 @@ const CardsPage = () => {
       <section className="py-16 px-4 md:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-2">Explore Our Card Options</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-2 bg-gradient-to-r from-blue-700 via-green-700 to-purple-700 text-transparent bg-clip-text">
+            Explore Our Card Options
+            </h2>
             <p className="text-lg text-gray-600">Find the perfect card for your financial needs</p>
           </div>
           
@@ -418,7 +420,9 @@ const CardsPage = () => {
       <section className="py-16 px-4 md:px-8 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-2">Card Comparison</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-2 bg-gradient-to-r from-blue-700 via-green-700 to-purple-700 text-transparent bg-clip-text">
+            Card Comparison
+            </h2>
             <p className="text-lg text-gray-600">Find the right card for your needs</p>
           </div>
           
@@ -486,7 +490,9 @@ const CardsPage = () => {
       <section className="py-16 px-4 md:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-2">Card Security Tips</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-2 bg-gradient-to-r from-blue-700 via-green-700 to-purple-700 text-transparent bg-clip-text">
+            Card Security Tips
+            </h2>
             <p className="text-lg text-gray-600">Keeping your cards safe and secure</p>
           </div>
           
@@ -538,7 +544,9 @@ const CardsPage = () => {
       <section className="py-16 px-4 md:px-8 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-2">Lost or Stolen Card?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-2 bg-gradient-to-r from-blue-700 via-green-700 to-purple-700 text-transparent bg-clip-text">
+            Lost or Stolen Card?
+            </h2>
             <p className="text-lg text-gray-600">Take immediate action to secure your account</p>
           </div>
           

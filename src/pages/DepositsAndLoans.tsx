@@ -77,7 +77,7 @@ const DepositsAndLoansPage = () => {
       <section className="py-16 px-4 md:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-2 bg-gradient-to-r from-blue-700 via-green-700 to-purple-500 text-transparent bg-clip-text">
+            <h2 className="text-3xl md:text-4xl font-bold mb-2 bg-gradient-to-r from-blue-700 via-green-700 to-purple-700 text-transparent bg-clip-text">
             Deposit Options
             </h2>
             <p className="text-lg text-gray-600">Grow your money with our secure deposit solutions</p>
