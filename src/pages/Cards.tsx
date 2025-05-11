@@ -20,14 +20,14 @@ const CardsPage = () => {
             <div className="text-white">
               <h1 className="text-4xl md:text-5xl font-bold mb-4">Cards Designed for Your Lifestyle</h1>
               <p className="text-lg mb-6">Explore our range of debit and credit cards with exclusive benefits and rewards tailored to your needs.</p>
-              <Button className="bg-white text-blue-600 hover:bg-blue-50">Apply for a Card</Button>
+              <Button className="bg-white text-blue-900 hover:bg-blue-50">Apply for a Card</Button>
             </div>
             <div className="flex justify-center md:justify-end">
               <div className="relative">
                 <div className="credit-card bg-gradient-to-r from-blue-400 to-blue-700 p-5 rounded-xl w-80 h-48 shadow-xl transform rotate-6 absolute -right-2 z-10">
                   <div className="flex justify-between">
                     <div>
-                      <p className="text-xs text-white/80">Skylet Bank</p>
+                      <p className="text-xs text-white/80">Skylet Bank Ltd.</p>
                       <p className="text-white/50 text-xs">Platinum</p>
                     </div>
                     <CreditCard className="text-white/70" size={24} />
