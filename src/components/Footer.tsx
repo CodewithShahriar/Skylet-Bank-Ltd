@@ -33,7 +33,9 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gradient-to-r from-blue-800 via-green-600 to-purple-800 text-white">
+    <footer className="bg-gradient-to-tr from-green-600 via-blue-800 to-purple-800 text-white">
+
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 
         {/* Newsletter Section */}
