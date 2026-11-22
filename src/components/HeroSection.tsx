@@ -32,7 +32,20 @@ export const HeroSection: React.FC = () => {
         }}
       ></div>
 
-      {/* 2. Soft Diffuse Ambient Glows (Smoothly blended across the whole canvas, no lines) */}
+      {/* 2. Right-Side 3D Digital Financial Network Background Visual (Seamless multi-directional linear fade - NO circular cuts) */}
+      <div className="absolute right-0 top-0 bottom-0 w-full lg:w-3/5 pointer-events-none select-none overflow-hidden z-0 opacity-35 dark:opacity-40">
+        <img
+          src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=1600&q=80"
+          alt="3D Digital Financial Network"
+          className="w-full h-full object-cover object-center lg:object-right scale-105"
+        />
+        {/* Seamless multi-directional linear fade masks - 100% blends smoothly into dark navy canvas with zero hard lines */}
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-50 via-slate-50/70 to-transparent dark:from-slate-950 dark:via-slate-950/70 dark:to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-50 via-transparent to-slate-50 dark:from-slate-950 dark:via-transparent dark:to-slate-950"></div>
+        <div className="absolute inset-0 bg-gradient-to-l from-slate-50/80 via-transparent to-transparent dark:from-slate-950/80 dark:via-transparent to-transparent"></div>
+      </div>
+
+      {/* 3. Soft Diffuse Ambient Glows (Smoothly blended across the whole canvas, no lines) */}
       <div className="absolute inset-0 pointer-events-none select-none overflow-hidden z-0">
         <div className="absolute top-1/3 left-1/4 -translate-y-1/2 w-[700px] h-[500px] bg-blue-600/10 dark:bg-blue-600/15 rounded-full blur-[150px]"></div>
         <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[600px] h-[500px] bg-emerald-500/10 dark:bg-emerald-500/15 rounded-full blur-[150px]"></div>

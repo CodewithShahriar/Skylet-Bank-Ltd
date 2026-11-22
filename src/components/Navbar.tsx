@@ -114,14 +114,11 @@ export const Navbar: React.FC = () => {
               <button
                 onClick={() => setIsSearchOpen(true)}
                 className="flex items-center gap-2 px-3 py-2 text-xs text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-900 hover:bg-slate-200/70 dark:hover:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-800 transition-colors whitespace-nowrap"
-                title="Search (Ctrl+K)"
+                title="Search"
               >
                 <Search size={14} className="text-slate-400 flex-shrink-0" />
                 <span className="hidden xl:inline">Quick Search...</span>
                 <span className="xl:hidden inline">Search</span>
-                <kbd className="hidden xl:inline-block font-mono text-[10px] bg-white dark:bg-slate-950 px-1.5 py-0.5 rounded border border-slate-300 dark:border-slate-700 text-slate-400">
-                  ⌘K
-                </kbd>
               </button>
 
               {/* Dark / Light Mode Toggle */}

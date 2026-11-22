@@ -23,17 +23,20 @@ export const CommandSearch: React.FC<CommandSearchProps> = ({ isOpen, onClose })
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if ((e.metaKey || e.ctrlKey) && e.key === "k") {
+      if (e.key === "Escape") {
         e.preventDefault();
-        if (isOpen) onClose();
-        else onClose(); // trigger toggle
-      }
-      if (e.key === "Escape" && isOpen) {
+        e.stopPropagation();
         onClose();
       }
     };
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
+    if (isOpen) {
+      window.addEventListener("keydown", handleKeyDown, true);
+      document.body.style.overflow = "hidden";
+    }
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown, true);
+      document.body.style.overflow = "unset";
+    };
   }, [isOpen, onClose]);
 
   if (!isOpen) return null;
@@ -94,9 +97,12 @@ export const CommandSearch: React.FC<CommandSearchProps> = ({ isOpen, onClose })
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-start justify-center pt-20 px-4 bg-slate-950/60 backdrop-blur-sm animate-in fade-in duration-200">
+    <div
+      onClick={onClose}
+      className="fixed inset-0 z-50 flex items-start justify-center pt-16 sm:pt-20 px-4 bg-slate-950/75 backdrop-blur-sm animate-in fade-in duration-200 cursor-pointer"
+    >
       <div
-        className="w-full max-w-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-2xl overflow-hidden animate-in zoom-in-95 duration-200"
+        className="w-full max-w-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-2xl overflow-hidden animate-in zoom-in-95 duration-200 cursor-default"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Input Bar */}
@@ -106,21 +112,36 @@ export const CommandSearch: React.FC<CommandSearchProps> = ({ isOpen, onClose })
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === "Escape") {
+                e.preventDefault();
+                e.stopPropagation();
+                onClose();
+              }
+            }}
             placeholder="Search accounts, loans, cards, or calculators..."
             className="w-full bg-transparent border-none text-slate-900 dark:text-slate-100 placeholder:text-slate-400 focus:outline-none text-sm md:text-base"
             autoFocus
           />
           {query && (
             <button
+              type="button"
               onClick={() => setQuery("")}
-              className="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200"
+              className="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 p-1"
+              title="Clear text"
             >
               <X className="w-4 h-4" />
             </button>
           )}
-          <span className="hidden sm:inline-block text-[11px] font-mono px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 border border-slate-200 dark:border-slate-700">
-            ESC
-          </span>
+          <button
+            type="button"
+            onClick={onClose}
+            className="flex items-center gap-1.5 px-2.5 py-1 text-xs font-medium text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-100 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-lg border border-slate-200 dark:border-slate-700 transition-colors"
+            title="Close (Esc)"
+          >
+            <span className="text-[11px] font-mono">ESC</span>
+            <X className="w-3.5 h-3.5" />
+          </button>
         </div>
 
         {/* Results List */}
