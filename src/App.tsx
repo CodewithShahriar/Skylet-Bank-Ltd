@@ -11,6 +11,7 @@ import DepositsAndLoans from "./pages/DepositsAndLoans";
 import Cards from "./pages/Cards";
 import AboutUs from "./pages/AboutUs";
 import Support from "./pages/Support";
+import SignIn from "./pages/SignIn";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,6 +31,8 @@ const App = () => (
             <Route path="/cards" element={<Cards />} />
             <Route path="/about-us" element={<AboutUs />} />
             <Route path="/support" element={<Support />} />
+            <Route path="/sign-in" element={<SignIn />} />
+            <Route path="/portal" element={<SignIn />} />
             {/* Catch-all 404 route */}
             <Route path="*" element={<NotFound />} />
           </Routes>

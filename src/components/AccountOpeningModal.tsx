@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import {
   X,
   CheckCircle2,
@@ -510,15 +511,14 @@ export const AccountOpeningModal: React.FC<AccountOpeningModalProps> = ({
                 )}
 
                 <div className="flex flex-col sm:flex-row gap-3 pt-2">
-                  <a
-                    href="https://skyletbankltd-dashboard.netlify.app/"
-                    target="_blank"
-                    rel="noreferrer"
+                  <Link
+                    to="/sign-in"
+                    onClick={onClose}
                     className="w-full btn-fintech-primary py-3 text-xs sm:text-sm font-semibold flex items-center justify-center gap-2"
                   >
                     <span>Access Client Portal Now</span>
                     <ArrowRight size={16} />
-                  </a>
+                  </Link>
                   <Button
                     variant="outline"
                     onClick={onClose}

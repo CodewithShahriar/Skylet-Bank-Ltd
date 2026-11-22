@@ -16,6 +16,7 @@ export const Footer: React.FC = () => {
   };
 
   const quickLinks = [
+    { name: "Client Banking Portal Sign In", href: "/sign-in" },
     { name: "Personal Checking & High-Yield", href: "/accounts" },
     { name: "Commercial & Corporate Treasury", href: "/accounts" },
     { name: "Sapphire & Corporate Credit Cards", href: "/cards" },

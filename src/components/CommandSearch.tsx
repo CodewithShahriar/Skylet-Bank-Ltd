@@ -45,6 +45,7 @@ export const CommandSearch: React.FC<CommandSearchProps> = ({ isOpen, onClose })
     {
       category: "Banking & Accounts",
       items: [
+        { title: "Client Portal & Online Banking Sign In", path: "/sign-in", icon: Building },
         { title: "High-Yield Checking & Savings", path: "/accounts", icon: Building },
         { title: "Global Multi-Currency Accounts", path: "/accounts", icon: Building },
         { title: "Commercial Treasury Accounts", path: "/accounts", icon: Building },

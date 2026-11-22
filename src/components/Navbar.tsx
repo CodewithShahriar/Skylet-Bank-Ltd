@@ -135,15 +135,13 @@ export const Navbar: React.FC = () => {
               </button>
 
               {/* Portal Sign In Link */}
-              <a
-                href="https://skyletbankltd-dashboard.netlify.app/"
-                target="_blank"
-                rel="noreferrer"
+              <Link
+                to="/sign-in"
                 className="inline-flex items-center gap-1.5 text-xs xl:text-sm font-semibold px-3 py-2 rounded-xl text-slate-800 dark:text-slate-200 hover:text-blue-600 dark:hover:text-emerald-400 hover:bg-slate-100/60 dark:hover:bg-slate-900/60 transition-colors whitespace-nowrap flex-shrink-0"
               >
                 <User size={15} className="flex-shrink-0" />
                 <span>Portal Sign In</span>
-              </a>
+              </Link>
 
               {/* Open Global Account CTA Button */}
               <Link
@@ -204,15 +202,14 @@ export const Navbar: React.FC = () => {
             </div>
 
             <div className="pt-3 border-t border-slate-200 dark:border-slate-800 space-y-2">
-              <a
-                href="https://skyletbankltd-dashboard.netlify.app/"
-                target="_blank"
-                rel="noreferrer"
+              <Link
+                to="/sign-in"
+                onClick={() => setIsMenuOpen(false)}
                 className="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 text-xs font-semibold hover:bg-slate-50 dark:hover:bg-slate-900"
               >
                 <User size={15} />
                 <span>Portal Sign In</span>
-              </a>
+              </Link>
               <Link
                 to="/accounts"
                 onClick={() => setIsMenuOpen(false)}
