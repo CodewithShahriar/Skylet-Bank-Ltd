@@ -1,11 +1,25 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="dark scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Skylet Bank Ltd | Next-Gen Global & US Digital Banking</title>
     <meta name="description" content="Skylet Bank Ltd - Premier Global & US Digital Banking Solutions. High-yield savings, commercial credit, FDIC-insured protection, and instant cross-border wire transfers." />
     <meta name="author" content="Skylet Bank Ltd" />
+    <script>
+      (function() {
+        try {
+          var saved = localStorage.getItem('skylet-theme');
+          if (saved === 'light') {
+            document.documentElement.classList.remove('dark');
+          } else {
+            document.documentElement.classList.add('dark');
+          }
+        } catch (e) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">

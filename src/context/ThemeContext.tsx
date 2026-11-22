@@ -14,7 +14,8 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   const [theme, setThemeState] = useState<Theme>(() => {
     const saved = localStorage.getItem("skylet-theme") as Theme | null;
     if (saved) return saved;
-    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    // Default to modern fintech dark mode for all new visitors
+    return "dark";
   });
 
   useEffect(() => {
