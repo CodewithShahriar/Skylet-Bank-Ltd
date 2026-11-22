@@ -7,11 +7,8 @@ import {
   Search,
   Sun,
   Moon,
-  Shield,
-  ArrowRight,
-  Sparkles
+  ArrowRight
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { useTheme } from "@/context/ThemeContext";
 import { CommandSearch } from "./CommandSearch";
 
@@ -24,7 +21,7 @@ export const Navbar: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 15);
+      setIsScrolled(window.scrollY > 10);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -55,46 +52,47 @@ export const Navbar: React.FC = () => {
   return (
     <>
       <nav
-        className={`sticky top-0 z-40 transition-all duration-300 ${
+        className={`sticky top-0 z-40 w-full transition-all duration-300 ${
           isScrolled
-            ? "bg-white/85 dark:bg-slate-900/85 backdrop-blur-md shadow-md border-b border-slate-200/80 dark:border-slate-800/80"
-            : "bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm border-b border-slate-200/50 dark:border-slate-800/50"
+            ? "bg-white/90 dark:bg-slate-950/90 backdrop-blur-md shadow-md border-b border-slate-200/80 dark:border-slate-800/80"
+            : "bg-white/95 dark:bg-slate-950/95 backdrop-blur-sm border-b border-slate-200/50 dark:border-slate-800/50"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-18">
-            {/* Logo */}
-            <div className="flex items-center gap-3">
-              <Link to="/" className="flex items-center gap-2 group">
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 via-indigo-600 to-emerald-500 flex items-center justify-center text-white shadow-md shadow-blue-500/20 group-hover:scale-105 transition-transform">
-                  <span className="font-extrabold text-xl tracking-tight">S</span>
+        <div className="w-full max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16 sm:h-20 gap-4">
+            
+            {/* 1. Left: Logo Brand */}
+            <div className="flex-shrink-0">
+              <Link to="/" className="flex items-center gap-2.5 group select-none">
+                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-blue-600 via-indigo-600 to-emerald-500 flex items-center justify-center text-white shadow-md shadow-blue-500/20 group-hover:scale-105 transition-transform flex-shrink-0">
+                  <span className="font-extrabold text-lg sm:text-xl tracking-tight">S</span>
                 </div>
                 <div className="flex flex-col">
-                  <div className="flex items-center gap-1.5">
-                    <span className="text-xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+                  <div className="flex items-center gap-1.5 leading-none">
+                    <span className="text-lg sm:text-xl font-extrabold tracking-tight text-slate-900 dark:text-white">
                       SKYLET<span className="text-blue-600 dark:text-emerald-400">.</span>
                     </span>
-                    <span className="hidden sm:inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-emerald-100 text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-400 border border-emerald-300 dark:border-emerald-800">
+                    <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-emerald-100 text-emerald-800 dark:bg-emerald-950/80 dark:text-emerald-400 border border-emerald-300 dark:border-emerald-800 whitespace-nowrap">
                       <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
                       FDIC
                     </span>
                   </div>
-                  <span className="text-[10px] font-semibold tracking-wider text-slate-500 dark:text-slate-400 uppercase -mt-1">
+                  <span className="text-[10px] font-semibold tracking-wider text-slate-500 dark:text-slate-400 uppercase mt-0.5 whitespace-nowrap">
                     Global Bank Ltd
                   </span>
                 </div>
               </Link>
             </div>
 
-            {/* Desktop Navigation Links */}
-            <div className="hidden lg:flex items-center space-x-1">
+            {/* 2. Middle: Navigation Links (Never wrap text) */}
+            <div className="hidden lg:flex items-center gap-1 xl:gap-1.5 flex-shrink-0">
               {menuItems.map((item) => {
                 const active = isActive(item.link);
                 return item.link.startsWith("/#") ? (
                   <button
                     key={item.name}
                     onClick={() => handleNavClick(item.link)}
-                    className="px-3.5 py-2 text-sm font-medium rounded-lg text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-emerald-400 hover:bg-slate-100/70 dark:hover:bg-slate-800/60 transition-colors"
+                    className="px-3 xl:px-3.5 py-2 text-xs xl:text-sm font-medium whitespace-nowrap rounded-lg text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-emerald-400 hover:bg-slate-100/70 dark:hover:bg-slate-900/80 transition-colors"
                   >
                     {item.name}
                   </button>
@@ -102,10 +100,10 @@ export const Navbar: React.FC = () => {
                   <Link
                     key={item.name}
                     to={item.link}
-                    className={`px-3.5 py-2 text-sm font-medium rounded-lg transition-all ${
+                    className={`px-3 xl:px-3.5 py-2 text-xs xl:text-sm font-medium whitespace-nowrap rounded-lg transition-all ${
                       active
-                        ? "text-blue-600 dark:text-emerald-400 bg-blue-50/80 dark:bg-emerald-950/40 font-semibold"
-                        : "text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-emerald-400 hover:bg-slate-100/70 dark:hover:bg-slate-800/60"
+                        ? "text-blue-600 dark:text-emerald-400 bg-blue-50/80 dark:bg-emerald-950/50 font-semibold"
+                        : "text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-emerald-400 hover:bg-slate-100/70 dark:hover:bg-slate-900/80"
                     }`}
                   >
                     {item.name}
@@ -114,26 +112,28 @@ export const Navbar: React.FC = () => {
               })}
             </div>
 
-            {/* Right Action Icons & Buttons */}
-            <div className="hidden sm:flex items-center space-x-2.5">
-              {/* Quick Search Button */}
+            {/* 3. Right: Action Controls & Buttons */}
+            <div className="hidden sm:flex items-center gap-2 xl:gap-3 flex-shrink-0">
+              
+              {/* Quick Search */}
               <button
                 onClick={() => setIsSearchOpen(true)}
-                className="flex items-center gap-2 px-3 py-1.5 text-xs text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200/70 dark:hover:bg-slate-700 rounded-lg border border-slate-200 dark:border-slate-700 transition-colors"
+                className="flex items-center gap-2 px-3 py-2 text-xs text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-900 hover:bg-slate-200/70 dark:hover:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-800 transition-colors whitespace-nowrap"
                 title="Search (Ctrl+K)"
               >
-                <Search size={14} className="text-slate-400" />
-                <span className="hidden md:inline">Quick Search...</span>
-                <kbd className="hidden md:inline-block font-mono text-[10px] bg-white dark:bg-slate-900 px-1.5 py-0.5 rounded border border-slate-300 dark:border-slate-600 text-slate-400">
+                <Search size={14} className="text-slate-400 flex-shrink-0" />
+                <span className="hidden xl:inline">Quick Search...</span>
+                <span className="xl:hidden inline">Search</span>
+                <kbd className="hidden xl:inline-block font-mono text-[10px] bg-white dark:bg-slate-950 px-1.5 py-0.5 rounded border border-slate-300 dark:border-slate-700 text-slate-400">
                   ⌘K
                 </kbd>
               </button>
 
-              {/* Theme Toggle Button */}
+              {/* Dark / Light Mode Toggle */}
               <button
                 onClick={toggleTheme}
-                aria-label="Toggle Dark Mode"
-                className="p-2 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors border border-transparent hover:border-slate-200 dark:hover:border-slate-700"
+                aria-label="Toggle Theme"
+                className="p-2.5 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-900 transition-colors border border-transparent hover:border-slate-200 dark:hover:border-slate-800 flex-shrink-0"
               >
                 {theme === "dark" ? (
                   <Sun size={18} className="text-amber-400 hover:rotate-45 transition-transform" />
@@ -142,67 +142,68 @@ export const Navbar: React.FC = () => {
                 )}
               </button>
 
-              {/* Login Button */}
+              {/* Portal Sign In Link */}
               <a
                 href="https://skyletbankltd-dashboard.netlify.app/"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-1.5 text-xs font-semibold px-3.5 py-2 rounded-xl text-slate-800 dark:text-slate-200 hover:text-blue-600 dark:hover:text-emerald-400 transition-colors"
+                className="inline-flex items-center gap-1.5 text-xs xl:text-sm font-semibold px-3 py-2 rounded-xl text-slate-800 dark:text-slate-200 hover:text-blue-600 dark:hover:text-emerald-400 hover:bg-slate-100/60 dark:hover:bg-slate-900/60 transition-colors whitespace-nowrap flex-shrink-0"
               >
-                <User size={15} />
+                <User size={15} className="flex-shrink-0" />
                 <span>Portal Sign In</span>
               </a>
 
-              {/* Open Account CTA */}
+              {/* Open Global Account CTA Button */}
               <Link
                 to="/accounts"
-                className="btn-fintech-primary text-xs py-2 px-4 shadow-sm"
+                className="btn-fintech-primary text-xs xl:text-sm py-2.5 px-4 rounded-xl shadow-sm whitespace-nowrap flex items-center gap-1.5 flex-shrink-0"
               >
                 <span>Open Account</span>
-                <ArrowRight size={14} className="ml-1.5" />
+                <ArrowRight size={14} className="flex-shrink-0" />
               </Link>
             </div>
 
-            {/* Mobile Controls */}
+            {/* 4. Mobile Controls (Screens < sm) */}
             <div className="flex sm:hidden items-center gap-1.5">
               <button
                 onClick={() => setIsSearchOpen(true)}
-                className="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800"
+                className="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-900"
                 aria-label="Search"
               >
-                <Search size={20} />
+                <Search size={18} />
               </button>
               <button
                 onClick={toggleTheme}
-                className="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800"
+                className="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-900"
                 aria-label="Theme"
               >
-                {theme === "dark" ? <Sun size={20} className="text-amber-400" /> : <Moon size={20} />}
+                {theme === "dark" ? <Sun size={18} className="text-amber-400" /> : <Moon size={18} />}
               </button>
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="p-2 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none"
+                className="p-2 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-900 focus:outline-none"
                 aria-label="Toggle Menu"
               >
-                {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
               </button>
             </div>
+
           </div>
         </div>
 
-        {/* Mobile Dropdown Menu */}
+        {/* Mobile Dropdown Sheet */}
         {isMenuOpen && (
-          <div className="lg:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 pt-3 pb-6 space-y-3 shadow-xl animate-in slide-in-from-top-4 duration-200">
+          <div className="lg:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 px-4 pt-3 pb-6 space-y-3 shadow-2xl animate-in slide-in-from-top-4 duration-200">
             <div className="space-y-1">
               {menuItems.map((item) => (
                 <Link
                   key={item.name}
                   to={item.link}
                   onClick={() => handleNavClick(item.link)}
-                  className={`block px-3 py-2.5 rounded-xl text-base font-medium transition-colors ${
+                  className={`block px-3 py-2.5 rounded-xl text-sm font-medium transition-colors ${
                     isActive(item.link)
-                      ? "text-blue-600 dark:text-emerald-400 bg-blue-50/70 dark:bg-emerald-950/30 font-semibold"
-                      : "text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800"
+                      ? "text-blue-600 dark:text-emerald-400 bg-blue-50/70 dark:bg-emerald-950/40 font-semibold"
+                      : "text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-900"
                   }`}
                 >
                   {item.name}
@@ -215,18 +216,18 @@ export const Navbar: React.FC = () => {
                 href="https://skyletbankltd-dashboard.netlify.app/"
                 target="_blank"
                 rel="noreferrer"
-                className="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 text-sm font-semibold hover:bg-slate-50 dark:hover:bg-slate-800"
+                className="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 text-xs font-semibold hover:bg-slate-50 dark:hover:bg-slate-900"
               >
-                <User size={16} />
-                <span>Client Portal Sign In</span>
+                <User size={15} />
+                <span>Portal Sign In</span>
               </a>
               <Link
                 to="/accounts"
                 onClick={() => setIsMenuOpen(false)}
-                className="w-full btn-fintech-primary text-sm py-2.5 flex items-center justify-center gap-2"
+                className="w-full btn-fintech-primary text-xs py-2.5 flex items-center justify-center gap-2"
               >
                 <span>Open Global Account</span>
-                <ArrowRight size={16} />
+                <ArrowRight size={14} />
               </Link>
             </div>
           </div>
