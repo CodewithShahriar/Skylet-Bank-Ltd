@@ -61,30 +61,25 @@ export const Navbar: React.FC = () => {
         <div className="w-full max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 sm:h-20 gap-4">
             
-            {/* 1. Left: Logo Brand */}
+            {/* 1. Left: Pure Text Logo Brand (Icon Box Removed as Requested) */}
             <div className="flex-shrink-0">
-              <Link to="/" className="flex items-center gap-2.5 group select-none">
-                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-blue-600 via-indigo-600 to-emerald-500 flex items-center justify-center text-white shadow-md shadow-blue-500/20 group-hover:scale-105 transition-transform flex-shrink-0">
-                  <span className="font-extrabold text-lg sm:text-xl tracking-tight">S</span>
-                </div>
-                <div className="flex flex-col">
-                  <div className="flex items-center gap-1.5 leading-none">
-                    <span className="text-lg sm:text-xl font-extrabold tracking-tight text-slate-900 dark:text-white">
-                      SKYLET<span className="text-blue-600 dark:text-emerald-400">.</span>
-                    </span>
-                    <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-emerald-100 text-emerald-800 dark:bg-emerald-950/80 dark:text-emerald-400 border border-emerald-300 dark:border-emerald-800 whitespace-nowrap">
-                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                      FDIC
-                    </span>
-                  </div>
-                  <span className="text-[10px] font-semibold tracking-wider text-slate-500 dark:text-slate-400 uppercase mt-0.5 whitespace-nowrap">
-                    Global Bank Ltd
+              <Link to="/" className="flex flex-col group select-none">
+                <div className="flex items-center gap-2 leading-none">
+                  <span className="text-xl sm:text-2xl font-black tracking-tight text-slate-900 dark:text-white">
+                    SKYLET<span className="text-blue-600 dark:text-emerald-400">.</span>
+                  </span>
+                  <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-emerald-100 text-emerald-800 dark:bg-emerald-950/80 dark:text-emerald-400 border border-emerald-300 dark:border-emerald-800 whitespace-nowrap">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                    FDIC
                   </span>
                 </div>
+                <span className="text-[10px] font-semibold tracking-wider text-slate-500 dark:text-slate-400 uppercase mt-1 whitespace-nowrap">
+                  Global Bank Ltd
+                </span>
               </Link>
             </div>
 
-            {/* 2. Middle: Navigation Links (Never wrap text) */}
+            {/* 2. Middle: Navigation Links */}
             <div className="hidden lg:flex items-center gap-1 xl:gap-1.5 flex-shrink-0">
               {menuItems.map((item) => {
                 const active = isActive(item.link);
@@ -163,7 +158,7 @@ export const Navbar: React.FC = () => {
               </Link>
             </div>
 
-            {/* 4. Mobile Controls (Screens < sm) */}
+            {/* 4. Mobile Controls */}
             <div className="flex sm:hidden items-center gap-1.5">
               <button
                 onClick={() => setIsSearchOpen(true)}

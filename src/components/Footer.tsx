@@ -91,18 +91,17 @@ export const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
         <div className="grid grid-cols-2 md:grid-cols-12 gap-8 lg:gap-12">
           
-          {/* Brand Info (Left) */}
+          {/* Brand Info (Left) - Icon Box Removed */}
           <div className="col-span-2 md:col-span-4 space-y-4">
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-600 via-indigo-600 to-emerald-500 flex items-center justify-center text-white font-black text-base">
-                S
+            <div className="flex flex-col">
+              <div className="flex items-center gap-2">
+                <span className="text-2xl font-black text-white tracking-tight">
+                  SKYLET<span className="text-emerald-400">.</span>
+                </span>
+                <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400 bg-slate-900 border border-slate-800 px-2 py-0.5 rounded">
+                  Global Bank Ltd
+                </span>
               </div>
-              <span className="text-xl font-extrabold text-white tracking-tight">
-                SKYLET<span className="text-emerald-400">.</span>
-              </span>
-              <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400 bg-slate-900 border border-slate-800 px-2 py-0.5 rounded">
-                Global Bank Ltd
-              </span>
             </div>
 
             <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">

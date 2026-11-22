@@ -23,25 +23,19 @@ export const HeroSection: React.FC = () => {
   return (
     <section className="relative overflow-hidden bg-slate-50 dark:bg-slate-950 min-h-[calc(100vh-116px)] sm:min-h-[calc(100svh-116px)] flex flex-col justify-center py-10 sm:py-14 lg:py-0 border-b border-slate-200/60 dark:border-slate-800/60">
       
-      {/* 1. Full-Canvas Seamless Radial Ambient Glows (Zero seams, zero vertical cutoffs) */}
-      <div className="absolute inset-0 pointer-events-none select-none overflow-hidden z-0">
-        <div className="absolute top-1/2 left-1/3 -translate-y-1/2 -translate-x-1/2 w-[650px] h-[650px] bg-blue-600/10 dark:bg-blue-600/18 rounded-full blur-[140px]"></div>
-        <div className="absolute top-1/2 right-[10%] -translate-y-1/2 w-[550px] h-[550px] bg-emerald-500/10 dark:bg-emerald-500/16 rounded-full blur-[130px]"></div>
-      </div>
-
-      {/* 2. Full-Width Background Visual with Soft Circular Radial Feather (No lines or borders anywhere) */}
+      {/* 1. Full-Canvas Subtle Fintech Grid Matrix (Spans 100% width, ZERO circular cutoffs or hard edges) */}
       <div 
-        className="absolute inset-0 w-full h-full pointer-events-none select-none overflow-hidden z-0 opacity-25 dark:opacity-35"
+        className="absolute inset-0 pointer-events-none select-none opacity-40 dark:opacity-30 z-0"
         style={{
-          maskImage: "radial-gradient(circle 500px at 78% 50%, black 15%, rgba(0,0,0,0.5) 50%, transparent 80%)",
-          WebkitMaskImage: "radial-gradient(circle 500px at 78% 50%, black 15%, rgba(0,0,0,0.5) 50%, transparent 80%)"
+          backgroundImage: "radial-gradient(rgba(59, 130, 246, 0.25) 1px, transparent 1px)",
+          backgroundSize: "32px 32px"
         }}
-      >
-        <img
-          src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=1800&q=85"
-          alt="Global Digital Financial Network"
-          className="w-full h-full object-cover object-center scale-105"
-        />
+      ></div>
+
+      {/* 2. Soft Diffuse Ambient Glows (Smoothly blended across the whole canvas, no lines) */}
+      <div className="absolute inset-0 pointer-events-none select-none overflow-hidden z-0">
+        <div className="absolute top-1/3 left-1/4 -translate-y-1/2 w-[700px] h-[500px] bg-blue-600/10 dark:bg-blue-600/15 rounded-full blur-[150px]"></div>
+        <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[600px] h-[500px] bg-emerald-500/10 dark:bg-emerald-500/15 rounded-full blur-[150px]"></div>
       </div>
 
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-4 sm:py-6">
@@ -107,17 +101,17 @@ export const HeroSection: React.FC = () => {
             </div>
           </motion.div>
 
-          {/* Right Column: Floating Frameless 3D Banking Elements (Responsive across all screens) */}
+          {/* Right Column: Floating Frameless 3D Banking Elements (Clean & Pure) */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, delay: 0.15 }}
             className="lg:col-span-5 relative flex flex-col items-center justify-center py-6 sm:py-8 lg:py-0 w-full"
           >
-            {/* Ambient Halo */}
-            <div className="absolute w-64 h-64 sm:w-80 sm:h-80 bg-gradient-to-br from-blue-500/20 via-indigo-600/15 to-emerald-500/20 rounded-full blur-3xl pointer-events-none"></div>
+            {/* Ambient Halo Behind Card */}
+            <div className="absolute w-72 h-72 sm:w-96 sm:h-96 bg-gradient-to-br from-blue-500/20 via-indigo-600/15 to-emerald-500/20 rounded-full blur-[100px] pointer-events-none"></div>
 
-            {/* 1. Floating Titanium Card (Fully Responsive for Mobile/Tablet/Desktop) */}
+            {/* 1. Floating Titanium Card */}
             <motion.div
               initial={{ y: 12 }}
               animate={{ y: -8 }}
