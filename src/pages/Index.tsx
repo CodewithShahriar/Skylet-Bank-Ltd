@@ -1,27 +1,31 @@
-
+import React from "react";
 import Navbar from "@/components/Navbar";
+import { LiveRatesTicker } from "@/components/LiveRatesTicker";
 import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
-import ProductsSection from "@/components/ProductsSection";
-import BankingServices from "@/components/BankingServices";
+import CardsShowcase from "@/components/CardsShowcase";
+import FinancialCalculators from "@/components/FinancialCalculators";
+import DigitalOnboardingSection from "@/components/DigitalOnboardingSection";
 import TrustSection from "@/components/TrustSection";
 import FAQSection from "@/components/FAQSection";
 import BlogSection from "@/components/BlogSection";
 import Footer from "@/components/Footer";
-import FinancialProducts from "@/components/FinancialProducts";
 
-const Index = () => {
+const Index: React.FC = () => {
   return (
-    <div className="min-h-screen w-full bg-gradient-to-b from-white to-gray-50">
+    <div className="min-h-screen w-full bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 transition-colors duration-300 flex flex-col font-sans">
       <Navbar />
-      <HeroSection />
-      <ServicesSection />
-      <ProductsSection />
-      <BankingServices />
-      <FinancialProducts />
-      <TrustSection />
-      <FAQSection />
-      <BlogSection />
+      <LiveRatesTicker />
+      <main className="flex-1">
+        <HeroSection />
+        <ServicesSection />
+        <CardsShowcase />
+        <FinancialCalculators />
+        <DigitalOnboardingSection />
+        <TrustSection />
+        <FAQSection />
+        <BlogSection />
+      </main>
       <Footer />
     </div>
   );

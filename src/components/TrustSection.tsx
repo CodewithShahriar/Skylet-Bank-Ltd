@@ -1,120 +1,171 @@
+import React from "react";
+import { ShieldCheck, Lock, Award, Globe, Building, CheckCircle2, Star, Sparkles } from "lucide-react";
+import { motion } from "framer-motion";
 
-import { Card, CardContent } from "@/components/ui/card";
-import { Lock } from "lucide-react";
+export const TrustSection: React.FC = () => {
+  const metrics = [
+    { value: "$48B+", label: "Annual Global Volume", sub: "Processed securely worldwide" },
+    { value: "160+", label: "Countries Supported", sub: "Multi-currency wire routing" },
+    { value: "99.99%", label: "Core Banking Uptime", sub: "Fault-tolerant architecture" },
+    { value: "150k+", label: "Global Clients", sub: "Across 4 continents" },
+  ];
 
-const TrustSection = () => {
+  const securityPillars = [
+    {
+      icon: ShieldCheck,
+      title: "FDIC Insured & Backed",
+      desc: "Standard deposit insurance coverage up to $250,000 per depositor, with extended insured cash sweeps up to $5,000,000.",
+    },
+    {
+      icon: Lock,
+      title: "SOC 2 Type II & 256-bit Vault",
+      desc: "Rigorous annual third-party audits with military-grade AES-256 data encryption in transit and at rest.",
+    },
+    {
+      icon: Award,
+      title: "Zero-Liability Protection",
+      desc: "Guaranteed 100% protection against unauthorized debit and credit card transactions with instant dispute resolution.",
+    },
+    {
+      icon: Globe,
+      title: "AI Real-Time Fraud Shield",
+      desc: "Self-learning anomaly detection that inspects billions of data points to block malicious transfers before execution.",
+    },
+  ];
+
+  const testimonials = [
+    {
+      name: "Marcus Vance",
+      title: "Chief Financial Officer, Apex Global Logistics (New York)",
+      quote:
+        "Switching our cross-border operations to Skylet cut our international wire fees by 80% and settled vendor payments same-day. The digital platform is leagues ahead of traditional legacy banks.",
+      rating: 5,
+    },
+    {
+      name: "Elena Rostova",
+      title: "Managing Director, Horizon Venture Partners (London)",
+      quote:
+        "The 5.25% APY treasury yield combined with seamless multi-currency account management gives our fund peace of mind. Skylet's security standards and dedicated concierge are best in class.",
+      rating: 5,
+    },
+    {
+      name: "David Kim",
+      title: "Founder & CEO, Synthetix AI (San Francisco)",
+      quote:
+        "The instant corporate credit issuance and real-time expense syncing with our accounting software saved our team dozens of hours every month. Phenomenal digital banking experience.",
+      rating: 5,
+    },
+  ];
+
   return (
-    <section className="py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="section-title text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-800 via-green-600 to-blue-700">
-  Why Choose Skylet Bank
-</h2>
-          <p className="section-subtitle">Trusted by thousands of customers across Bangladesh</p>
-        </div>
+    <section id="trust" className="py-20 bg-white dark:bg-slate-950 relative overflow-hidden border-b border-slate-200/60 dark:border-slate-800/60">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center mb-20">
-          <div>
-            <img
-              src="https://www.icba.org/images/default-source/news/bank-security.jpg?sfvrsn=9e590817_0"
-              alt="Secure banking"
-              className="rounded-lg shadow-xl"
-            />
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800 mb-3">
+            <Sparkles className="w-3.5 h-3.5" />
+            <span>Institutional Reliability</span>
           </div>
-          
-          <div>
-            <h3 className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-800 via-green-600 to-blue-700 mb-6">
-  Your Security, Our Top Priority
-</h3>
-            <p className="text-gray-600 mb-8">
-              We prioritize your financial safety above all. With advanced encryption, real-time monitoring, and strict compliance standards, we ensure your money and data are always protected.
-            </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <SecurityFeature 
-                title="24/7 Surveillance" 
-                description="Continuous monitoring with advanced security systems"
-              />
-              <SecurityFeature 
-                title="Biometric Access" 
-                description="Multi-layer authentication for enhanced security"
-              />
-              <SecurityFeature 
-                title="Advanced Fraud Detection" 
-                description="Instantly blocks suspicious activity with real-time monitoring."
-              />
-              <SecurityFeature 
-                title="End-to-End Encryptione" 
-                description="Keeps your data safe with top-tier encryption."
-              />
-            </div>
-          </div>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-4">
+            Security That Meets the Demands of Global Finance
+          </h2>
+          <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300">
+            Backed by federal deposit insurance, advanced cryptographic infrastructure, and 24/7 global surveillance.
+          </p>
         </div>
-        
-        {/* Testimonials */}
-        <div>
-           <h3 className="text-2xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-900 via-green-600 to-blue-900 mb-10">
-  What Our Customers Say
-</h3>
-          <div className="grid md:grid-cols-3 gap-8">
-  <div className="p-6 rounded-xl bg-gradient-to-br from-blue-100 via-green-100 to-purple-100 shadow-md">
-    <Testimonial 
-      content="Skylet Bank has transformed how I manage my finances. Their mobile app is intuitive and their customer service is exceptional."
-      author="Ahsan Rahman"
-      position="Business Owner"
-    />
-  </div>
-  
-  <div className="p-6 rounded-xl bg-gradient-to-br from-blue-100 via-green-100 to-purple-100 shadow-md">
-    <Testimonial 
-      content="I've been with Skylet Bank for 3 years now. Their Islamic banking services align perfectly with my values while delivering great returns."
-      author="Fatima Begum"
-      position="University Professor"
-    />
-  </div>
 
-  <div className="p-6 rounded-xl bg-gradient-to-br from-blue-100 via-green-100 to-purple-100 shadow-md">
-    <Testimonial 
-      content="The loan process was seamless and quick. The bank representatives were helpful throughout the entire application process."
-      author="Mohammed Hasan"
-      position="Software Engineer"
-    />
-  </div>
-</div>
+        {/* Big Metrics Grid */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-20">
+          {metrics.map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1, duration: 0.5 }}
+              className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 text-center hover:border-blue-500/30 dark:hover:border-emerald-500/30 transition-all hover:-translate-y-1"
+            >
+              <p className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-blue-600 dark:text-emerald-400 font-mono tracking-tight mb-2">
+                {item.value}
+              </p>
+              <h3 className="text-sm sm:text-base font-bold text-slate-900 dark:text-white mb-1">
+                {item.label}
+              </h3>
+              <p className="text-xs text-slate-500 dark:text-slate-400">{item.sub}</p>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Security Pillars */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+          {securityPillars.map((pillar, idx) => {
+            const Icon = pillar.icon;
+            return (
+              <div
+                key={idx}
+                className="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
+              >
+                <div>
+                  <div className="w-12 h-12 rounded-xl bg-blue-50 dark:bg-blue-950/70 text-blue-600 dark:text-emerald-400 flex items-center justify-center mb-4">
+                    <Icon className="w-6 h-6" />
+                  </div>
+                  <h3 className="text-base font-bold text-slate-900 dark:text-white mb-2">
+                    {pillar.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                    {pillar.desc}
+                  </p>
+                </div>
+                <div className="pt-4 mt-4 border-t border-slate-100 dark:border-slate-800 flex items-center gap-1.5 text-xs text-emerald-600 dark:text-emerald-400 font-semibold">
+                  <CheckCircle2 className="w-3.5 h-3.5" />
+                  <span>Fully Compliant</span>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Customer Testimonials Header */}
+        <div className="text-center max-w-2xl mx-auto mb-10">
+          <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
+            Trusted by Leaders Across the Globe
+          </h3>
+          <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">
+            See how forward-thinking CFOs, investors, and families manage capital with Skylet.
+          </p>
+        </div>
+
+        {/* Testimonials Grid */}
+        <div className="grid md:grid-cols-3 gap-6">
+          {testimonials.map((t, idx) => (
+            <div
+              key={idx}
+              className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex flex-col justify-between hover:shadow-lg transition-all"
+            >
+              <div>
+                {/* 5 Stars */}
+                <div className="flex items-center gap-1 text-amber-400 mb-4">
+                  {[...Array(t.rating)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-amber-400" />
+                  ))}
+                </div>
+                <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-300 italic mb-6 leading-relaxed">
+                  "{t.quote}"
+                </p>
+              </div>
+
+              <div className="pt-4 border-t border-slate-200/60 dark:border-slate-800">
+                <p className="font-bold text-slate-900 dark:text-white text-sm">{t.name}</p>
+                <p className="text-xs text-slate-500 dark:text-slate-400">{t.title}</p>
+              </div>
+            </div>
+          ))}
         </div>
 
       </div>
     </section>
   );
 };
-
-const SecurityFeature = ({ title, description }: { title: string; description: string }) => (
-  <div className="flex items-start">
-    <div className="mr-3 mt-1">
-      <Lock className="w-5 h-5 text-bank-accent" />
-    </div>
-    <div>
-      <h4 className="font-semibold text-bank-dark">{title}</h4>
-      <p className="text-sm text-gray-600">{description}</p>
-    </div>
-  </div>
-);
-
-const Testimonial = ({ content, author, position }: { content: string; author: string; position: string }) => (
-  <Card className="h-full bg-white border border-gray-200 card-hover">
-    <CardContent className="p-6">
-      <div className="mb-4">
-        {[...Array(5)].map((_, i) => (
-          <span key={i} className="text-yellow-400">★</span>
-        ))}
-      </div>
-      <p className="text-gray-700 mb-6">"{content}"</p>
-      <div>
-        <p className="font-semibold text-bank-primary">{author}</p>
-        <p className="text-sm text-gray-600">{position}</p>
-      </div>
-    </CardContent>
-  </Card>
-);
 
 export default TrustSection;

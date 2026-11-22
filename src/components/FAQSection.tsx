@@ -1,148 +1,168 @@
-import { useState } from "react";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { X } from "lucide-react";
+import React, { useState } from "react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { Search, HelpCircle, MessageSquare, ArrowRight, CheckCircle2, Sparkles } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
-const FAQSection = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+export const FAQSection: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [activeCategory, setActiveCategory] = useState("all");
 
-  const handleFormSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitted(true);
-
-    setTimeout(() => {
-      setIsModalOpen(false);
-      setIsSubmitted(false);
-    }, 2000);
-  };
+  const categories = [
+    { id: "all", label: "All Questions" },
+    { id: "accounts", label: "Accounts & Wires" },
+    { id: "cards", label: "Cards & ATMs" },
+    { id: "security", label: "FDIC & Security" },
+    { id: "lending", label: "Lending & Mortgages" },
+  ];
 
   const faqs = [
     {
-      question: "How do I open a bank account with Skylet Bank?",
+      category: "accounts",
+      question: "How does Skylet protect my deposits under FDIC insurance?",
       answer:
-        "To open a bank account with Skylet Bank, you can visit any of our branches with your ID proof, address proof, and passport-sized photographs. Alternatively, you can initiate the account opening process online through our website, and our representative will get in touch with you to complete the formalities.",
+        "Skylet Bank Ltd is a chartered commercial institution and Member FDIC. Your deposits are automatically insured up to $250,000 for individual accounts and up to $500,000 for joint accounts. For commercial accounts with larger balances, our Insured Cash Sweep (ICS) program spreads deposits across partner institutions to provide extended protection up to $5,000,000.",
     },
     {
-      question: "What documents are required for a personal loan?",
+      category: "accounts",
+      question: "Can I open an international or multi-currency account as a non-US resident?",
       answer:
-        "For a personal loan, you'll need to submit your ID proof, address proof, income proof (salary slips or income tax returns), bank statements for the last 6 months, and a passport-sized photograph. Additional documents may be required based on your employment type and loan amount.",
+        "Yes. Skylet provides global multi-currency checking and treasury services for approved international clients and non-US registered corporations. You will receive dedicated local routing numbers (US ACH/Fedwire, European IBAN, UK Sort Code) with full digital onboarding.",
     },
     {
-      question: "How can I access my account online?",
+      category: "cards",
+      question: "Are there foreign transaction fees or international ATM surcharge fees?",
       answer:
-        "You can access your account online by registering for our Internet Banking service. Visit our website, click on 'Internet Banking', and select 'First Time User' to register. You'll need your account number and registered mobile number to complete the registration process.",
+        "No. All Skylet Platinum, Sapphire, and World Debit cards carry 0% foreign transaction fees. Additionally, Skylet account holders enjoy unlimited fee-free withdrawals across the worldwide Allpoint network (55,000+ ATMs) and automated monthly ATM fee rebates for out-of-network ATMs.",
     },
     {
-      question: "What are the charges for fund transfers?",
+      category: "cards",
+      question: "How does the instant virtual card feature work?",
       answer:
-        "Fund transfers within Skylet Bank accounts are free of charge. For NEFT/RTGS transfers to other banks, nominal charges apply based on the transfer amount and mode. Please refer to our Schedule of Charges on the website for detailed information.",
+        "The moment your credit or debit application is approved, you can generate encrypted single-use or merchant-locked virtual cards within the Skylet mobile app. These can be added immediately to Apple Pay, Google Pay, or used for secure online subscriptions.",
     },
     {
-      question: "How secure is online banking with Skylet Bank?",
+      category: "security",
+      question: "What security measures protect against unauthorized wire transfers?",
       answer:
-        "Skylet Bank employs industry-leading security measures including 256-bit encryption, two-factor authentication, and real-time fraud monitoring systems. We also conduct regular security audits and updates to ensure your data and transactions remain secure.",
+        "All outbound wire transfers require dual-factor biometric authorization, hardware security key (FIDO2) compatibility, and AI behavioral analysis. For corporate treasury accounts, dual-signoff authorization rules can be configured so that transactions exceeding custom thresholds require two distinct executive approvals.",
+    },
+    {
+      category: "lending",
+      question: "How quickly can I get pre-approved for a personal or commercial loan?",
+      answer:
+        "Our digital lending engine processes automated soft-credit pre-approvals in under 2 minutes with zero impact on your credit score. Full loan funding is typically completed within 24 to 48 hours following document verification.",
     },
   ];
 
+  const filteredFaqs = faqs.filter((faq) => {
+    const matchesCategory = activeCategory === "all" || faq.category === activeCategory;
+    const matchesSearch =
+      faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      faq.answer.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
+
   return (
-    <section className="py-16 bg-gray-50">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="section-title text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-800 via-green-600 to-blue-700">
+    <section className="py-20 bg-slate-50/70 dark:bg-slate-900/60 relative overflow-hidden border-b border-slate-200/60 dark:border-slate-800/60">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        {/* Header */}
+        <div className="text-center max-w-3xl mx-auto mb-12">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 dark:bg-blue-950/60 text-blue-700 dark:text-blue-400 border border-blue-200 dark:border-blue-800 mb-3">
+            <HelpCircle className="w-3.5 h-3.5" />
+            <span>Got Questions? We Have Answers</span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-4">
             Frequently Asked Questions
           </h2>
-          <p className="section-subtitle">
-            Find answers to commonly asked questions about our banking services
+          <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300">
+            Everything you need to know about Skylet accounts, FDIC insurance, global wires, and lending solutions.
           </p>
         </div>
 
-        <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
-          <Accordion type="single" collapsible className="w-full">
-            {faqs.map((faq, index) => (
-              <AccordionItem value={`item-${index}`} key={index}>
-                <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-gray-200 text-left font-medium text-bank-primary">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="px-6 pb-4 pt-0 text-gray-600">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+        {/* Search Bar within FAQ */}
+        <div className="max-w-xl mx-auto mb-8 relative">
+          <Search className="w-5 h-5 text-slate-400 absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none" />
+          <input
+            type="text"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            placeholder="Search questions (e.g. FDIC, ATM fees, wire transfers)..."
+            className="w-full pl-12 pr-4 py-3.5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 shadow-sm text-sm"
+          />
         </div>
 
-        <div className="mt-10 text-center">
-  <p className="text-gray-600">
-    Can't find what you're looking for?{" "}
-    <button
-      onClick={() => setIsModalOpen(true)}
-      className="text-blue-600 text-base font-semibold hover:underline"
-    >
-      Contact our support team
-    </button>
-  </p>
-</div>
+        {/* Category Pills */}
+        <div className="flex flex-wrap justify-center gap-2 mb-10">
+          {categories.map((cat) => (
+            <button
+              key={cat.id}
+              onClick={() => setActiveCategory(cat.id)}
+              className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
+                activeCategory === cat.id
+                  ? "bg-blue-600 text-white shadow-md shadow-blue-500/25"
+                  : "bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800"
+              }`}
+            >
+              {cat.label}
+            </button>
+          ))}
+        </div>
+
+        {/* Accordions */}
+        <div className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-6 sm:p-8 shadow-sm">
+          {filteredFaqs.length === 0 ? (
+            <div className="text-center py-10 text-slate-500 text-sm">
+              No matching questions found for "{searchTerm}". Please contact our 24/7 client desk.
+            </div>
+          ) : (
+            <Accordion type="single" collapsible className="space-y-4">
+              {filteredFaqs.map((faq, index) => (
+                <AccordionItem
+                  key={index}
+                  value={`item-${index}`}
+                  className="border border-slate-100 dark:border-slate-800/80 rounded-2xl px-5 py-1 data-[state=open]:bg-slate-50/70 dark:data-[state=open]:bg-slate-800/40 transition-colors"
+                >
+                  <AccordionTrigger className="text-left font-bold text-sm sm:text-base text-slate-900 dark:text-white hover:no-underline py-4">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed pt-1 pb-4">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          )}
+        </div>
+
+        {/* Bottom Help Desk CTA */}
+        <div className="mt-12 p-6 rounded-2xl bg-gradient-to-r from-blue-600 to-emerald-600 text-white flex flex-col sm:flex-row items-center justify-between gap-4 shadow-lg shadow-blue-500/20">
+          <div className="flex items-center gap-4 text-center sm:text-left">
+            <div className="w-12 h-12 rounded-xl bg-white/10 backdrop-blur-md flex items-center justify-center flex-shrink-0">
+              <MessageSquare className="w-6 h-6" />
+            </div>
+            <div>
+              <h4 className="font-bold text-base sm:text-lg">Still have questions?</h4>
+              <p className="text-white/80 text-xs sm:text-sm">
+                Our global private bankers and support specialists are on call 24 hours a day.
+              </p>
+            </div>
+          </div>
+          <Button
+            onClick={() => window.location.href = "/support"}
+            className="bg-white text-slate-900 hover:bg-slate-100 font-bold text-xs sm:text-sm px-6 py-2.5 rounded-xl flex-shrink-0 shadow-md"
+          >
+            <span>Contact 24/7 Desk</span>
+            <ArrowRight size={16} className="ml-1.5" />
+          </Button>
+        </div>
 
       </div>
-
-      {/* Modal */}
-      {isModalOpen && (
-        <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center px-4">
-          <div className="bg-white rounded-xl w-full max-w-md p-6 relative shadow-lg">
-            <button
-              onClick={() => setIsModalOpen(false)}
-              className="absolute top-4 right-4 text-gray-400 hover:text-gray-600"
-            >
-              <X size={20} />
-            </button>
-
-            {!isSubmitted ? (
-              <>
-                <h3 className="text-lg font-bold mb-4 text-bank-primary">Contact Support</h3>
-                <form onSubmit={handleFormSubmit} className="space-y-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700">Name</label>
-                    <input
-                      type="text"
-                      required
-                      className="w-full border rounded-md p-2"
-                      placeholder="Your name"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700">Email</label>
-                    <input
-                      type="email"
-                      required
-                      className="w-full border rounded-md p-2"
-                      placeholder="you@example.com"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700">Message</label>
-                    <textarea
-                      required
-                      rows={4}
-                      className="w-full border rounded-md p-2"
-                      placeholder="How can we help you?"
-                    ></textarea>
-                  </div>
-                  <button
-                      type="submit"
-                      className="w-full bg-gradient-to-r from-blue-400 via-green-600 to-blue-700 text-white py-2 rounded-md hover:bg-gradient-to-r from-blue-600 via-green-600 to-blue-700/90">
-                      Submit
-</button>
-                </form>
-              </>
-            ) : (
-              <div className="text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-800 via-green-600 to-blue-700 font-medium py-10">
- 
-                 Thank you for reaching out. Our support team will contact you shortly via email.
-              </div>
-            )}
-          </div>
-        </div>
-      )}
     </section>
   );
 };

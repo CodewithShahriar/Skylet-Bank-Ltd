@@ -1,55 +1,98 @@
-
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
+import { LiveRatesTicker } from "@/components/LiveRatesTicker";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { ChevronRight, Wallet, Users, GraduationCap, CreditCard, Building2, Rocket, Globe, Laptop, User } from "lucide-react";
+import {
+  ChevronRight,
+  Wallet,
+  Users,
+  CreditCard,
+  Building2,
+  Rocket,
+  Globe,
+  Laptop,
+  CheckCircle2,
+  ArrowRight,
+  Sparkles,
+  ShieldCheck,
+  Percent
+} from "lucide-react";
+import { motion } from "framer-motion";
 
-const AccountsPage = () => {
+export const AccountsPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState("personal");
-  
+
   return (
-    <div className="min-h-screen w-full bg-gradient-to-b from-white to-gray-50">
+    <div className="min-h-screen w-full bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 transition-colors duration-300 flex flex-col font-sans">
       <Navbar />
-      
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-blue-800 via-green-600 to-blue-700 py-20 px-4 md:px-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div className="text-white">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">Choose the Right Account for You</h1>
-              <p className="text-lg mb-6">Explore our range of accounts designed to meet your unique financial needs with enhanced benefits and digital features.</p>
-              <Button className="bg-white text-blue-600 hover:bg-blue-50">Open Your Account</Button>
+      <LiveRatesTicker />
+
+      {/* Hero Banner */}
+      <section className="relative bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-white py-20 px-4 sm:px-6 lg:px-8 border-b border-slate-800 overflow-hidden">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center relative z-10">
+          <div className="md:col-span-7 space-y-5">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+              <Sparkles size={14} />
+              <span>Global Multi-Currency Checking & Wealth</span>
             </div>
-            <div className="flex justify-center md:justify-end">
-              <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl border border-white/20 shadow-xl">
-                <div className="flex flex-col space-y-3">
-                  <div className="flex items-center space-x-3 text-white">
-                    <div className="bg-blue-600 p-2 rounded-full">
-                      <Wallet size={20} />
-                    </div>
-                    <span className="font-medium">Easy account setup</span>
+            <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight">
+              Accounts Engineered for Precision & Yield
+            </h1>
+            <p className="text-base sm:text-lg text-slate-300 max-w-xl leading-relaxed">
+              Whether managing day-to-day household liquidity or orchestrating multi-entity commercial treasury across 160+ countries, Skylet accounts deliver unmatched security and up to 5.25% APY.
+            </p>
+            <div className="pt-2 flex flex-wrap gap-3">
+              <Button
+                onClick={() => {
+                  const form = document.getElementById("account-application");
+                  if (form) form.scrollIntoView({ behavior: "smooth" });
+                }}
+                className="btn-fintech-primary text-sm px-6 py-3"
+              >
+                <span>Open Account in 3 Minutes</span>
+                <ArrowRight size={16} className="ml-2" />
+              </Button>
+            </div>
+          </div>
+
+          <div className="md:col-span-5 flex justify-center md:justify-end">
+            <div className="bg-slate-900/80 backdrop-blur-md p-6 rounded-2xl border border-slate-700/80 shadow-2xl space-y-4 w-full max-w-md">
+              <div className="flex items-center justify-between pb-3 border-b border-slate-800">
+                <span className="text-xs font-bold uppercase tracking-wider text-slate-400">Account Highlights</span>
+                <span className="text-xs text-emerald-400 font-semibold flex items-center gap-1">
+                  <ShieldCheck size={14} /> FDIC Insured
+                </span>
+              </div>
+              <div className="space-y-3 text-xs sm:text-sm">
+                <div className="flex items-center gap-3 text-slate-200">
+                  <div className="w-8 h-8 rounded-lg bg-blue-600/20 text-blue-400 flex items-center justify-center flex-shrink-0">
+                    <Percent size={16} />
                   </div>
-                  <div className="flex items-center space-x-3 text-white">
-                    <div className="bg-blue-600 p-2 rounded-full">
-                      <Users size={20} />
-                    </div>
-                    <span className="font-medium">24/7 customer support</span>
+                  <div>
+                    <p className="font-bold">5.25% APY High-Yield Savings</p>
+                    <p className="text-[11px] text-slate-400">No lock-ins, interest compounded daily</p>
                   </div>
-                  <div className="flex items-center space-x-3 text-white">
-                    <div className="bg-blue-600 p-2 rounded-full">
-                      <CreditCard size={20} />
-                    </div>
-                    <span className="font-medium">Free debit card</span>
+                </div>
+                <div className="flex items-center gap-3 text-slate-200">
+                  <div className="w-8 h-8 rounded-lg bg-emerald-600/20 text-emerald-400 flex items-center justify-center flex-shrink-0">
+                    <Globe size={16} />
                   </div>
-                  <div className="flex items-center space-x-3 text-white">
-                    <div className="bg-blue-600 p-2 rounded-full">
-                      <Laptop size={20} />
-                    </div>
-                    <span className="font-medium">Digital banking access</span>
+                  <div>
+                    <p className="font-bold">Zero Foreign Transaction Fees</p>
+                    <p className="text-[11px] text-slate-400">Spend directly in 40+ global currencies</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3 text-slate-200">
+                  <div className="w-8 h-8 rounded-lg bg-purple-600/20 text-purple-400 flex items-center justify-center flex-shrink-0">
+                    <CreditCard size={16} />
+                  </div>
+                  <div>
+                    <p className="font-bold">55,000+ Surcharge-Free ATMs</p>
+                    <p className="text-[11px] text-slate-400">Allpoint worldwide network included</p>
                   </div>
                 </div>
               </div>
@@ -57,472 +100,312 @@ const AccountsPage = () => {
           </div>
         </div>
       </section>
-      
-      {/* Account Types Section */}
-      <section className="py-16 px-4 md:px-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-2 bg-gradient-to-r from-blue-700 via-green-700 to-purple-700 text-transparent bg-clip-text">
-            Account Types
-            </h2>
-            <p className="text-lg text-gray-600">Select the account that fits your lifestyle and financial goals</p>
-          </div>
-          
-          <Tabs defaultValue="personal" className="w-full" onValueChange={setActiveTab}>
-            <TabsList className="grid w-full grid-cols-3 mb-8">
-              <TabsTrigger value="personal" className={`${activeTab === "personal" ? "bg-blue-600 text-white" : ""}`}>
-                Personal Accounts
+
+      {/* Account Categories Tabs */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto w-full">
+        <div className="text-center max-w-3xl mx-auto mb-12">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-3">
+            Select Your Account Tier
+          </h2>
+          <p className="text-base text-slate-600 dark:text-slate-400">
+            Tailored specifically for personal wealth builders, high-net-worth investors, and scaling corporations.
+          </p>
+        </div>
+
+        <Tabs defaultValue="personal" onValueChange={setActiveTab} className="w-full">
+          <div className="flex justify-center mb-8">
+            <TabsList className="grid grid-cols-3 max-w-md w-full bg-slate-200 dark:bg-slate-900 p-1 rounded-2xl">
+              <TabsTrigger value="personal" className="rounded-xl text-xs sm:text-sm font-semibold">
+                Personal
               </TabsTrigger>
-              <TabsTrigger value="business" className={`${activeTab === "business" ? "bg-blue-600 text-white" : ""}`}>
-                Business Accounts
+              <TabsTrigger value="business" className="rounded-xl text-xs sm:text-sm font-semibold">
+                Commercial
               </TabsTrigger>
-              <TabsTrigger value="digital" className={`${activeTab === "digital" ? "bg-blue-600 text-white" : ""}`}>
-                Digital & Specialized
+              <TabsTrigger value="digital" className="rounded-xl text-xs sm:text-sm font-semibold">
+                Global FX
               </TabsTrigger>
             </TabsList>
-            
-            <TabsContent value="personal" className="mt-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Card className="card-hover border border-gray-300 rounded-md">
+          </div>
 
-                  <CardHeader>
-                    <div className="flex items-center gap-3 mb-2">
-                      <div className="bg-blue-100 p-2 rounded-full">
-                        <Wallet size={20} className="text-blue-600" />
-                      </div>
-                      <CardTitle>Savings Account</CardTitle>
+          {/* Personal Accounts */}
+          <TabsContent value="personal">
+            <div className="grid md:grid-cols-2 gap-6">
+              <Card className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm hover:shadow-xl transition-all">
+                <CardHeader>
+                  <div className="flex items-center gap-3 mb-1">
+                    <div className="w-10 h-10 rounded-xl bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-emerald-400 flex items-center justify-center">
+                      <Wallet size={20} />
                     </div>
-                    <CardDescription>Earn interest on your deposits with easy access to your funds</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-2">
-                      <li className="flex items-start gap-2">
-                        <ChevronRight className="min-w-4 text-blue-600 mt-1" size={16} />
-                        <span>Competitive interest rates</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <ChevronRight className="min-w-4 text-blue-600 mt-1" size={16} />
-                        <span>Free digital banking access</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <ChevronRight className="min-w-4 text-blue-600 mt-1" size={16} />
-                        <span>No minimum balance requirements</span>
-                      </li>
-                    </ul>
-                   <Button className="mt-4 bg-gradient-to-r from-blue-600 to-green-500 hover:bg-gradient-to-r hover:from-blue-700 to-green-600">
-                            Learn More
-                    </Button>
-                  </CardContent>
-                </Card>
-                
-                <Card className="card-hover border border-gray-300 rounded-md">
-                  <CardHeader>
-                    <div className="flex items-center gap-3 mb-2">
-                      <div className="bg-blue-100 p-2 rounded-full">
-                        <CreditCard size={20} className="text-blue-600" />
-                      </div>
-                      <CardTitle>Current Account</CardTitle>
+                    <div>
+                      <CardTitle className="text-lg font-bold">High-Yield Premier Savings</CardTitle>
+                      <span className="text-xs font-bold text-emerald-600 dark:text-emerald-400">5.25% APY</span>
                     </div>
-                    <CardDescription>Ideal for daily transactions with higher withdrawal limits</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-2">
-                      <li className="flex items-start gap-2">
-                        <ChevronRight className="min-w-4 text-blue-600 mt-1" size={16} />
-                        <span>Unlimited transactions</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <ChevronRight className="min-w-4 text-blue-600 mt-1" size={16} />
-                        <span>Free checkbook facility</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <ChevronRight className="min-w-4 text-blue-600 mt-1" size={16} />
-                        <span>Overdraft options available</span>
-                      </li>
-                    </ul>
-                    <Button className="mt-4 bg-gradient-to-r from-blue-600 to-green-500 hover:bg-gradient-to-r hover:from-blue-700 to-green-600">
-                            Learn More
-                    </Button>
-                  </CardContent>
-                </Card>
-                
-                <Card className="card-hover border border-gray-300 rounded-md">
-                  <CardHeader>
-                    <div className="flex items-center gap-3 mb-2">
-                      <div className="bg-blue-100 p-2 rounded-full">
-                        <GraduationCap size={20} className="text-blue-600" />
-                      </div>
-                      <CardTitle>Student Account</CardTitle>
-                    </div>
-                    <CardDescription>No minimum balance, designed for students with educational benefits</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-2">
-                      <li className="flex items-start gap-2">
-                        <ChevronRight className="min-w-4 text-blue-600 mt-1" size={16} />
-                        <span>Zero maintenance charges</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <ChevronRight className="min-w-4 text-blue-600 mt-1" size={16} />
-                        <span>Special education loan options</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <ChevronRight className="min-w-4 text-blue-600 mt-1" size={16} />
-                        <span>Discounts on educational services</span>
-                      </li>
-                    </ul>
-                    <Button className="mt-4 bg-gradient-to-r from-blue-600 to-green-500 hover:bg-gradient-to-r hover:from-blue-700 to-green-600">
-                            Learn More
-                    </Button>
-                  </CardContent>
-                </Card>
-                
-                <Card className="card-hover border border-gray-300 rounded-md">
-                  <CardHeader>
-                    <div className="flex items-center gap-3 mb-2">
-                      <div className="bg-blue-100 p-2 rounded-full">
-                        <User size={20} className="text-blue-600" />
-                      </div>
-                      <CardTitle>Salary Account</CardTitle>
-                    </div>
-                    <CardDescription>Auto-credit your salary with zero balance and perks</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-2">
-                      <li className="flex items-start gap-2">
-                        <ChevronRight className="min-w-4 text-blue-600 mt-1" size={16} />
-                        <span>Zero balance account</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <ChevronRight className="min-w-4 text-blue-600 mt-1" size={16} />
-                        <span>Free insurance benefits</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <ChevronRight className="min-w-4 text-blue-600 mt-1" size={16} />
-                        <span>Special loan rates for account holders</span>
-                      </li>
-                    </ul>
-                    <Button className="mt-4 bg-gradient-to-r from-blue-600 to-green-500 hover:bg-gradient-to-r hover:from-blue-700 to-green-600">
-                            Learn More
-                    </Button>
-                  </CardContent>
-                </Card>
-              </div>
-            </TabsContent>
-            
-            <TabsContent value="business" className="mt-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Card className="card-hover border border-gray-300 rounded-md">
-                  <CardHeader>
-                    <div className="flex items-center gap-3 mb-2">
-                      <div className="bg-blue-100 p-2 rounded-full">
-                        <Building2 size={20} className="text-blue-600" />
-                      </div>
-                      <CardTitle>Business Current Account</CardTitle>
-                    </div>
-                    <CardDescription>Manage business transactions with high limits and tools</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-2">
-                      <li className="flex items-start gap-2">
-                        <ChevronRight className="min-w-4 text-blue-600 mt-1" size={16} />
-                        <span>High transaction limits</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <ChevronRight className="min-w-4 text-blue-600 mt-1" size={16} />
-                        <span>Integrated payment solutions</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <ChevronRight className="min-w-4 text-blue-600 mt-1" size={16} />
-                        <span>Business analytics dashboard</span>
-                      </li>
-                    </ul>
-                    <Button className="mt-4 bg-gradient-to-r from-blue-600 to-green-500 hover:bg-gradient-to-r hover:from-blue-700 to-green-600">
-                            Learn More
-                    </Button>
-                  </CardContent>
-                </Card>
-                
-                <Card className="card-hover border border-gray-300 rounded-md">
-                  <CardHeader>
-                    <div className="flex items-center gap-3 mb-2">
-                      <div className="bg-blue-100 p-2 rounded-full">
-                        <Rocket size={20} className="text-blue-600" />
-                      </div>
-                      <CardTitle>Startup Account</CardTitle>
-                    </div>
-                    <CardDescription>Specially designed for new businesses with low charges</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-2">
-                      <li className="flex items-start gap-2">
-                        <ChevronRight className="min-w-4 text-blue-600 mt-1" size={16} />
-                        <span>Reduced banking charges for first year</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <ChevronRight className="min-w-4 text-blue-600 mt-1" size={16} />
-                        <span>Free business advisory services</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <ChevronRight className="min-w-4 text-blue-600 mt-1" size={16} />
-                        <span>Networking opportunities</span>
-                      </li>
-                    </ul>
-                    <Button className="mt-4 bg-gradient-to-r from-blue-600 to-green-500 hover:bg-gradient-to-r hover:from-blue-700 to-green-600">
-                            Learn More
-                    </Button>
-                  </CardContent>
-                </Card>
-              </div>
-            </TabsContent>
-            
-            <TabsContent value="digital" className="mt-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Card className="card-hover border border-gray-300 rounded-md">
-                  <CardHeader>
-                    <div className="flex items-center gap-3 mb-2">
-                      <div className="bg-blue-100 p-2 rounded-full">
-                        <Laptop size={20} className="text-blue-600" />
-                      </div>
-                      <CardTitle>Digital-Only Account</CardTitle>
-                    </div>
-                    <CardDescription>100% online banking experience, no physical branch needed</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-2">
-                      <li className="flex items-start gap-2">
-                        <ChevronRight className="min-w-4 text-blue-600 mt-1" size={16} />
-                        <span>Higher interest rates than regular savings</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <ChevronRight className="min-w-4 text-blue-600 mt-1" size={16} />
-                        <span>Zero paperwork, fully digital onboarding</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <ChevronRight className="min-w-4 text-blue-600 mt-1" size={16} />
-                        <span>24/7 digital support</span>
-                      </li>
-                    </ul>
-                    <Button className="mt-4 bg-gradient-to-r from-blue-600 to-green-500 hover:bg-gradient-to-r hover:from-blue-700 to-green-600">
-                            Learn More
-                    </Button>
-                  </CardContent>
-                </Card>
-                
-                <Card className="card-hover border border-gray-300 rounded-md">
-                  <CardHeader>
-                    <div className="flex items-center gap-3 mb-2">
-                      <div className="bg-blue-100 p-2 rounded-full">
-                        <Users size={20} className="text-blue-600" />
-                      </div>
-                      <CardTitle>Joint Account</CardTitle>
-                    </div>
-                    <CardDescription>Shared access for couples or partners</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-2">
-                      <li className="flex items-start gap-2">
-                        <ChevronRight className="min-w-4 text-blue-600 mt-1" size={16} />
-                        <span>Dual access control</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <ChevronRight className="min-w-4 text-blue-600 mt-1" size={16} />
-                        <span>Spending insights for both users</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <ChevronRight className="min-w-4 text-blue-600 mt-1" size={16} />
-                        <span>Joint financial planning tools</span>
-                      </li>
-                    </ul>
-                    <Button className="mt-4 bg-gradient-to-r from-blue-600 to-green-500 hover:bg-gradient-to-r hover:from-blue-700 to-green-600">
-                            Learn More
-                    </Button>
-                  </CardContent>
-                </Card>
-                
-                <Card className="card-hover border border-gray-300 rounded-md">
-                  <CardHeader>
-                    <div className="flex items-center gap-3 mb-2">
-                      <div className="bg-blue-100 p-2 rounded-full">
-                        <User size={20} className="text-blue-600" />
-                      </div>
-                      <CardTitle>Senior Citizen Account</CardTitle>
-                    </div>
-                    <CardDescription>Extra interest rates and priority support for seniors</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-2">
-                      <li className="flex items-start gap-2">
-                        <ChevronRight className="min-w-4 text-blue-600 mt-1" size={16} />
-                        <span>Higher interest rate than standard accounts</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <ChevronRight className="min-w-4 text-blue-600 mt-1" size={16} />
-                        <span>Priority service at branches</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <ChevronRight className="min-w-4 text-blue-600 mt-1" size={16} />
-                        <span>Free doorstep banking services</span>
-                      </li>
-                    </ul>
-                    <Button className="mt-4 bg-gradient-to-r from-blue-600 to-green-500 hover:bg-gradient-to-r hover:from-blue-700 to-green-600">
-                            Learn More
-                    </Button>
-                  </CardContent>
-                </Card>
-                
-                <Card className="card-hover border border-gray-300 rounded-md">
-                  <CardHeader>
-                    <div className="flex items-center gap-3 mb-2">
-                      <div className="bg-blue-100 p-2 rounded-full">
-                        <Globe size={20} className="text-blue-600" />
-                      </div>
-                      <CardTitle>NRI/Foreign Account</CardTitle>
-                    </div>
-                    <CardDescription>Tailored for non-resident customers to manage money across borders</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-2">
-                      <li className="flex items-start gap-2">
-                        <ChevronRight className="min-w-4 text-blue-600 mt-1" size={16} />
-                        <span>Multi-currency transaction support</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <ChevronRight className="min-w-4 text-blue-600 mt-1" size={16} />
-                        <span>Preferential exchange rates</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <ChevronRight className="min-w-4 text-blue-600 mt-1" size={16} />
-                        <span>Tax advisory services</span>
-                      </li>
-                    </ul>
-                    <Button className="mt-4 bg-gradient-to-r from-blue-600 to-green-500 hover:bg-gradient-to-r hover:from-blue-700 to-green-600">
-                            Learn More
-                    </Button>
-                  </CardContent>
-                </Card>
-              </div>
-            </TabsContent>
-          </Tabs>
-        </div>
-      </section>
-      
-      {/* Features & Benefits Section */}
-      <section className="py-16 px-4 md:px-8 bg-blue-50">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-2 bg-gradient-to-r from-blue-700 via-green-700 to-purple-500 text-transparent bg-clip-text">
-  Frequently Asked Questions
-</h2>
-            <p className="text-lg text-gray-600">Every Skylet Bank account comes with premium features</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Laptop size={28} className="text-blue-600" />
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Digital Banking</h3>
-              <p className="text-gray-600">24/7 access to your accounts through our secure mobile and web platforms</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <CreditCard size={28} className="text-green-600" />
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Free Debit Card</h3>
-              <p className="text-gray-600">Complimentary debit card with enhanced security features and rewards</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <User size={28} className="text-purple-600" />
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Personal Assistance</h3>
-              <p className="text-gray-600">Dedicated relationship managers for premium account holders</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      {/* Steps to Open Account */}
-      <section className="py-16 px-4 md:px-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            
-            <h2 className="text-3xl md:text-4xl font-bold mb-2 bg-gradient-to-r from-blue-700 via-green-700 to-purple-500 text-transparent bg-clip-text">
-            Open Your Account in 3 Simple Steps
-            </h2>
-            <p className="text-lg text-gray-600">Quick, easy, and hassle-free account opening process</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="bg-gradient-to-r from-blue-600 to-blue-400 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-2xl">1</div>
-              <h3 className="text-xl font-semibold mb-3">Choose Your Account</h3>
-              <p className="text-gray-600">Select the account type that best suits your financial needs</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="bg-gradient-to-r from-blue-500 to-purple-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-2xl">2</div>
-              <h3 className="text-xl font-semibold mb-3">Fill Application</h3>
-              <p className="text-gray-600">Complete the online application form with your details</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="bg-gradient-to-r from-purple-500 to-purple-400 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-2xl">3</div>
-              <h3 className="text-xl font-semibold mb-3">Verification</h3>
-              <p className="text-gray-600">Submit required documents and complete KYC verification</p>
-            </div>
-          </div>
-          
-          <div className="text-center mt-10">
-            <Button className="bg-gradient-to-r from-blue-600 to-green-500 hover:from-blue-700 hover:to-green-600 text-lg px-8 py-6">
-  Open Your Account Now
-</Button>
+                  </div>
+                  <CardDescription className="text-xs sm:text-sm text-slate-500">
+                    Earn industry-leading yield on your cash reserves with zero monthly fees.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <ul className="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 size={15} className="text-emerald-500" />
+                      <span>$0 Minimum opening deposit & zero maintenance fees</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 size={15} className="text-emerald-500" />
+                      <span>Interest compounded daily and credited monthly</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 size={15} className="text-emerald-500" />
+                      <span>Full FDIC insurance coverage up to $250,000</span>
+                    </li>
+                  </ul>
+                  <Button className="w-full btn-fintech-primary text-xs sm:text-sm py-2.5">
+                    Open Premier Savings
+                  </Button>
+                </CardContent>
+              </Card>
 
-          </div>
-        </div>
+              <Card className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm hover:shadow-xl transition-all">
+                <CardHeader>
+                  <div className="flex items-center gap-3 mb-1">
+                    <div className="w-10 h-10 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 flex items-center justify-center">
+                      <CreditCard size={20} />
+                    </div>
+                    <div>
+                      <CardTitle className="text-lg font-bold">Smart Global Checking</CardTitle>
+                      <span className="text-xs font-bold text-blue-600 dark:text-blue-400">Zero FX Fees</span>
+                    </div>
+                  </div>
+                  <CardDescription className="text-xs sm:text-sm text-slate-500">
+                    Seamless daily transactions with worldwide ATM fee rebates.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <ul className="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 size={15} className="text-emerald-500" />
+                      <span>Free World Debit Card with contactless chip and Apple Pay</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 size={15} className="text-emerald-500" />
+                      <span>Unlimited domestic & international fee-free ATM withdrawals</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 size={15} className="text-emerald-500" />
+                      <span>Instant mobile check deposit with same-day availability</span>
+                    </li>
+                  </ul>
+                  <Button className="w-full btn-fintech-primary text-xs sm:text-sm py-2.5">
+                    Open Smart Checking
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
+          </TabsContent>
+
+          {/* Commercial Accounts */}
+          <TabsContent value="business">
+            <div className="grid md:grid-cols-2 gap-6">
+              <Card className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm hover:shadow-xl transition-all">
+                <CardHeader>
+                  <div className="flex items-center gap-3 mb-1">
+                    <div className="w-10 h-10 rounded-xl bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-emerald-400 flex items-center justify-center">
+                      <Building2 size={20} />
+                    </div>
+                    <div>
+                      <CardTitle className="text-lg font-bold">Commercial Treasury Account</CardTitle>
+                      <span className="text-xs font-bold text-purple-600 dark:text-purple-400">Up to $5M Insured</span>
+                    </div>
+                  </div>
+                  <CardDescription className="text-xs sm:text-sm text-slate-500">
+                    High-volume cash management and multi-entity accounting.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <ul className="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 size={15} className="text-emerald-500" />
+                      <span>Extended cash sweeps for up to $5,000,000 in FDIC coverage</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 size={15} className="text-emerald-500" />
+                      <span>Multi-user RBAC role permissions & dual-sign wire approvals</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 size={15} className="text-emerald-500" />
+                      <span>Automated 2-way sync with QuickBooks, Xero & NetSuite</span>
+                    </li>
+                  </ul>
+                  <Button className="w-full btn-fintech-primary text-xs sm:text-sm py-2.5">
+                    Open Treasury Account
+                  </Button>
+                </CardContent>
+              </Card>
+
+              <Card className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm hover:shadow-xl transition-all">
+                <CardHeader>
+                  <div className="flex items-center gap-3 mb-1">
+                    <div className="w-10 h-10 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 flex items-center justify-center">
+                      <Rocket size={20} />
+                    </div>
+                    <div>
+                      <CardTitle className="text-lg font-bold">Startup & Venture Operating</CardTitle>
+                      <span className="text-xs font-bold text-emerald-600 dark:text-emerald-400">Zero Minimums</span>
+                    </div>
+                  </div>
+                  <CardDescription className="text-xs sm:text-sm text-slate-500">
+                    Built for fast-moving startups and venture-backed tech firms.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <ul className="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 size={15} className="text-emerald-500" />
+                      <span>Unlimited free domestic ACH & Fedwire transfers</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 size={15} className="text-emerald-500" />
+                      <span>Virtual corporate credit cards with real-time spend limits</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 size={15} className="text-emerald-500" />
+                      <span>$50,000+ in partner software credits (AWS, Stripe, Brex)</span>
+                    </li>
+                  </ul>
+                  <Button className="w-full btn-fintech-primary text-xs sm:text-sm py-2.5">
+                    Open Startup Account
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
+          </TabsContent>
+
+          {/* Global FX Accounts */}
+          <TabsContent value="digital">
+            <div className="grid md:grid-cols-2 gap-6">
+              <Card className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm hover:shadow-xl transition-all">
+                <CardHeader>
+                  <div className="flex items-center gap-3 mb-1">
+                    <div className="w-10 h-10 rounded-xl bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-emerald-400 flex items-center justify-center">
+                      <Globe size={20} />
+                    </div>
+                    <div>
+                      <CardTitle className="text-lg font-bold">Multi-Currency Global IBAN</CardTitle>
+                      <span className="text-xs font-bold text-cyan-600 dark:text-cyan-400">40+ Currencies</span>
+                    </div>
+                  </div>
+                  <CardDescription className="text-xs sm:text-sm text-slate-500">
+                    Hold USD, EUR, GBP, JPY, CAD and CHF in a unified account.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <ul className="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 size={15} className="text-emerald-500" />
+                      <span>Local routing numbers in US, EU, UK, Canada & Singapore</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 size={15} className="text-emerald-500" />
+                      <span>Mid-market exchange rates with transparent low conversion margins</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 size={15} className="text-emerald-500" />
+                      <span>Same-day SWIFT and SEPA cross-border wire execution</span>
+                    </li>
+                  </ul>
+                  <Button className="w-full btn-fintech-primary text-xs sm:text-sm py-2.5">
+                    Open Multi-Currency Account
+                  </Button>
+                </CardContent>
+              </Card>
+
+              <Card className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm hover:shadow-xl transition-all">
+                <CardHeader>
+                  <div className="flex items-center gap-3 mb-1">
+                    <div className="w-10 h-10 rounded-xl bg-purple-50 dark:bg-purple-950/60 text-purple-600 dark:text-emerald-400 flex items-center justify-center">
+                      <Laptop size={20} />
+                    </div>
+                    <div>
+                      <CardTitle className="text-lg font-bold">Private International Banking</CardTitle>
+                      <span className="text-xs font-bold text-amber-500">Dedicated Banker</span>
+                    </div>
+                  </div>
+                  <CardDescription className="text-xs sm:text-sm text-slate-500">
+                    White-glove concierge wealth management for global families.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <ul className="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 size={15} className="text-emerald-500" />
+                      <span>Bespoke fixed income structuring & global asset protection</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 size={15} className="text-emerald-500" />
+                      <span>24/7 dedicated private banking concierge via encrypted chat</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 size={15} className="text-emerald-500" />
+                      <span>Custom liquidity lines backed by international portfolios</span>
+                    </li>
+                  </ul>
+                  <Button className="w-full btn-fintech-primary text-xs sm:text-sm py-2.5">
+                    Request Private Consultation
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
+          </TabsContent>
+        </Tabs>
       </section>
-      
-      {/* FAQs Section */}
-      <section className="py-16 px-4 md:px-8 bg-gray-50">
+
+      {/* Simple 3-Step Process */}
+      <section className="py-16 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-2 bg-gradient-to-r from-blue-700 via-green-700 to-purple-500 text-transparent bg-clip-text">
-            Frequently Asked Questions
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white mb-2">
+              Get Started in 3 Simple Steps
             </h2>
-            <p className="text-lg text-gray-600">Got questions? We've got answers</p>
+            <p className="text-sm text-slate-500 dark:text-slate-400">
+              100% digital onboarding with zero physical paperwork or branch visits.
+            </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">What documents do I need to open an account?</h3>
-              <p className="text-gray-600">You'll need a valid ID (passport, national ID, or driver's license), proof of address, and a passport-sized photograph.</p>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center p-6 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200/80 dark:border-slate-800">
+              <div className="w-12 h-12 rounded-xl bg-blue-600 text-white font-extrabold text-lg flex items-center justify-center mx-auto mb-4">
+                1
+              </div>
+              <h3 className="font-bold text-base text-slate-900 dark:text-white mb-2">Select Your Plan</h3>
+              <p className="text-xs text-slate-500 dark:text-slate-400">
+                Pick from Personal High-Yield Savings, Checking, or Commercial Treasury.
+              </p>
             </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">Can I open an account online?</h3>
-              <p className="text-gray-600">Yes, most accounts can be opened online through our digital banking platform with remote verification.</p>
+
+            <div className="text-center p-6 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200/80 dark:border-slate-800">
+              <div className="w-12 h-12 rounded-xl bg-emerald-600 text-white font-extrabold text-lg flex items-center justify-center mx-auto mb-4">
+                2
+              </div>
+              <h3 className="font-bold text-base text-slate-900 dark:text-white mb-2">Digital ID Verification</h3>
+              <p className="text-xs text-slate-500 dark:text-slate-400">
+                Snap your ID and selfie. Our automated system confirms your credentials in 60 seconds.
+              </p>
             </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">What is the minimum deposit required?</h3>
-              <p className="text-gray-600">Minimum deposits vary by account type, with some accounts having no minimum requirement.</p>
+
+            <div className="text-center p-6 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200/80 dark:border-slate-800">
+              <div className="w-12 h-12 rounded-xl bg-purple-600 text-white font-extrabold text-lg flex items-center justify-center mx-auto mb-4">
+                3
+              </div>
+              <h3 className="font-bold text-base text-slate-900 dark:text-white mb-2">Fund & Transact</h3>
+              <p className="text-xs text-slate-500 dark:text-slate-400">
+                Link any external US or international bank to deposit funds and activate your card.
+              </p>
             </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">How long does it take to activate my account?</h3>
-              <p className="text-gray-600">Digital accounts can be activated instantly, while traditional accounts typically take 1-2 business days after verification.</p>
-            </div>
-          </div>
-          
-          <div className="text-center mt-8">
-            <Link to="/support" className="text-blue-600 hover:underline font-medium">View all FAQs</Link>
           </div>
         </div>
       </section>
-      
+
       <Footer />
     </div>
   );
