@@ -1,5 +1,15 @@
 import React from "react";
-import { ArrowRight, ShieldCheck, TrendingUp, Globe2, Sparkles, CheckCircle2, Lock } from "lucide-react";
+import {
+  ArrowRight,
+  ShieldCheck,
+  TrendingUp,
+  Globe2,
+  Sparkles,
+  CheckCircle2,
+  Lock,
+  Zap,
+  Percent
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -11,12 +21,27 @@ export const HeroSection: React.FC = () => {
   };
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-100/60 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 py-12 md:py-20 lg:py-24 border-b border-slate-200/60 dark:border-slate-800/60">
-      {/* Background Glow Mesh */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-fintech-glow opacity-80 pointer-events-none blur-3xl"></div>
+    <section className="relative overflow-hidden bg-slate-50 dark:bg-slate-950 py-16 md:py-24 lg:py-28 border-b border-slate-200/60 dark:border-slate-800/60">
       
+      {/* 1. Ambient Background Glow Meshes */}
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/15 dark:bg-blue-600/25 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute bottom-0 right-10 w-96 h-96 bg-emerald-500/15 dark:bg-emerald-500/20 rounded-full blur-3xl pointer-events-none"></div>
+
+      {/* 2. Direct Background Image on the Right (No Box - Seamlessly Mixed into Background) */}
+      <div className="absolute right-0 top-0 bottom-0 w-full lg:w-[55%] pointer-events-none select-none overflow-hidden z-0">
+        <img
+          src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=1600&q=85"
+          alt="Global Digital Financial Network"
+          className="w-full h-full object-cover object-center opacity-30 dark:opacity-40 mix-blend-luminosity dark:mix-blend-screen scale-110"
+        />
+        {/* Gradients on all sides that fade the image into the background seamlessly */}
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-50 via-slate-50/70 to-transparent dark:from-slate-950 dark:via-slate-950/80 dark:to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-50 via-transparent to-slate-50/80 dark:from-slate-950 dark:via-transparent dark:to-slate-950/80"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-50/80 via-transparent to-slate-50 dark:from-slate-950/80 dark:via-transparent dark:to-slate-950"></div>
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-12 gap-12 items-center">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           
           {/* Left Column: Headlines & CTA */}
           <motion.div
@@ -78,74 +103,120 @@ export const HeroSection: React.FC = () => {
             </div>
           </motion.div>
 
-          {/* Right Column: Frameless Seamless Visual + Floating Ambient Badges */}
+          {/* Right Column: Floating Frameless 3D Banking Elements (No Box / No Border) */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, delay: 0.15 }}
-            className="lg:col-span-5 relative flex items-center justify-center"
+            className="lg:col-span-5 relative flex flex-col items-center justify-center min-h-[440px] sm:min-h-[500px]"
           >
-            {/* Ambient Background Glow (Frameless & Organic) */}
-            <div className="absolute -inset-4 bg-gradient-to-tr from-blue-600/30 via-indigo-600/20 to-emerald-500/25 rounded-full blur-3xl opacity-75 pointer-events-none"></div>
+            {/* Ambient Multi-layer Halo */}
+            <div className="absolute w-72 h-72 bg-gradient-to-br from-blue-500/20 via-indigo-600/20 to-emerald-500/20 rounded-full blur-3xl pointer-events-none"></div>
 
-            {/* Frameless Hero Visual with Soft Edge Transitions */}
-            <div className="relative w-full max-w-md lg:max-w-none">
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-                <img
-                  src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=80"
-                  alt="Skylet Global Digital Banking Platform"
-                  className="w-full h-[440px] sm:h-[500px] lg:h-[530px] object-cover object-center"
-                />
+            {/* 1. Floating Titanium Card (Frameless) */}
+            <motion.div
+              initial={{ y: 15 }}
+              animate={{ y: -10 }}
+              transition={{ repeat: Infinity, repeatType: "reverse", duration: 4, ease: "easeInOut" }}
+              className="relative w-full max-w-[360px] sm:max-w-[390px] aspect-[1.586/1] rounded-2xl p-6 sm:p-7 text-white shadow-2xl border border-white/20 bg-gradient-to-br from-slate-900/90 via-blue-950/95 to-slate-900/95 backdrop-blur-xl z-10 rotate-[-3deg] hover:rotate-0 transition-transform duration-500 group select-none"
+            >
+              {/* Subtle Card Shimmer */}
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-white/0 via-white/10 to-transparent pointer-events-none"></div>
 
-                {/* Smooth atmospheric overlays that blend seamlessly into dark & light mode */}
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent pointer-events-none"></div>
-                <div className="absolute inset-0 bg-gradient-to-r from-slate-950/40 via-transparent to-slate-950/20 pointer-events-none"></div>
-
-                {/* Floating Bottom Stats Pill inside the image */}
-                <div className="absolute bottom-5 left-5 right-5 p-4 rounded-2xl bg-slate-900/85 backdrop-blur-md border border-white/10 text-white flex items-center justify-between shadow-xl">
-                  <div>
-                    <p className="text-[11px] text-slate-300 font-medium">Guaranteed APY Yield</p>
-                    <p className="text-xl sm:text-2xl font-black text-emerald-400 font-mono tracking-tight">5.25% Annual Return</p>
+              {/* Card Top */}
+              <div className="flex justify-between items-start">
+                <div>
+                  <div className="flex items-center gap-2">
+                    <span className="font-extrabold text-lg sm:text-xl tracking-wider">SKYLET</span>
+                    <span className="text-[10px] font-bold tracking-widest px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 uppercase">
+                      SAPPHIRE
+                    </span>
                   </div>
-                  <div className="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-bold border border-emerald-500/30">
-                    FDIC Insured
-                  </div>
+                  <p className="text-[10px] text-slate-400 font-mono mt-0.5">WORLD ELITE</p>
+                </div>
+                <div className="flex items-center gap-1.5 text-amber-400">
+                  <Zap size={18} />
                 </div>
               </div>
 
-              {/* Floating Live Transaction Pill (Top-Right) */}
-              <motion.div
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.4, duration: 0.5 }}
-                className="absolute -top-4 -right-2 sm:-right-4 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md p-3.5 rounded-2xl shadow-2xl border border-slate-200/80 dark:border-slate-800 flex items-center gap-3 text-xs z-20 animate-float"
-              >
-                <div className="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold flex-shrink-0">
-                  <TrendingUp size={20} />
+              {/* Gold EMV Chip */}
+              <div className="my-4 flex items-center gap-3">
+                <div className="w-11 h-8 rounded-md bg-gradient-to-br from-amber-300 via-amber-400 to-yellow-600 shadow-md border border-yellow-200/50 p-1 flex items-center justify-center">
+                  <div className="w-full h-full border border-amber-900/40 rounded-sm grid grid-cols-3 grid-rows-2 gap-0.5 opacity-60">
+                    <div className="border border-amber-900/40"></div>
+                    <div className="border border-amber-900/40"></div>
+                    <div className="border border-amber-900/40"></div>
+                    <div className="border border-amber-900/40"></div>
+                    <div className="border border-amber-900/40"></div>
+                    <div className="border border-amber-900/40"></div>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-[10px] text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider">Wire Received</p>
-                  <p className="font-extrabold text-sm text-slate-900 dark:text-white font-mono">+$45,000.00 USD</p>
-                  <span className="text-[10px] text-emerald-600 dark:text-emerald-400 font-semibold">Instant Fedwire Confirmed</span>
-                </div>
-              </motion.div>
+                <span className="text-[11px] text-slate-400 font-mono">Contactless Pay</span>
+              </div>
 
-              {/* Floating Security Badge (Bottom-Left) */}
-              <motion.div
-                initial={{ y: -20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.6, duration: 0.5 }}
-                className="hidden sm:flex absolute -bottom-5 -left-4 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md p-3.5 rounded-2xl shadow-2xl border border-slate-200/80 dark:border-slate-800 items-center gap-3 text-xs z-20"
-              >
-                <div className="w-9 h-9 rounded-xl bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-blue-400 flex items-center justify-center flex-shrink-0">
-                  <ShieldCheck size={20} />
-                </div>
+              {/* Number */}
+              <p className="font-mono text-base sm:text-lg font-bold tracking-widest text-slate-100">
+                4532 •••• •••• 8821
+              </p>
+
+              {/* Card Bottom */}
+              <div className="flex justify-between items-end pt-2">
                 <div>
-                  <p className="font-bold text-slate-900 dark:text-white">Institutional Vault</p>
-                  <p className="text-[11px] text-slate-500 dark:text-slate-400">256-bit AES & Biometric Auth</p>
+                  <p className="text-[9px] uppercase tracking-wider text-slate-400 font-mono">Cardholder</p>
+                  <p className="text-xs sm:text-sm font-semibold tracking-wide text-white uppercase font-mono">
+                    GLOBAL ENTERPRISE
+                  </p>
                 </div>
-              </motion.div>
-            </div>
+                <div className="flex -space-x-2">
+                  <div className="w-6 h-6 rounded-full bg-rose-500/90 shadow-sm"></div>
+                  <div className="w-6 h-6 rounded-full bg-amber-400/90 shadow-sm"></div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* 2. Floating Live Wire Notification Pill (Top-Right of Card) */}
+            <motion.div
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: [0, -6, 0], opacity: 1 }}
+              transition={{
+                delay: 0.3,
+                y: { repeat: Infinity, duration: 4.5, ease: "easeInOut" }
+              }}
+              className="absolute -top-6 -right-2 sm:-right-4 bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl p-3.5 rounded-2xl shadow-2xl border border-slate-200/80 dark:border-slate-800 flex items-center gap-3 text-xs z-20"
+            >
+              <div className="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold flex-shrink-0">
+                <TrendingUp size={20} />
+              </div>
+              <div>
+                <p className="text-[10px] text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider">Wire Received</p>
+                <p className="font-extrabold text-sm text-slate-900 dark:text-white font-mono">+$45,000.00 USD</p>
+                <span className="text-[10px] text-emerald-600 dark:text-emerald-400 font-semibold flex items-center gap-1">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                  Instant Fedwire Cleared
+                </span>
+              </div>
+            </motion.div>
+
+            {/* 3. Floating APY Yield Chip (Bottom-Left of Card) */}
+            <motion.div
+              initial={{ y: -20, opacity: 0 }}
+              animate={{ y: [0, 6, 0], opacity: 1 }}
+              transition={{
+                delay: 0.5,
+                y: { repeat: Infinity, duration: 5, ease: "easeInOut" }
+              }}
+              className="absolute -bottom-6 -left-2 sm:-left-6 bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl p-3.5 rounded-2xl shadow-2xl border border-slate-200/80 dark:border-slate-800 flex items-center gap-3 text-xs z-20"
+            >
+              <div className="w-10 h-10 rounded-xl bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-blue-400 flex items-center justify-center flex-shrink-0">
+                <Percent size={20} />
+              </div>
+              <div>
+                <p className="text-[10px] text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider">Treasury Yield</p>
+                <p className="font-extrabold text-sm text-emerald-600 dark:text-emerald-400 font-mono">5.25% Fixed APY</p>
+                <span className="text-[10px] text-slate-500 dark:text-slate-400 font-medium">Daily Compounding</span>
+              </div>
+            </motion.div>
+
           </motion.div>
 
         </div>
